@@ -1,0 +1,16 @@
+# Ignore all .vscode folders
+.vscode/
+**/.vscode/
+
+# Ignore macOS specific files
+.DS_Store
+**/.DS_Store
+.AppleDouble
+.LSOverride
+
+# Ignore files created by macOS Finder
+Icon?
+._*
+
+# Ignore Thumbs.db (Windows compatibility)
+Thumbs.db

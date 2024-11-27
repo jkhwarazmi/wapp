@@ -14,3 +14,7 @@ Icon?
 
 # Ignore Thumbs.db (Windows compatibility)
 Thumbs.db
+
+**/__pycache__
+__pycache__/
+*.py[cod]

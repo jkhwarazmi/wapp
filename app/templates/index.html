@@ -1,0 +1,183 @@
+{% extends "base.html" %}
+{% block content %}
+
+<!-- No Assessments Heading -->
+{% if not complete and not incomplete %}
+<div class="text-center mx-auto" style="max-width: 500px;">
+  <h1 class="mt-5 mb-4">No Assessments Added</h1>
+  <h5 class="mb-4">To add an assessment, please use the "Add Assessment" button above</h5>
+  <h5>To restore a deleted assessment, please use the "Deleted Assessments" button</h5>
+</div>
+{% else %}
+<!-- Headings -->
+<h2 class="mt-5 mb-4" id="assessment-type">Incomplete Assessments</h2>
+<h6 class="text-muted">Select an assessment below for more details.</h6>
+<div class="row justify-content-center mt-3">
+  <ul class="nav nav-tabs d-flex flex-nowrap justify-content-end" role="tablist">
+    <li class="nav-item" role="presentation">
+      <button id="assessment-incomplete-btn" class="nav-link active flex-shrink-1" data-bs-toggle="tab"
+        data-bs-target="#incomplete" type="button" role="tab" title="View incomplete assessments">
+        Incomplete
+        {% if incomplete %}
+        <span class="position-absolute top-0 start-0 translate-middle badge rounded-pill bg-danger">
+          {{ incomplete|length }}
+          <span class="visually-hidden">Number of incomplete assessments</span>
+        </span>
+        {% endif %}
+      </button>
+    </li>
+    <li class="nav-item" role="presentation">
+      <button id="assessment-complete-btn" class="nav-link flex-shrink-1" data-bs-toggle="tab"
+        data-bs-target="#complete" type="button" role="tab" title="View completed assessments">
+        Complete
+      </button>
+    </li>
+  </ul>
+  <!-- Assessment Cards -->
+  <div class="content-box">
+    <div class="tab-content">
+      <div class="tab-pane fade show active" id="incomplete">
+      {% if not incomplete %}
+        <h4 class="text-center my-4">No Incomplete Assessments</h4>
+      {% else %}
+        <!-- Incomplete Assessments -->
+        <div class="container my-4">
+          <div class="row row-cols-1 row-cols-sm-1 row-cols-md-2 g-4">
+          {% for assessment in incomplete %}
+            <div class="col" title="Click for more details">
+              <div class="card p-3 shadow-sm" onclick="expandCard(event, '{{ assessment.id }}')">
+                <h5 id="assessment-module-{{ assessment.id }}">{{ assessment.module }}</h5>
+                <h6 id="assessment-title-{{ assessment.id }}">{{ assessment.title }}</h6>
+                <p id="assessment-due_at-{{ assessment.id }}"><span id="pill-{{ assessment.id }}"
+                    class="badge rounded-pill text-bg-warning">Due Date: {{ assessment.due_date.strftime("%d/%m/%y")
+                    }}{{ ", " + assessment.due_time.strftime("%H:%M") if assessment.due_time else "" }}</span></p>
+                <!-- Hidden data container -->
+                <span id="hidden-data-{{ assessment.id }}" class="incomplete-data" style="display: none;"
+                  data-desc="{{ assessment.desc }}" data-created_at="{{ assessment.created_at }}"
+                  data-modified_at="{{ assessment.modified_at }}" data-due_date="{{ assessment.due_date }}"
+                  data-due_time="{{ assessment.due_time }}" data-id="{{ assessment.id }}"></span>
+                <div class="d-flex flex-column flex-lg-row justify-content-around align-items-center gap-2">
+                  <form method="GET" action="/edit/{{ assessment.id }}">
+                    <button type="submit" class="btn btn-outline-primary btn-sm d-flex align-items-center gap-2"
+                      title="Edit this assessment">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-pencil" viewBox="0 0 16 16">
+                        <path
+                          d="M12.146.854a.5.5 0 0 1 .708 0l2.292 2.292a.5.5 0 0 1 0 .708l-10 10a.5.5 0 0 1-.168.11l-5 2a.5.5 0 0 1-.651-.651l2-5a.5.5 0 0 1 .11-.168l10-10zM11.207 3L3 11.207V13h1.793L13 4.793 11.207 3zM4 12v1h1v-1H4z" />
+                      </svg>
+                      Edit
+                    </button>
+                  </form>
+                  <form method="POST" action="/complete">
+                    <input type="hidden" name="id" value="{{ assessment.id }}">
+                    <button type="submit" name="complete"
+                      class="btn btn-outline-success btn-sm d-flex align-items-center gap-2"
+                      title="Mark this assessment as complete">
+                      <!-- Source: https://icons.getbootstrap.com/icons/check/ -->
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-check" viewBox="0 0 16 16">
+                        <path
+                          d="M13.854 3.146a.5.5 0 0 1 0 .708L6.207 11.5 4.854 10.146a.5.5 0 1 1 .708-.708l1.5 1.5a.5.5 0 0 1 .708 0l7.5-7.5a.5.5 0 0 1 .708 0z" />
+                      </svg>
+                      Complete
+                    </button>
+                  </form>
+                  <form method="POST" action="/delete">
+                    <input type="hidden" name="id" value="{{ assessment.id }}">
+                    <button type="submit" name="delete"
+                      class="btn btn-outline-danger btn-sm d-flex align-items-center gap-2"
+                      title="Delete this assessment">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-trash" viewBox="0 0 16 16">
+                        <path
+                          d="M5.5 5.5A.5.5 0 0 1 6 5h4a.5.5 0 0 1 .5.5v8a.5.5 0 0 1-.5.5H6a.5.5 0 0 1-.5-.5v-8zM5.118 1a1 1 0 0 1 .9-.6h4a1 1 0 0 1 .9.6L11 2H4l1.118-1zM4.5 3h7a.5.5 0 0 1 .5.5V4H4v-.5A.5.5 0 0 1 4.5 3z" />
+                      </svg>
+                      Delete
+                    </button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          {% endfor %}
+          </div>
+        </div>
+      {% endif %}
+      </div>
+      <div class="tab-pane fade" id="complete">
+        {% if not complete %}
+        <h4 class="text-center my-4">No Complete Assessments</h4>
+        {% else %}
+        <!-- Complete Assessments -->
+        <div class="container my-4">
+          <div class="row row-cols-1 row-cols-sm-1 row-cols-md-2 g-4">
+          {% for assessment in complete %}
+            <div class="col" title="Click for more details">
+              <div class="card p-3 shadow-sm" onclick="expandCard(event, '{{ assessment.id }}')">
+                <h5 id="assessment-module-{{ assessment.id }}">{{ assessment.module }}</h5>
+                <h6 id="assessment-title-{{ assessment.id }}">{{ assessment.title }}</h6>
+                <p id="assessment-completed_at-{{ assessment.id }}"><span
+                    class="badge rounded-pill text-bg-success">Completion Date: {{
+                    assessment.completed_at.strftime("%d/%m/%y") }}</span></p>
+                <p id="assessment-due_at-{{ assessment.id }}" style="display: none;">Due Date: {{
+                  assessment.due_date.strftime("%d/%m/%y") }}{{ ", " + assessment.due_time.strftime("%H:%M") if
+                  assessment.due_time else "" }}</p>
+                <!-- Hidden data container -->
+                <span id="hidden-data-{{ assessment.id }}" style="display: none;" data-desc="{{ assessment.desc }}"
+                  data-created_at="{{ assessment.created_at }}" data-modified_at="{{ assessment.modified_at }}"></span>
+                <div class="d-flex flex-column flex-lg-row justify-content-around align-items-center gap-2">
+                  <form method="GET" action="/edit/{{ assessment.id }}">
+                    <button type="submit" class="btn btn-outline-primary btn-sm d-flex align-items-center gap-2"
+                      title="Edit this assessment">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-pencil" viewBox="0 0 16 16">
+                        <path
+                          d="M12.146.854a.5.5 0 0 1 .708 0l2.292 2.292a.5.5 0 0 1 0 .708l-10 10a.5.5 0 0 1-.168.11l-5 2a.5.5 0 0 1-.651-.651l2-5a.5.5 0 0 1 .11-.168l10-10zM11.207 3L3 11.207V13h1.793L13 4.793 11.207 3zM4 12v1h1v-1H4z" />
+                      </svg>
+                      Edit
+                    </button>
+                  </form>
+                  <form method="POST" action="/restore">
+                    <input type="hidden" name="id" value="{{ assessment.id }}">
+                    <button type="submit" name="restore"
+                      class="btn btn-outline-secondary btn-sm d-flex align-items-center gap-2"
+                      title="Mark this assessment as incomplete">
+                      <!-- Source: https://icons.getbootstrap.com/icons/arrow-clockwise/ -->
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-arrow-clockwise" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M8 3a5 5 0 1 0 4.546 2.914.5.5 0 1 1 .908-.418A6 6 0 1 1 8 2v1z" />
+                        <path d="M8 1a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-1 0v-3A.5.5 0 0 1 8 1z" />
+                        <path
+                          d="M5.354 1.646a.5.5 0 0 1 .708 0l2 2a.5.5 0 1 1-.708.708L5.354 2.354a.5.5 0 0 1 0-.708z" />
+                      </svg>
+                      Restore
+                    </button>
+                  </form>
+                  <form method="POST" action="/delete">
+                    <input type="hidden" name="id" value="{{ assessment.id }}">
+                    <button type="submit" name="delete"
+                      class="btn btn-outline-danger btn-sm d-flex align-items-center gap-2"
+                      title="Delete this assessment">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-trash" viewBox="0 0 16 16">
+                        <path
+                          d="M5.5 5.5A.5.5 0 0 1 6 5h4a.5.5 0 0 1 .5.5v8a.5.5 0 0 1-.5.5H6a.5.5 0 0 1-.5-.5v-8zM5.118 1a1 1 0 0 1 .9-.6h4a1 1 0 0 1 .9.6L11 2H4l1.118-1zM4.5 3h7a.5.5 0 0 1 .5.5V4H4v-.5A.5.5 0 0 1 4.5 3z" />
+                      </svg>
+                      Delete
+                    </button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          {% endfor %}
+          </div>
+        </div>
+      {% endif %}
+      </div>
+    </div>
+  </div>
+</div>
+{% endif %}
+<!-- Scripts -->
+<script src="../static/js/index.js"></script>
+
+{% endblock %}

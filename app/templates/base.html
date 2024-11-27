@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+
+<html lang="en" data-bs-theme="dark">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Manrope" />
+  <link rel="stylesheet" href="../static/css/styles.css" />
+  <!-- Source: https://icons8.com/icons/set/list -->
+  <link rel="shortcut icon" href="{{ url_for('static', filename='/images/favicon.ico') }}">
+  <script src="../static/js/theme.js"></script>
+  {% if title %}
+  <title>{{ title }}</title>
+  {% else %}
+  <title>Page Not Found</title>
+  {% endif %}
+</head>
+
+<body>
+  <div class="content-wrapper">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="/" title="See active assessments">
+          <img src="../static/images/icon.png" alt="Logo" width="40" height="30"
+            class="d-inline-block align-text-bottom" />
+          Assessment List
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <!-- Add Assessment Link -->
+            <li class="nav-item">
+              {% if title == "Add Assessment" %}
+              <button type="button" class="btn nav-pad btn-outline-secondary btn-sm nav-active"
+                title="Add a new assessment">
+                <a class="nav-link nav-btn btn-hover" href="/add">
+                  Add Assessment &nbsp;
+                  <!-- Source: https://icons.getbootstrap.com/icons/plus-circle/ -->
+                  <svg class="nav-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                    xmlns:sketch="http://www.bohemiancoding.com/sketch/ns" width="1em" height="1em" viewBox="0 0 32 32"
+                    version="1.1">
+                    <title>New</title>
+                    <defs></defs>
+                    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+                      <g id="Icon-Set" sketch:type="MSLayerGroup" transform="translate(-464.000000, -1087.000000)"
+                        fill="#000000">
+                        <path
+                          d="M480,1117 C472.268,1117 466,1110.73 466,1103 C466,1095.27 472.268,1089 480,1089 C487.732,1089 494,1095.27 494,1103 C494,1110.73 487.732,1117 480,1117 L480,1117 Z M480,1087 C471.163,1087 464,1094.16 464,1103 C464,1111.84 471.163,1119 480,1119 C488.837,1119 496,1111.84 496,1103 C496,1094.16 488.837,1087 480,1087 L480,1087 Z M486,1102 L481,1102 L481,1097 C481,1096.45 480.553,1096 480,1096 C479.447,1096 479,1096.45 479,1097 L479,1102 L474,1102 C473.447,1102 473,1102.45 473,1103 C473,1103.55 473.447,1104 474,1104 L479,1104 L479,1109 C479,1109.55 479.447,1110 480,1110 C480.553,1110 481,1109.55 481,1109 L481,1104 L486,1104 C486.553,1104 487,1103.55 487,1103 C487,1102.45 486.553,1102 486,1102 L486,1102 Z"
+                          id="plus-circle" sketch:type="MSShapeGroup"></path>
+                      </g>
+                    </g>
+                  </svg>
+                </a>
+              </button>
+              {% else %}
+              <button type="button" class="btn nav-pad btn-outline-secondary btn-sm" title="Add a new assessment">
+                <a class="nav-link btn-hover" href="/add">
+                  Add Assessment &nbsp;
+                  <svg class="nav-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                    xmlns:sketch="http://www.bohemiancoding.com/sketch/ns" width="1em" height="1em" viewBox="0 0 32 32"
+                    version="1.1">
+                    <title>New</title>
+                    <defs></defs>
+                    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+                      <g id="Icon-Set" sketch:type="MSLayerGroup" transform="translate(-464.000000, -1087.000000)"
+                        fill="#000000">
+                        <path
+                          d="M480,1117 C472.268,1117 466,1110.73 466,1103 C466,1095.27 472.268,1089 480,1089 C487.732,1089 494,1095.27 494,1103 C494,1110.73 487.732,1117 480,1117 L480,1117 Z M480,1087 C471.163,1087 464,1094.16 464,1103 C464,1111.84 471.163,1119 480,1119 C488.837,1119 496,1111.84 496,1103 C496,1094.16 488.837,1087 480,1087 L480,1087 Z M486,1102 L481,1102 L481,1097 C481,1096.45 480.553,1096 480,1096 C479.447,1096 479,1096.45 479,1097 L479,1102 L474,1102 C473.447,1102 473,1102.45 473,1103 C473,1103.55 473.447,1104 474,1104 L479,1104 L479,1109 C479,1109.55 479.447,1110 480,1110 C480.553,1110 481,1109.55 481,1109 L481,1104 L486,1104 C486.553,1104 487,1103.55 487,1103 C487,1102.45 486.553,1102 486,1102 L486,1102 Z"
+                          id="plus-circle" sketch:type="MSShapeGroup"></path>
+                      </g>
+                    </g>
+                  </svg>
+                </a>
+              </button>
+              {% endif %}
+            </li>
+            <!-- Deleted Assessments Link -->
+            <li class="nav-item">
+              {% if title == "Deleted Assessments" %}
+              <button type="button" class="btn nav-pad btn-outline-secondary btn-sm nav-active"
+                title="Permanently delete assessments">
+                <a class="nav-link nav-btn btn-hover" href="/deleted">
+                  Deleted Assessments &nbsp;
+                  <!-- Source: https://www.svgrepo.com/svg/513794/trash-1 -->
+                  <svg class="nav-icon" xmlns="http://www.w3.org/2000/svg" fill="#000000" width="1em" height="1em"
+                    viewBox="-2.94 0 31.716 31.716">
+                    <title>Deleted</title>
+                    <g transform="translate(-355.957 -579)">
+                      <path
+                        d="M376.515,610.716H361.231a2.361,2.361,0,0,1-2.358-2.359V584.1a1,1,0,0,1,2,0v24.255a.36.36,0,0,0,.358.359h15.284a.36.36,0,0,0,.358-.359V584.1a1,1,0,0,1,2,0v24.255A2.361,2.361,0,0,1,376.515,610.716Z" />
+                      <path d="M365.457,604.917a1,1,0,0,1-1-1v-14a1,1,0,0,1,2,0v14A1,1,0,0,1,365.457,604.917Z" />
+                      <path d="M372.29,604.917a1,1,0,0,1-1-1v-14a1,1,0,0,1,2,0v14A1,1,0,0,1,372.29,604.917Z" />
+                      <path d="M380.79,585.1H356.957a1,1,0,0,1,0-2H380.79a1,1,0,0,1,0,2Z" />
+                      <path d="M372.79,581h-7.917a1,1,0,1,1,0-2h7.917a1,1,0,0,1,0,2Z" />
+                    </g>
+                  </svg>
+                </a>
+              </button>
+              {% else %}
+              <div title="There are no deleted assessments">
+                <button type="button" class="btn nav-pad btn-outline-secondary btn-sm"
+                  title="Permanently delete assessments" {{ "disabled" if not deleted }}>
+                  <a class="nav-link btn-hover" href="/deleted">
+                    Deleted Assessments &nbsp;
+                    <svg class="nav-icon" xmlns="http://www.w3.org/2000/svg" fill="#000000" width="1em" height="1em"
+                      viewBox="-2.94 0 31.716 31.716">
+                      <title>Deleted</title>
+                      <g transform="translate(-355.957 -579)">
+                        <path
+                          d="M376.515,610.716H361.231a2.361,2.361,0,0,1-2.358-2.359V584.1a1,1,0,0,1,2,0v24.255a.36.36,0,0,0,.358.359h15.284a.36.36,0,0,0,.358-.359V584.1a1,1,0,0,1,2,0v24.255A2.361,2.361,0,0,1,376.515,610.716Z" />
+                        <path d="M365.457,604.917a1,1,0,0,1-1-1v-14a1,1,0,0,1,2,0v14A1,1,0,0,1,365.457,604.917Z" />
+                        <path d="M372.29,604.917a1,1,0,0,1-1-1v-14a1,1,0,0,1,2,0v14A1,1,0,0,1,372.29,604.917Z" />
+                        <path d="M380.79,585.1H356.957a1,1,0,0,1,0-2H380.79a1,1,0,0,1,0,2Z" />
+                        <path d="M372.79,581h-7.917a1,1,0,1,1,0-2h7.917a1,1,0,0,1,0,2Z" />
+                      </g>
+                    </svg>
+                  </a>
+                </button>
+              </div>
+              {% endif %}
+            </li>
+          </ul>
+          <!-- Theme Toggle -->
+          <div class="nav-item dropdown">
+            <button
+              class="btn btn-sm nav-pad btn-link nav-link py-2 px-0 px-lg-2 dropdown-toggle d-flex align-items-center"
+              id="bd-theme" type="button" aria-expanded="false" data-bs-toggle="dropdown" data-bs-display="static"
+              aria-label="Toggle theme" title="Change color theme">
+              <svg class="bi my-1 theme-icon-active" width="1em" height="1em">
+                <use href="#sun-fill"></use>
+              </svg>
+              <span class="d-lg-none ms-2" id="bd-theme-text">Toggle Theme</span>
+            </button>
+            <ul class="dropdown-menu dropdown-menu-start dropdown-menu-lg-end" aria-labelledby="bd-theme-text">
+              <li>
+                <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="light"
+                  aria-pressed="false">
+                  <svg class="bi me-2 opacity-50 theme-icon" width="1em" height="1em">
+                    <use href="#sun-fill"></use>
+                  </svg>
+                  Light
+                  <svg class="bi ms-auto d-none" width="1em" height="1em">
+                    <use href="#check2"></use>
+                  </svg>
+                </button>
+              </li>
+              <li>
+                <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark"
+                  aria-pressed="false">
+                  <svg class="bi me-2 opacity-50 theme-icon" width="1em" height="1em">
+                    <use href="#moon-stars-fill"></use>
+                  </svg>
+                  Dark
+                  <svg class="bi ms-auto d-none" width="1em" height="1em">
+                    <use href="#check2"></use>
+                  </svg>
+                </button>
+              </li>
+              <li>
+                <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="auto"
+                  aria-pressed="false">
+                  <svg class="bi me-2 opacity-50 theme-icon" width="1em" height="1em">
+                    <use href="#circle-half"></use>
+                  </svg>
+                  Auto
+                  <svg class="bi ms-auto d-none" width="1em" height="1em">
+                    <use href="#check2"></use>
+                  </svg>
+                </button>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!-- Source: https://icons.getbootstrap.com/ -->
+    <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+      <symbol id="check2" viewBox="0 0 16 16">
+        <path
+          d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z" />
+      </symbol>
+      <symbol id="circle-half" viewBox="0 0 16 16">
+        <path d="M8 15A7 7 0 1 0 8 1v14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z" />
+      </symbol>
+      <symbol id="sun-fill" viewBox="0 0 16 16">
+        <path
+          d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z" />
+      </symbol>
+      <symbol id="moon-stars-fill" viewBox="0 0 16 16">
+        <path
+          d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z" />
+        <path
+          d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z" />
+      </symbol>
+    </svg>
+    <!-- Flashes -->
+    <div class="container-fluid">
+      <div class="row justify-content-center">
+        <div class="col-10 col-lg-8">
+          {% with messages = get_flashed_messages(with_categories=True) %}
+          {% if messages %}
+          {% for category, message in messages[::-1] %}
+          <div class="alert alert-{{ category }} alert-dismissible fade show text-center" role="alert">
+            {{ message }}
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+          </div>
+          {% endfor %}
+          {% endif %}
+          {% endwith %}
+          {% block content %}{% endblock %}
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+  <!-- Assessment Popup -->
+  <div id="expanded-view" style="display: none;">
+    <div class="card-overlay"></div>
+    <div class="expanded-card" id="popup">
+      <div class="expanded-header">
+        <button type="button" class="btn-close float-end" aria-label="Close" onclick="closeCard()"
+          title="Close popup"></button>
+        <h2 class="fw-bold mb-2" id="popup-module"></h2>
+        <h4 class="text-muted mb-3 text-break" id="popup-title"></h4>
+        <p class="text-muted mb-1"><small id="popup-created"></small></p>
+        <p class="text-muted mb-1"><small id="popup-modified"></small></p>
+        <p class="text-muted mb-1" id="popup-due-parent" style="display: none;"><small id="popup-due"></small></p>
+        <h5><span id="popup-status"></span></h5>
+      </div>
+      <div class="expanded-content">
+        <div class="row mb-2">
+          <div class="col-12">
+            <h4 class="fw-bold mb-3">Description</h4>
+            <p class="text-muted" id="popup-desc"></p>
+          </div>
+        </div>
+      </div>
+      <div class="my-3">
+        <div class="d-flex justify-content-around">
+          <form method="GET" action="/edit/" id="popup-form-1">
+            <button type="submit" class="btn btn-outline-primary btn-lg d-flex align-items-center gap-2"
+              title="Edit this assessment">
+              <!-- Source: https://icons.getbootstrap.com/icons/pencil/ -->
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil"
+                viewBox="0 0 16 16">
+                <path
+                  d="M12.146.854a.5.5 0 0 1 .708 0l2.292 2.292a.5.5 0 0 1 0 .708l-10 10a.5.5 0 0 1-.168.11l-5 2a.5.5 0 0 1-.651-.651l2-5a.5.5 0 0 1 .11-.168l10-10zM11.207 3L3 11.207V13h1.793L13 4.793 11.207 3zM4 12v1h1v-1H4z" />
+              </svg>
+              Edit
+            </button>
+          </form>
+          <form method="POST" action="" id="popup-form-2">
+          </form>
+          <form method="POST" action="/delete">
+            <input type="hidden" name="id" value="" id="popup-input-3">
+            <button type="submit" name="delete" class="btn btn-outline-danger btn-lg d-flex align-items-center gap-2"
+              title="Delete this assessment">
+              <!-- Source: https://icons.getbootstrap.com/icons/trash/ -->
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash"
+                viewBox="0 0 16 16">
+                <path
+                  d="M5.5 5.5A.5.5 0 0 1 6 5h4a.5.5 0 0 1 .5.5v8a.5.5 0 0 1-.5.5H6a.5.5 0 0 1-.5-.5v-8zM5.118 1a1 1 0 0 1 .9-.6h4a1 1 0 0 1 .9.6L11 2H4l1.118-1zM4.5 3h7a.5.5 0 0 1 .5.5V4H4v-.5A.5.5 0 0 1 4.5 3z" />
+              </svg>
+              Delete
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+    integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+    crossorigin="anonymous"></script>
+  <script src="../static/js/alerts.js"></script>
+</body>
+
+</html>

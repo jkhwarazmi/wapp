@@ -1,0 +1,68 @@
+{% extends "base.html" %}
+{% block content %}
+
+<!-- Heading -->
+<h2 class="mt-5 mb-4" id="assessment-type">Remove Assessments</h2>
+<h6 class="text-muted">Use the area below to select assessments.</h6>
+<h6 class="text-muted">Once selected, choose to either restore or delete the assessments below.</h6>
+<h6 class="text-danger mb-4">NOTE: Deleting an assessment here is irreversible.</h6>
+<!-- Selection Count -->
+<h5 class="text-end d-flex align-items-center justify-content-end">
+  <span class="badge text-bg-secondary" id="assessments-selected">0</span>
+  &nbsp;&nbsp;
+  <span id="word">Assessments</span>&nbsp;&nbsp;Selected
+</h5>
+<!-- Assessment Cards-->
+<div class="row justify-content-center mt-3">
+  <div class="content-box">
+    <div class="form-check">
+      <label class="form-check-label" for="select-all">
+        Select All
+      </label>
+      <input class="form-check-input" type="checkbox" name="select-all" value="" id="select-all" placeholder="false" />
+    </div>
+    <form action="" method="POST" name="remove-assessment">
+      <div class="tab-content">
+        <div class="tab-pane active">
+          {% if not deleted %}
+          <h4 class="text-center my-4">No Deleted Assessments</h4>
+          {% else %}
+          <div class="container my-4">
+            <div class="row row-cols-1 row-cols-sm-1 row-cols-md-2 g-4">
+              {% for assessment in deleted %}
+              <div class="col-12 col-lg-6 mb-4" title="Select this assessment">
+                <div class="card p-3 shadow-sm" onclick="selectAssessment(event)">
+                  <p class="text-muted mb-0 text-end">{{ "Complete" if assessment.completed_at else "Incomplete" }}</p>
+                  <h5 id="assessment-module-{{ assessment.id }}">{{ assessment.module }}</h5>
+                  <h6 id="assessment-title-{{ assessment.id }}">{{ assessment.title }}</h6>
+                  <p class="mb-0" id="assessment-deleted_at-{{ assessment.id }}">
+                    <span class="badge rounded-pill text-bg-danger">Deleted On: {{
+                      assessment.deleted_at.strftime("%d/%m/%y") }}</span>
+                  </p>
+                  <div class="form-check form-check-reverse d-flex justify-content-end gap-2">
+                    <label class="form-check-label select-assessment text-muted"
+                      for="{{ assessment.id }}">Select</label>
+                    <input id="custom-checkbox-{{ assessment.id }}" class="form-check-input visually-hidden"
+                      type="checkbox" name="remove-item" value="{{ assessment.id }}" />
+                    <span class="custom-checkbox-circle"></span>
+                  </div>
+                </div>
+              </div>
+              {% endfor %}
+            </div>
+          </div>
+          {% endif %}
+          <!-- Submission Buttons -->
+          <div class="d-flex justify-content-between">
+            <span class="btn-message" title="No assessments to restore">
+              <input type="submit" class="btn btn-primary" value="Restore" id="restore-btn" disabled />
+            </span>
+            <span class="btn-message" title="No assessments to delete">
+              <input type="submit" class="btn btn-danger" value="Delete" id="delete-btn" disabled />
+            </span>
+          </div>
+    </form>
+<!-- Scripts -->
+<script src="../static/js/deleted.js"></script>
+
+{% endblock %}

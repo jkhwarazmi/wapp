@@ -1,0 +1,65 @@
+{% extends "base.html" %}
+{% block content %}
+
+<!-- Heading -->
+<h2 class="mt-5 mb-4" id="assessment-type">Add Assessments</h2>
+<h6 class="text-muted">Use the form below to add new assessments to the list.</h6>
+<h6 class="text-muted">All assessments are initially set to incomplete.</h6>
+<h6 class="text-muted mb-4">Each assessment must have a unique combination of module name and title.</h6>
+<!-- Form -->
+<div id="add-form">
+  <form action="" method="POST" name="Assessment" id="add-assessment">
+    {{ form.hidden_tag() }}
+    <!-- Module -->
+    <p>
+      <label for="module" class="form-label required">Module </label>
+      {{ form.module(class_="form-control required-field", placeholder="Required", maxlength_="10") }}
+    <p id="module-count" class="text-danger text-end">10 characters remaining</p>
+    {% for error in form.module.errors %}
+    <div class="alert alert-danger" role="alert">{{ error }}</div>
+    {% endfor %}
+    </p>
+    <!-- Title -->
+    <p>
+      <label for="title" class="form-label required">Title </label>
+      {{ form.title(class_="form-control required-field", placeholder="Required", maxlength_="50") }}
+    <p id="title-count" class="text-danger text-end">50 characters remaining</p>
+    {% for error in form.title.errors %}
+    <div class="alert alert-danger" role="alert">{{ error }}</div>
+    {% endfor %}
+    </p>
+    <!-- Due Date -->
+    <p>
+      <label for="due_date" class="form-label required">Due Date </label>
+      {{ form.due_date(class_="form-control required-field", min_="2023-09-01", max_="2027-09-01") }}
+      {% for error in form.due_date.errors %}
+    <div class="alert alert-danger" role="alert">{{ error }}</div>
+    {% endfor %}
+    </p>
+    <!-- Due Time -->
+    <p>
+      <label for="due_time" class="form-label">Due Time</label>
+      {{ form.due_time(class_="form-control") }}
+      {% for error in form.due_time.errors %}
+    <div class="alert alert-danger" role="alert">{{ error }}</div>
+    {% endfor %}
+    </p>
+    <!-- Description -->
+    <p>
+      <label for="desc" class="form-label">Description</label>
+      {{ form.desc(class_="form-control", maxlength_="500", rows_="5") }}
+    <p id="desc-count" class="text-danger text-end">500 characters remaining</p>
+    {% for error in form.desc.errors %}
+    <div class="alert alert-danger" role="alert">{{ error }}</div>
+    {% endfor %}
+    </p>
+    <!-- Submit -->
+    <p title="Please fill in all required fields">
+      <input type="submit" id="add-assessment-btn" class="btn btn-primary" value="Save Assessment" disabled />
+    </p>
+  </form>
+</div>
+<!-- Scripts -->
+<script src="../static/js/add.js"></script>
+
+{% endblock %}

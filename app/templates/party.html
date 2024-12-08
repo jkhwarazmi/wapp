@@ -1,0 +1,310 @@
+{% extends "base.html" %}
+{% block content %}
+
+<!-- IF A USER LEAVES DO THEIR RATINGS AND COMMENTS REMAIN???? -->
+
+<div id="main-content">
+  <div class="row">
+    <!-- Watch Party Details Section -->
+    <div class="col-md-8">
+      <div class="mb-4">
+        <h2>{{ wp.title }}</h2>
+        <p class="text-muted mb-0">Created by {{ owner.username }}</p>
+        <p class="text-muted mb-0">Last Updated: {{ wp.updated_at.strftime('%d/%m/%Y at %H:%M') }}</p>
+      </div>
+      
+      <div class="mb-4">
+        <div class="row">
+          <div class="col-md-6">
+            <p>Location: {{ wp.location or "No location specified" }}</p>
+            <p>Start Time: {{ wp.start_time.strftime('%d/%m/%Y at %H:%M') }}</p>
+            <p>Visibility: {{ "Private" if wp.is_private else "Public" }}</p>
+            <br>
+            <p>Description:</p>
+            <p>{{ wp.description or "No description provided" }}</p>
+          </div>
+          <div class="col-md-6">
+            <p><strong>Members:</strong></p>
+            <ul class="list-unstyled">
+              <li class="d-flex align-items-center gap-2 mb-2">
+                <strong>{{ owner.username }}</strong>
+                <div class="d-flex align-items-center justify-content-center rounded-circle text-white" 
+                  style="width: 30px; height: 30px; background-color: {{ owner.profile_colour }}">
+                  <span class="fs-6 fw-semibold">{{ owner.username[0] }}</span>
+                </div>
+              </li>
+              {% for member in members %}
+              <li class="d-flex align-items-center gap-2 mb-2">
+                {{ member.username }}
+                <div class="d-flex align-items-center justify-content-center rounded-circle text-white" 
+                  style="width: 30px; height: 30px; background-color: {{ member.profile_colour }}">
+                  <span class="fs-6 fw-semibold">{{ member.username[0] }}</span>
+                </div>
+              </li>
+              {% endfor %}
+            </ul>
+          </div>
+        </div>
+      </div>
+      <hr>
+      <!-- Ratings Section -->
+      <div class="d-flex flex-column flex-lg-row gap-4">
+        <!-- Average Rating Column -->
+        <div class="flex-grow-1 text-center">
+          <h5 class="mb-3">Average Rating</h5>
+          {% if avg_rating != None %}
+            <div class="d-flex flex-column align-items-center gap-3">
+              <input type="text" class="kv-fa rating-display" 
+                    value="{{ avg_rating }}"
+                    data-size="sm" 
+                    title="Average rating: {{ avg_rating }}" 
+                    readonly>
+              <span class="text-muted fs-5">({{ "%.1f"|format(avg_rating) }})</span>
+            </div>
+          {% else %}
+            <p class="text-muted mb-0 fs-5" id="no-avg">No ratings yet</p>
+          {% endif %}
+        </div>
+
+        <!-- User Rating Column -->
+        <div class="flex-grow-1 text-center">
+          <h5 class="mb-3">Your Rating</h5>
+          {% if is_owner or is_member %}
+            <div class="d-flex flex-column align-items-center gap-3">
+              {% if rating == None %}
+                <p class="text-muted mb-0 fs-5" id="no-rating">
+                  You haven't rated this watch party yet
+                </p>
+              {% else %}
+                <input type="text" class="kv-fa rating-display" 
+                      value="{{ rating }}"
+                      data-size="sm" 
+                      readonly
+                      id="rating-current">
+              {% endif %}
+
+              <form action="/party/rate/{{ wp.url }}" 
+                    method="POST" 
+                    id="rating-form"
+                    class="d-flex flex-column align-items-center gap-3">
+                <input type="hidden" name="csrf_token" value="{{ csrf_token() }}"/>
+                {{ rating_form.rating(
+                  type="number", 
+                  class_="rating-input",
+                  data_min="0",
+                  data_max="5",
+                  data_step="1",
+                  data_size="md",
+                  data_show_clear="false",
+                  data_show_caption="false",
+                  data_show_label="false",
+                  value=rating if rating else ""
+                ) }}
+                <button type="submit" class="btn btn-warning btn-sm px-4">
+                  {{ "Change Rating" if rating else "Rate" }}
+                </button>
+              </form>
+            </div>
+          {% else %}
+            <p class="text-muted mb-0 fs-5">
+              You must be a member of this watch party to rate it
+            </p>
+          {% endif %}
+        </div>
+      </div>
+      <hr>
+      <!-- Comment Section -->
+      <div id="comments">
+        <h4 class="my-3">Comments</h4>
+        {% for comment in comments %}
+        <div class="card p-3 shadow-sm mb-3 comment">
+          {% if comment.deleted_at == None %}
+          <!-- Delete Button-->
+          {% if comment.can_edit and (is_owner or is_member) %}
+          <form action="/party/comment/delete/{{ wp.url }}/{{ comment.id }}" method="POST" class="delete-comment">
+            <input type="hidden" name="csrf_token" value="{{ csrf_token() }}"/>
+            <button type="submit" 
+                    class="position-absolute top-0 start-0 translate-middle btn btn-danger rounded-circle d-flex align-items-center justify-content-center" 
+                    style="width: 28px; height: 28px; padding: 0;"
+                    title="Delete this comment">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="white" viewBox="0 0 16 16">
+                <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+              </svg>
+            </button>
+          </form>
+          {% endif %}
+          <div class="d-flex flex-wrap justify-content-between align-items-center gap-2">
+            <div class="order-1 order-sm-0">
+              <p class="text-muted mb-2" id="{{ comment.id }}-updated">
+                {{ comment.updated_at.strftime("%H:%M, %d/%m/%Y") }}
+              </p>
+            </div>
+            <div class="d-flex align-items-center gap-2 order-0 order-sm-1">
+              <span class="text-muted">{{ comment.username }}</span>
+              <div class="d-flex align-items-center justify-content-center rounded-circle text-white"
+                   style="width: 30px; height: 30px; background-color: {{ comment.profile_colour }}">
+                <span class="fs-6 fw-semibold">{{ comment.username[0] }}</span>
+              </div>
+            </div>
+          </div>
+          <p id="{{ comment.id }}-content">{{ comment.content }}</p>
+          {% if comment.can_edit %}
+          <!-- Edit Form -->
+          <form action="/party/comment/edit/{{ wp.url }}/{{ comment.id }}" method="POST" class="edit-comment-form" id="edit-form-{{ comment.id }}" style="display: none;">
+            <input type="hidden" name="csrf_token" value="{{ csrf_token() }}"/>
+            <div class="form-group">
+              <div class="mb-3">
+                {{ comment_form.content(class_="form-control comment", rows="3", placeholder="Edit your comment...") }}
+                <div class="d-flex justify-content-between align-items-center mt-2">
+                  <p class="text-muted mb-0 comment-chars"></p>
+                  <div class="d-flex gap-2">
+                    <button type="submit" class="btn btn-primary btn-sm px-3">
+                      Save Changes
+                    </button>
+                  </div>
+                </div>
+              </div>
+              {% for error in comment_form.errors %}
+              <div class="alert alert-danger py-2" role="alert">{{ error }}</div>
+              {% endfor %}
+            </div>
+          </form>
+          {% endif %}
+          <!-- Like/Dislike Buttons -->
+          {% if is_owner or is_member %}
+          <div class="d-flex flex-column gap-2">
+            <div class="d-flex flex-column flex-sm-row justify-content-between align-items-start align-items-sm-center gap-2">
+              <div class="d-flex flex-column flex-sm-row gap-2">
+
+                <!-- Like Button -->
+                <div class="d-flex align-items-center">
+                  <button class="vote-btn btn btn-outline-primary btn-sm d-inline-flex align-items-center gap-1" 
+                      id="like-{{ comment.id }}" title="Like this comment">
+                      {% if comment.user_reaction %}
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                        <path d="M6.956 1.745C7.021.81 7.908.087 8.864.325l.261.066c.463.116.874.456 1.012.965.22.816.533 2.511.062 4.51a9.84 9.84 0 0 1 .443-.051c.713-.065 1.669-.072 2.516.21.518.173.994.681 1.2 1.273.184.532.16 1.162-.234 1.733.058.119.103.242.138.363.077.27.113.567.113.856 0 .289-.036.586-.113.856-.039.135-.09.273-.16.404.169.387.107.819-.003 1.148a3.163 3.163 0 0 1-.488.901c.054.152.076.312.076.465 0 .305-.089.625-.253.912C13.1 15.522 12.437 16 11.5 16H8c-.605 0-1.07-.081-1.466-.218a4.82 4.82 0 0 1-.97-.484l-.048-.03c-.504-.307-.999-.609-2.068-.722C2.682 14.464 2 13.846 2 13V9c0-.85.685-1.432 1.357-1.615.849-.232 1.574-.787 2.132-1.41.56-.627.914-1.28 1.039-1.639.199-.575.356-1.539.428-2.59z"/>
+                      </svg>
+                      <span>Liked</span>
+                      {% else %}
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                        <path d="M8.864.046C7.908-.193 7.02.53 6.956 1.466c-.072 1.051-.23 2.016-.428 2.59-.125.36-.479 1.013-1.04 1.639-.557.623-1.282 1.178-2.131 1.41C2.685 7.288 2 7.87 2 8.72v4.001c0 .845.682 1.464 1.448 1.545 1.07.114 1.564.415 2.068.723l.048.03c.272.165.578.348.97.484.397.136.861.217 1.466.217h3.5c.937 0 1.599-.477 1.934-1.064a1.86 1.86 0 0 0 .254-.912c0-.152-.023-.312-.077-.464.201-.263.38-.578.488-.901.11-.33.172-.762.004-1.149.069-.13.12-.269.159-.403.077-.27.113-.568.113-.857 0-.288-.036-.585-.113-.856a2.144 2.144 0 0 0-.138-.362 1.9 1.9 0 0 0 .234-1.734c-.206-.592-.682-1.1-1.2-1.272-.847-.282-1.803-.276-2.516-.211a9.84 9.84 0 0 0-.443.05 9.365 9.365 0 0 0-.062-4.509A1.38 1.38 0 0 0 9.125.111L8.864.046zM11.5 14.721H8c-.51 0-.863-.069-1.14-.164-.281-.097-.506-.228-.776-.393l-.04-.024c-.555-.339-1.198-.731-2.49-.868-.333-.036-.554-.29-.554-.55V8.72c0-.254.226-.543.62-.65 1.095-.3 1.977-.996 2.614-1.708.635-.71 1.064-1.475 1.238-1.978.243-.7.407-1.768.482-2.85.025-.362.36-.594.667-.518l.262.066c.16.04.258.143.288.255a8.34 8.34 0 0 1-.145 4.725.5.5 0 0 0 .595.644l.003-.001.014-.003.058-.014a8.908 8.908 0 0 1 1.036-.157c.663-.06 1.457-.054 2.11.164.175.058.45.3.57.65.107.308.087.67-.266 1.022l-.353.353.353.354c.043.043.105.141.154.315.048.167.075.37.075.581 0 .212-.027.414-.075.582-.05.174-.111.272-.154.315l-.353.353.353.354c.047.047.109.177.005.488a2.224 2.224 0 0 1-.505.805l-.353.353.353.354c.006.005.041.05.041.17a.866.866 0 0 1-.121.416c-.165.288-.503.56-1.066.56z"/>
+                      </svg>
+                      <span>Like</span>
+                      {% endif %}
+                      <span class="ms-1 badge bg-secondary">{{ comment.likes }}</span>
+                  </button>
+                </div>
+          
+                <!-- Dislike Button -->
+                <div class="d-flex align-items-center">
+                  <button class="vote-btn btn btn-outline-danger btn-sm d-inline-flex align-items-center gap-1" 
+                    id="dislike-{{ comment.id }}" title="Dislike this comment">
+                    {% if comment.user_reaction == False %}
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                      <path d="M8.864 15.674c-.956.24-1.843-.484-1.908-1.42-.072-1.05-.23-2.015-.428-2.59-.125-.36-.479-1.012-1.04-1.638-.557-.624-1.282-1.179-2.131-1.41C2.685 8.432 2 7.85 2 7V3c0-.845.682-1.464 1.448-1.546 1.07-.113 1.564-.415 2.068-.723l.048-.029c.272-.166.578-.349.97-.484C6.931.08 7.395 0 8 0h3.5c.937 0 1.599.478 1.934 1.064.164.287.254.607.254.913 0 .152-.023.312-.077.464.201.262.38.577.488.9.11.33.172.762.004 1.15.069.13.12.268.159.403.077.27.113.567.113.856 0 .289-.036.586-.113.856-.035.12-.08.244-.138.363.394.571.418 1.2.234 1.733-.206.592-.682 1.1-1.2 1.272-.847.283-1.803.276-2.516.211a9.877 9.877 0 0 1-.443-.05 9.364 9.364 0 0 1-.062 4.51c-.138.508-.55.848-1.012.964l-.261.065z"/>
+                    </svg>
+                    <span>Disliked</span>
+                    {% else %}
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                      <path d="M8.864 15.674c-.956.24-1.843-.484-1.908-1.42-.072-1.05-.23-2.015-.428-2.59-.125-.36-.479-1.012-1.04-1.638-.557-.624-1.282-1.179-2.131-1.41C2.685 8.432 2 7.85 2 7V3c0-.845.682-1.464 1.448-1.546 1.07-.113 1.564-.415 2.068-.723l.048-.029c.272-.166.578-.349.97-.484C6.931.08 7.395 0 8 0h3.5c.937 0 1.599.478 1.934 1.064.164.287.254.607.254.913 0 .152-.023.312-.077.464.201.262.38.577.488.9.11.33.172.762.004 1.15.069.13.12.268.159.403.077.27.113.567.113.856 0 .289-.036.586-.113.856-.035.12-.08.244-.138.363.394.571.418 1.2.234 1.733-.206.592-.682 1.1-1.2 1.272-.847.283-1.803.276-2.516.211a9.877 9.877 0 0 1-.443-.05 9.364 9.364 0 0 1-.062 4.51c-.138.508-.55.848-1.012.964l-.261.065zM11.5 1H8c-.51 0-.863.068-1.14.163-.281.097-.506.229-.776.393l-.04.025c-.555.338-1.198.73-2.49.868-.333.035-.554.29-.554.55V7c0 .255.226.543.62.65 1.095.3 1.977.997 2.614 1.709.635.71 1.064 1.475 1.238 1.977.243.7.407 1.768.482 2.85.025.362.36.595.667.518l.262-.065c.16-.04.258-.144.288-.255a8.34 8.34 0 0 0-.145-4.726.5.5 0 0 1 .595-.643h.003l.014.004.058.013a8.912 8.912 0 0 0 1.036.157c.663.06 1.457.054 2.11-.163.175-.059.45-.301.57-.651.107-.308.087-.67-.266-1.021L12.793 7l.353-.354c.043-.042.105-.14.154-.315.048-.167.075-.37.075-.581 0-.211-.027-.414-.075-.581-.05-.174-.111-.273-.154-.315l-.353-.354.353-.354c.047-.047.109-.176.005-.488a2.224 2.224 0 0 0-.505-.804l-.353-.354.353-.354c.006-.005.041-.05.041-.17a.866.866 0 0 0-.121-.415C12.4 1.272 12.063 1 11.5 1z"/>
+                    </svg>
+                    <span>Dislike</span>
+                    {% endif %}
+                    <span class="ms-1 badge bg-secondary">{{ comment.dislikes }}</span>
+                  </button>
+                </div>
+              </div>
+          
+              <!-- Edit Button -->
+              {% if comment.can_edit %}
+              <button class="edit-btn btn btn-warning btn-sm px-3 d-inline-flex align-items-center gap-1" 
+                id="edit-{{ comment.id }}" title="Edit this comment">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                  <path d="M12.146.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-10 10a.5.5 0 0 1-.168.11l-5 2a.5.5 0 0 1-.65-.65l2-5a.5.5 0 0 1 .11-.168l10-10zM11.207 2.5 13.5 4.793 14.793 3.5 12.5 1.207 11.207 2.5zm1.586 3L10.5 3.207 4 9.707V10h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.293l6.5-6.5zm-9.761 5.175-.106.106-1.528 3.821 3.821-1.528.106-.106A.5.5 0 0 1 5 12.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.468-.325z"/>
+                </svg>
+                <span>Edit</span>
+              </button>
+              {% endif %}
+            </div>
+          </div>
+          {% endif %}
+          {% else %}
+          <p class="mt-3 text-center">Comment deleted</p>
+          {% endif %}
+        </div>
+        {% endfor %}
+      </div>
+      <!-- New Comment -->
+      {% if is_member or is_owner %}
+      <form action="/party/comment/{{ wp.url }}" method="POST" id="new-comment" class="content-box movie-box bg-body-tertiary p-3 shadow-sm mb-3">
+        <input type="hidden" name="csrf_token" value="{{ csrf_token() }}"/>
+        <div class="form-group">
+          <div class="mb-3">
+            <label for="comment" class="form-label h6 mb-2">New Comment</label>
+            {{ comment_form.content(class_="form-control comment", rows="3", placeholder="Add a comment...") }}
+            <div class="d-flex flex-column flex-sm-row justify-content-between align-items-start align-items-sm-center gap-2 mt-2">
+              <p class="text-muted mb-0 comment-chars">500 characters remaining</p>
+              <button type="submit" class="btn btn-warning px-3 d-inline-flex align-items-center">
+                <span>Add Comment</span>
+              </button>
+            </div>
+          </div>
+          {% for error in comment_form.errors %}
+          <div class="alert alert-danger py-2" role="alert">{{ error }}</div>
+          {% endfor %}
+        </div>
+      </form>
+      {% endif %}
+    </div>
+
+    <!-- Movie Details and Options Section -->
+    <div class="col-md-4">
+      <div class="content-box movie-box bg-body-tertiary px-3">
+        <div class="text-center mb-4">
+          <img src="https://image.tmdb.org/t/p/w500{{ movie.poster_path }}"
+               alt="{{ movie.title }} Poster"
+               class="img-fluid rounded mb-3 d-none d-md-inline-block">
+          <h4>{{ movie.title }}</h4>
+          <p class="text-muted">Released: {{ "/".join(movie.release_date.split("-")[::-1]) }}</p>
+          <p>{{ movie.overview }}</p>
+        </div>
+        <hr>
+        <!-- Watch Party Options -->
+        <div class="d-flex flex-wrap gap-2 mt-4 {% if is_owner %}{% else %}justify-content-center{% endif %}">
+          {% if is_owner %}
+            <button id="edit-party" class="btn btn-warning flex-fill">Edit Watch Party</button>
+            <form action="/party/delete/{{ wp.url }}" method="POST" id="delete-form" class="flex-fill">
+              <input type="hidden" name="csrf_token" value="{{ csrf_token() }}"/>
+              <button type="submit" class="btn btn-danger w-100">Delete Watch Party</button>
+            </form>
+            <input type="hidden" id="current-movie-id" value="{{ wp.movie_id }}">
+            <input type="hidden" id="current-start-date" value="{{ wp.start_time.strftime('%Y-%m-%d') }}">
+            <input type="hidden" id="current-start-time" value="{{ wp.start_time.strftime('%H:%M') }}">
+            <input type="hidden" id="current-is-private" value="{{ 'true' if wp.is_private else '' }}">
+            <input type="hidden" id="wp-url" value="{{ wp.url }}">
+            <div id="current-title" class="d-none">{{ wp.title }}</div>
+            <div id="current-location" class="d-none">{{ wp.location or "" }}</div>
+            <div id="current-description" class="d-none">{{ wp.description or "" }}</div>
+            <input type="hidden" id="wp-url" value="{{ wp.url }}">
+          {% elif is_member %}
+            <form action="/party/leave/{{ wp.url }}" method="POST">
+              <input type="hidden" name="csrf_token" value="{{ csrf_token() }}"/>
+              <button type="submit" class="btn btn-warning">Leave Watch Party</button>
+            </form>
+          {% else %}
+            <form action="/party/join/{{ wp.url }}" method="POST">
+              <input type="hidden" name="csrf_token" value="{{ csrf_token() }}"/>
+              <button type="submit" class="btn btn-success">Join Watch Party</button>
+            </form>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="{{ url_for('static', filename='/js/rate.js') }}"></script>
+<script src="{{ url_for('static', filename='/js/comment.js') }}"></script>
+<script src="{{ url_for('static', filename='/js/partyPage.js') }}"></script>
+
+{% endblock %}

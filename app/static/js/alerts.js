@@ -21,6 +21,6 @@ function autoFadeAlerts() {
   })
 }
   
-// Initialize when DOM is loaded
+// Initialise when DOM is loaded
 document.addEventListener("DOMContentLoaded", autoFadeAlerts)
   

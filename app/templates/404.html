@@ -2,7 +2,11 @@
 {% block content %}
 
 <div class="text-center mx-auto" style="max-width: 500px;">
-  <h1 class="mt-5 mb-4">404: Page Not Found</h1>
+  <!-- Source: https://i.gifer.com/yH.gif -->
+   <!-- Gif from Pulp Fiction (1994) -->
+  <img src="{{ url_for('static', filename='/images/404.gif') }}" class="img-fluid mt-5 mb-0" alt="Confused John Travolta gif from Pulp Fiction">
+  <hr class="mt-0">
+  <h1 class="mb-4">404: Page Not Found</h1>
   <h5 class="mb-4">The page you requested is unavailable.</h5>
   <h5><a href="/">Click here</a> to return to the homepage.</h5>
 </div>

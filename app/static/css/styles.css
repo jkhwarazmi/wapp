@@ -1,5 +1,5 @@
 :root {
-  --primary-yellow: #EBB800;
+  --primary-yellow: #FDB908;
   --secondary-yellow: #F8CB27;
 }
 
@@ -7,6 +7,58 @@ body {
   font-family: "Manrope", Arial, Helvetica, sans-serif;
   transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
   min-height: 100vh;
+  margin: 0;
+}
+
+#main-content {
+  background-color: var(--bs-secondary-bg);
+  margin-top: 70px;
+  margin-bottom: 20px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  border-radius: 30px;
+  padding: 50px;
+}
+
+.text-danger {
+  margin-top: 5px;
+}
+
+.text-shadow {
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.scrolling-container {
+  overflow: hidden;
+  white-space: nowrap;
+  position: relative;
+  max-width: 470px;
+  padding: 20px 0;
+  margin: 0 auto;
+}
+
+.poster {
+  display: inline-block;
+  margin: 0 10px;
+  width: 150px;
+  height: 225px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.scrolling-container .scroll-content {
+  display: flex;
+  animation: scroll 15s linear infinite;
+  width: fit-content;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
 }
 
 .theme-icon, .theme-icon-active use {
@@ -96,9 +148,21 @@ border-bottom-color: var(--secondary-yellow);
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
 }
 
-/* Assessment card effects */
+.content-box.movie-box, [data-bs-theme="dark"] .content-box.movie-box {
+  box-shadow: none;
+}
+
+/* Party card effects */
 .card:hover {
   transform: scale(1.05);
+}
+
+.card.comment:hover {
+  transform: none;
+}
+
+.card.comment {
+  cursor: auto;
 }
 
 .card {
@@ -113,12 +177,12 @@ border-bottom-color: var(--secondary-yellow);
 
 .expanded-card {
   position: fixed;
-  top: 50%;
+  top: 10%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translateX(-50%);
   width: 90%;
   max-width: 800px;
-  max-height: 90vh;
+  max-height: 80vh;
   z-index: 1000;
   background: var(--bs-body-bg);
   border-radius: 12px;
@@ -136,12 +200,27 @@ border-bottom-color: var(--secondary-yellow);
   border-bottom: 1px solid var(--bs-secondary-bg);
   border-radius: 12px 12px 0 0;
   z-index: 1;
+  flex-shrink: 0;
+}
+
+#search-form, #create-form {
+  transition: opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  opacity: 1;
+  width: 100%;
+}
+
+#search-form.fade-out, #create-form.fade-out {
+  opacity: 0;
+  transform: scale(0.98);
+  transition: opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1), transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .expanded-content {
   flex: 1;
   overflow-y: auto;
   padding: 1.5rem;
+  min-height: 0;
+  position: relative;
 }
 
 .card-overlay {
@@ -158,11 +237,11 @@ border-bottom-color: var(--secondary-yellow);
 @keyframes expandCard {
   from {
     opacity: 0;
-    transform: translate(-50%, -48%) scale(0.95);
+    transform: translateX(-50%) scale(0.95);
   }
   to {
     opacity: 1;
-    transform: translate(-50%, -50%) scale(1);
+    transform: translateX(-50%) scale(1);
   }
 }
 
@@ -199,16 +278,40 @@ border-bottom-color: var(--secondary-yellow);
   border-bottom: 1px solid var(--bs-secondary-bg);
 }
 
-#add-form {
-  margin-top: 40px;
+#user-form {
   padding: 2rem;
-  border-radius: 12px 12px 0 0;
+  max-width: 700px;
+  margin: 40px auto;
+  border-radius: 12px;
   box-shadow: 0 24px 48px rgba(0, 0, 0, 0.2);
+}
+
+.form-group {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.form-group.login-form {
+  margin: 20px auto;
+}
+
+#profile-icon {
+  border-color: rgba(0, 0, 0, 0);
+  margin-left: 10px
+}
+
+.option-text {
+  margin-top: 20px;
 }
 
 .nav-link {
   color: var(--bs-body-color);
 }
+
+.nav-link.nav-btn {
+  color: black;
+}
+
 
 #due_date {
   margin-bottom: 30px;
@@ -272,6 +375,38 @@ border-bottom-color: var(--secondary-yellow);
   .nav-pad {
     margin-top: 5px;
   }
+
+  .nav-action {
+    margin-left: 20px;
+  }
+
+  #profile-icon {
+    margin-top: 10px;
+  }
+}
+
+.party-link {
+  text-decoration: none;
+}
+
+.color-option input[type="radio"]:checked + label {
+  border: 3px solid #007bff !important;
+  box-shadow: 0 0 5px rgba(0,123,255,0.5);
+}
+
+.color-option label:hover {
+  transform: scale(1.1);
+  transition: transform 0.2s ease;
+}
+
+.form-mode-create .edit-text,
+.form-mode-edit .create-text {
+    display: none;
+}
+
+.form-mode-create .create-text,
+.form-mode-edit .edit-text {
+    display: inline;
 }
 
 /* Make the assessment toggles visible on narrow phones */
@@ -279,4 +414,20 @@ border-bottom-color: var(--secondary-yellow);
   #assessment-complete-btn, #assessment-incomplete-btn {
     padding: 10px;
   }  
+
+  .toggle-tab {
+    padding: 0.25rem 0.5rem;
+    font-size: 0.75rem;
+  }
+}
+
+@media (max-width: 650px) {
+  /* Hide movie description on narrow devices */
+  .movie-description {
+    display: none;
+  }
+
+  .create-poster {
+    margin-top: -20px;
+  }
 }

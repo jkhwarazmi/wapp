@@ -1,0 +1,247 @@
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 127-006-388
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.themoviedb.org:443
+DEBUG:urllib3.connectionpool:https://api.themoviedb.org:443 "GET /3/movie/858017?language=en-US HTTP/1.1" 200 None
+INFO:werkzeug:127.0.0.1 - - [08/Dec/2024 02:05:13] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [08/Dec/2024 02:05:13] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/Dec/2024 02:05:13] "[36mGET /static/js/theme.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/Dec/2024 02:05:13] "[36mGET /static/js/index.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/Dec/2024 02:05:13] "[36mGET /static/js/alerts.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/Dec/2024 02:05:13] "[36mGET /static/images/icon.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/Dec/2024 02:05:13] "[36mGET /static/js/party.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/Dec/2024 02:05:13] "[36mGET /static/js/csrf.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/Dec/2024 02:05:13] "[36mGET /static/images/favicon.ico HTTP/1.1[0m" 304 -
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.themoviedb.org:443
+DEBUG:urllib3.connectionpool:https://api.themoviedb.org:443 "GET /3/movie/858017?language=en-US HTTP/1.1" 200 None
+INFO:werkzeug:127.0.0.1 - - [08/Dec/2024 02:05:13] "GET /party/7b72bf7062bc45fbb81f0700d68116d4 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [08/Dec/2024 02:05:13] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/Dec/2024 02:05:13] "[36mGET /static/js/theme.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/Dec/2024 02:05:13] "[36mGET /static/js/party.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/Dec/2024 02:05:13] "[36mGET /static/js/comment.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/Dec/2024 02:05:13] "[36mGET /static/images/icon.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/Dec/2024 02:05:13] "[36mGET /static/js/alerts.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/Dec/2024 02:05:13] "[36mGET /static/js/csrf.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/Dec/2024 02:05:13] "[36mGET /static/js/rate.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/Dec/2024 02:05:13] "[36mGET /static/js/partyPage.js HTTP/1.1[0m" 304 -
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.themoviedb.org:443
+DEBUG:urllib3.connectionpool:https://api.themoviedb.org:443 "GET /3/movie/858017?language=en-US HTTP/1.1" 200 None
+INFO:werkzeug:127.0.0.1 - - [08/Dec/2024 02:05:19] "GET /party/7b72bf7062bc45fbb81f0700d68116d4 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [08/Dec/2024 02:05:19] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/Dec/2024 02:05:19] "[36mGET /static/js/theme.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/Dec/2024 02:05:19] "[36mGET /static/js/party.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/Dec/2024 02:05:19] "[36mGET /static/js/comment.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/Dec/2024 02:05:19] "[36mGET /static/images/icon.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/Dec/2024 02:05:19] "[36mGET /static/js/rate.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/Dec/2024 02:05:19] "[36mGET /static/js/alerts.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/Dec/2024 02:05:19] "[36mGET /static/js/partyPage.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/Dec/2024 02:05:19] "[36mGET /static/js/csrf.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/Dec/2024 02:05:19] "[36mGET /static/images/favicon.ico HTTP/1.1[0m" 304 -
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.themoviedb.org:443
+DEBUG:urllib3.connectionpool:https://api.themoviedb.org:443 "GET /3/movie/858017?language=en-US HTTP/1.1" 200 None
+INFO:werkzeug:127.0.0.1 - - [08/Dec/2024 02:05:20] "GET /party/7b72bf7062bc45fbb81f0700d68116d4 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [08/Dec/2024 02:05:20] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/Dec/2024 02:05:20] "[36mGET /static/js/party.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/Dec/2024 02:05:20] "[36mGET /static/js/theme.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/Dec/2024 02:05:20] "[36mGET /static/js/comment.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/Dec/2024 02:05:20] "[36mGET /static/images/icon.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/Dec/2024 02:05:20] "[36mGET /static/js/rate.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/Dec/2024 02:05:20] "[36mGET /static/js/partyPage.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/Dec/2024 02:05:20] "[36mGET /static/js/alerts.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/Dec/2024 02:05:20] "[36mGET /static/js/csrf.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/Dec/2024 02:05:20] "[36mGET /static/images/favicon.ico HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/Dec/2024 02:05:29] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.themoviedb.org:443
+DEBUG:urllib3.connectionpool:https://api.themoviedb.org:443 "GET /3/movie/858017?language=en-US HTTP/1.1" 200 None
+INFO:werkzeug:127.0.0.1 - - [08/Dec/2024 02:05:46] "GET /party/7b72bf7062bc45fbb81f0700d68116d4 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [08/Dec/2024 02:05:46] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/Dec/2024 02:05:46] "[36mGET /static/js/theme.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/Dec/2024 02:05:46] "[36mGET /static/js/comment.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/Dec/2024 02:05:46] "[36mGET /static/js/rate.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/Dec/2024 02:05:46] "[36mGET /static/images/icon.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/Dec/2024 02:05:46] "[36mGET /static/js/partyPage.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/Dec/2024 02:05:46] "[36mGET /static/js/party.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/Dec/2024 02:05:46] "[36mGET /static/js/alerts.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/Dec/2024 02:05:46] "[36mGET /static/js/csrf.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/Dec/2024 02:05:46] "[36mGET /static/images/favicon.ico HTTP/1.1[0m" 304 -
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.themoviedb.org:443
+DEBUG:urllib3.connectionpool:https://api.themoviedb.org:443 "GET /3/movie/858017?language=en-US HTTP/1.1" 200 None
+INFO:werkzeug:127.0.0.1 - - [08/Dec/2024 02:10:21] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [08/Dec/2024 02:10:21] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/Dec/2024 02:10:21] "[36mGET /static/js/theme.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/Dec/2024 02:10:21] "[36mGET /static/js/index.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/Dec/2024 02:10:21] "[36mGET /static/js/alerts.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/Dec/2024 02:10:21] "[36mGET /static/js/party.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/Dec/2024 02:10:21] "[36mGET /static/images/icon.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/Dec/2024 02:10:21] "[36mGET /static/js/csrf.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/Dec/2024 02:10:24] "GET /profile HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [08/Dec/2024 02:10:25] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/Dec/2024 02:10:25] "[36mGET /static/js/theme.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/Dec/2024 02:10:25] "[36mGET /static/js/party.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/Dec/2024 02:10:25] "[36mGET /static/js/alerts.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/Dec/2024 02:10:25] "[36mGET /static/images/icon.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/Dec/2024 02:10:25] "[36mGET /static/js/csrf.js HTTP/1.1[0m" 304 -
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.themoviedb.org:443
+DEBUG:urllib3.connectionpool:https://api.themoviedb.org:443 "GET /3/movie/858017?language=en-US HTTP/1.1" 200 None
+INFO:werkzeug:127.0.0.1 - - [08/Dec/2024 02:14:36] "GET /party/7b72bf7062bc45fbb81f0700d68116d4 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [08/Dec/2024 02:14:36] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/Dec/2024 02:14:36] "[36mGET /static/js/theme.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/Dec/2024 02:14:36] "[36mGET /static/js/comment.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/Dec/2024 02:14:36] "[36mGET /static/js/rate.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/Dec/2024 02:14:36] "[36mGET /static/images/icon.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/Dec/2024 02:14:36] "[36mGET /static/js/party.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/Dec/2024 02:14:36] "[36mGET /static/js/alerts.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/Dec/2024 02:14:36] "[36mGET /static/js/csrf.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/Dec/2024 02:14:36] "[36mGET /static/js/partyPage.js HTTP/1.1[0m" 304 -
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.themoviedb.org:443
+DEBUG:urllib3.connectionpool:https://api.themoviedb.org:443 "GET /3/movie/858017?language=en-US HTTP/1.1" 200 None
+INFO:werkzeug:127.0.0.1 - - [08/Dec/2024 02:23:39] "GET /party/7b72bf7062bc45fbb81f0700d68116d4 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [08/Dec/2024 02:23:39] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/Dec/2024 02:23:39] "[36mGET /static/js/theme.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/Dec/2024 02:23:39] "[36mGET /static/js/comment.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/Dec/2024 02:23:39] "[36mGET /static/js/rate.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/Dec/2024 02:23:39] "[36mGET /static/images/icon.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/Dec/2024 02:23:39] "[36mGET /static/js/partyPage.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/Dec/2024 02:23:39] "[36mGET /static/js/alerts.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/Dec/2024 02:23:39] "[36mGET /static/js/party.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/Dec/2024 02:23:39] "[36mGET /static/js/csrf.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/Dec/2024 02:23:40] "[36mGET /static/images/favicon.ico HTTP/1.1[0m" 304 -
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.themoviedb.org:443
+DEBUG:urllib3.connectionpool:https://api.themoviedb.org:443 "GET /3/movie/858017?language=en-US HTTP/1.1" 200 None
+INFO:werkzeug:127.0.0.1 - - [08/Dec/2024 02:23:40] "GET /party/7b72bf7062bc45fbb81f0700d68116d4 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [08/Dec/2024 02:23:40] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/Dec/2024 02:23:40] "[36mGET /static/js/comment.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/Dec/2024 02:23:40] "[36mGET /static/js/theme.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/Dec/2024 02:23:40] "[36mGET /static/js/rate.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/Dec/2024 02:23:40] "[36mGET /static/images/icon.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/Dec/2024 02:23:40] "[36mGET /static/js/alerts.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/Dec/2024 02:23:40] "[36mGET /static/js/partyPage.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/Dec/2024 02:23:40] "[36mGET /static/js/party.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/Dec/2024 02:23:40] "[36mGET /static/js/csrf.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/Dec/2024 02:23:40] "[36mGET /static/images/favicon.ico HTTP/1.1[0m" 304 -
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.themoviedb.org:443
+DEBUG:urllib3.connectionpool:https://api.themoviedb.org:443 "GET /3/movie/858017?language=en-US HTTP/1.1" 200 None
+INFO:werkzeug:127.0.0.1 - - [08/Dec/2024 02:23:40] "GET /party/7b72bf7062bc45fbb81f0700d68116d4 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [08/Dec/2024 02:23:40] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/Dec/2024 02:23:40] "[36mGET /static/js/theme.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/Dec/2024 02:23:40] "[36mGET /static/js/comment.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/Dec/2024 02:23:40] "[36mGET /static/js/rate.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/Dec/2024 02:23:40] "[36mGET /static/images/icon.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/Dec/2024 02:23:40] "[36mGET /static/js/alerts.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/Dec/2024 02:23:40] "[36mGET /static/js/partyPage.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/Dec/2024 02:23:40] "[36mGET /static/js/party.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/Dec/2024 02:23:40] "[36mGET /static/js/csrf.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/Dec/2024 02:23:40] "[36mGET /static/images/favicon.ico HTTP/1.1[0m" 304 -
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.themoviedb.org:443
+DEBUG:urllib3.connectionpool:https://api.themoviedb.org:443 "GET /3/movie/858017?language=en-US HTTP/1.1" 200 None
+INFO:werkzeug:127.0.0.1 - - [08/Dec/2024 02:25:56] "GET /party/7b72bf7062bc45fbb81f0700d68116d4 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [08/Dec/2024 02:25:56] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/Dec/2024 02:25:56] "[36mGET /static/js/rate.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/Dec/2024 02:25:56] "[36mGET /static/js/theme.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/Dec/2024 02:25:56] "[36mGET /static/js/comment.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/Dec/2024 02:25:56] "[36mGET /static/images/icon.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/Dec/2024 02:25:56] "[36mGET /static/js/partyPage.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/Dec/2024 02:25:56] "[36mGET /static/js/alerts.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/Dec/2024 02:25:56] "[36mGET /static/js/csrf.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/Dec/2024 02:25:56] "[36mGET /static/js/party.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/Dec/2024 02:25:56] "[36mGET /static/images/favicon.ico HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/Dec/2024 02:25:57] "POST /party/rate/7b72bf7062bc45fbb81f0700d68116d4 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [08/Dec/2024 02:26:00] "POST /party/rate/7b72bf7062bc45fbb81f0700d68116d4 HTTP/1.1" 200 -
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.themoviedb.org:443
+DEBUG:urllib3.connectionpool:https://api.themoviedb.org:443 "GET /3/movie/858017?language=en-US HTTP/1.1" 200 None
+INFO:werkzeug:127.0.0.1 - - [08/Dec/2024 02:26:01] "GET /party/7b72bf7062bc45fbb81f0700d68116d4 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [08/Dec/2024 02:26:01] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/Dec/2024 02:26:01] "[36mGET /static/js/theme.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/Dec/2024 02:26:01] "[36mGET /static/js/comment.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/Dec/2024 02:26:01] "[36mGET /static/js/rate.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/Dec/2024 02:26:01] "[36mGET /static/images/icon.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/Dec/2024 02:26:01] "[36mGET /static/js/partyPage.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/Dec/2024 02:26:01] "[36mGET /static/js/party.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/Dec/2024 02:26:01] "[36mGET /static/js/alerts.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/Dec/2024 02:26:01] "[36mGET /static/js/csrf.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/Dec/2024 02:26:01] "[36mGET /static/images/favicon.ico HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/Dec/2024 02:26:29] "GET /profile HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [08/Dec/2024 02:26:29] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/Dec/2024 02:26:29] "[36mGET /static/js/theme.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/Dec/2024 02:26:29] "[36mGET /static/js/alerts.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/Dec/2024 02:26:29] "[36mGET /static/js/profile.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/Dec/2024 02:26:29] "[36mGET /static/images/icon.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/Dec/2024 02:26:29] "[36mGET /static/js/party.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/Dec/2024 02:26:29] "[36mGET /static/js/csrf.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/Dec/2024 02:26:32] "POST /profile HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [08/Dec/2024 02:26:37] "POST /profile HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [08/Dec/2024 02:26:42] "GET /profile HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [08/Dec/2024 02:26:43] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/Dec/2024 02:26:43] "[36mGET /static/js/theme.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/Dec/2024 02:26:43] "[36mGET /static/js/alerts.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/Dec/2024 02:26:43] "[36mGET /static/js/profile.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/Dec/2024 02:26:43] "[36mGET /static/images/icon.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/Dec/2024 02:26:43] "[36mGET /static/js/party.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/Dec/2024 02:26:43] "[36mGET /static/js/csrf.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/Dec/2024 02:26:43] "[36mGET /static/images/favicon.ico HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/Dec/2024 02:27:41] "GET /profile HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [08/Dec/2024 02:27:41] "GET /static/js/profile.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [08/Dec/2024 02:27:41] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/Dec/2024 02:27:41] "[36mGET /static/js/theme.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/Dec/2024 02:27:41] "[36mGET /static/js/alerts.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/Dec/2024 02:27:41] "[36mGET /static/images/icon.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/Dec/2024 02:27:41] "[36mGET /static/js/csrf.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/Dec/2024 02:27:41] "[36mGET /static/js/party.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/Dec/2024 02:27:41] "[36mGET /static/images/favicon.ico HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/Dec/2024 02:27:41] "GET /profile HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [08/Dec/2024 02:27:41] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/Dec/2024 02:27:41] "[36mGET /static/js/theme.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/Dec/2024 02:27:41] "[36mGET /static/js/profile.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/Dec/2024 02:27:41] "[36mGET /static/js/alerts.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/Dec/2024 02:27:41] "[36mGET /static/images/icon.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/Dec/2024 02:27:41] "[36mGET /static/js/party.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/Dec/2024 02:27:41] "[36mGET /static/js/csrf.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/Dec/2024 02:27:41] "[36mGET /static/images/favicon.ico HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/Dec/2024 02:27:41] "GET /profile HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [08/Dec/2024 02:27:41] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/Dec/2024 02:27:41] "[36mGET /static/js/theme.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/Dec/2024 02:27:41] "[36mGET /static/js/profile.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/Dec/2024 02:27:41] "[36mGET /static/js/alerts.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/Dec/2024 02:27:41] "[36mGET /static/images/icon.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/Dec/2024 02:27:41] "[36mGET /static/js/party.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/Dec/2024 02:27:41] "[36mGET /static/js/csrf.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/Dec/2024 02:27:41] "[36mGET /static/images/favicon.ico HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/Dec/2024 02:27:44] "POST /profile HTTP/1.1" 200 -
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.themoviedb.org:443
+DEBUG:urllib3.connectionpool:https://api.themoviedb.org:443 "GET /3/movie/858017?language=en-US HTTP/1.1" 200 None
+INFO:werkzeug:127.0.0.1 - - [08/Dec/2024 02:27:47] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [08/Dec/2024 02:27:47] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/Dec/2024 02:27:47] "[36mGET /static/js/theme.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/Dec/2024 02:27:47] "[36mGET /static/js/index.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/Dec/2024 02:27:47] "[36mGET /static/js/alerts.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/Dec/2024 02:27:47] "[36mGET /static/images/icon.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/Dec/2024 02:27:47] "[36mGET /static/js/party.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/Dec/2024 02:27:47] "[36mGET /static/js/csrf.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/Dec/2024 02:27:49] "GET /profile HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [08/Dec/2024 02:27:49] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/Dec/2024 02:27:49] "[36mGET /static/js/theme.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/Dec/2024 02:27:49] "[36mGET /static/js/alerts.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/Dec/2024 02:27:49] "[36mGET /static/js/profile.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/Dec/2024 02:27:49] "[36mGET /static/images/icon.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/Dec/2024 02:27:49] "[36mGET /static/js/party.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/Dec/2024 02:27:49] "[36mGET /static/js/csrf.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/Dec/2024 02:28:08] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/Dec/2024 02:31:02] "GET /profile HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [08/Dec/2024 02:31:02] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/Dec/2024 02:31:02] "[36mGET /static/js/theme.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/Dec/2024 02:31:02] "GET /static/js/profile.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [08/Dec/2024 02:31:02] "[36mGET /static/js/alerts.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/Dec/2024 02:31:02] "[36mGET /static/images/icon.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/Dec/2024 02:31:02] "[36mGET /static/js/party.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/Dec/2024 02:31:02] "[36mGET /static/js/csrf.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/Dec/2024 02:31:02] "[36mGET /static/images/favicon.ico HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/Dec/2024 02:31:07] "POST /profile HTTP/1.1" 200 -
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.themoviedb.org:443
+DEBUG:urllib3.connectionpool:https://api.themoviedb.org:443 "GET /3/movie/858017?language=en-US HTTP/1.1" 200 None
+INFO:werkzeug:127.0.0.1 - - [08/Dec/2024 02:31:14] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [08/Dec/2024 02:31:14] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/Dec/2024 02:31:14] "[36mGET /static/js/theme.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/Dec/2024 02:31:14] "[36mGET /static/js/index.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/Dec/2024 02:31:14] "[36mGET /static/js/alerts.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/Dec/2024 02:31:14] "[36mGET /static/images/icon.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/Dec/2024 02:31:14] "[36mGET /static/js/party.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [08/Dec/2024 02:31:14] "[36mGET /static/js/csrf.js HTTP/1.1[0m" 304 -

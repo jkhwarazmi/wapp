@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<!-- Heading -->
+<h1 class="mt-5 mb-4 text-center">Login</h1>
+
+<!-- Form -->
+<div id="user-form">
+  <form action="" method="POST" name="Login">
+    {{  form.csrf_token }}
+
+    <!-- Username -->
+    <div class="form-group login-form">
+      <label for="username" class="form-label">Username</label>
+      {{ form.username(class_="form-control required-field", placeholder="Enter your username", id_="enter-username", maxlength_="30") }}
+      {% for error in form.username.errors %} 
+      <div class="alert alert-danger" role="alert">{{ error }}</div>
+      {% endfor %}
+    </div>
+
+    <!-- Password -->
+    <div class="form-group login-form">
+      <label for="password" class="form-label">Password</label>
+      {{ form.password(class_="form-control required-field", placeholder="Enter your password", id_="enter-password", minlength_="8", maxlength_="24") }}
+      {% for error in form.password.errors %}
+      <div class="alert alert-danger" role="alert">{{ error }}</div>
+      {% endfor %}
+    </div>
+
+    <!-- Remember Me -->
+    <div class="form-group login-form">
+      <label for="remember_me" class="form-label">Remember Me &nbsp;</label>
+      {{ form.remember_me(class_="form-check-input") }}
+      {% for error in form.remember_me.errors %}
+      <div class="alert alert-danger" role="alert">{{ error }}</div>
+      {% endfor %}
+    </div>
+
+    <!-- Submit -->
+    <div class="form-group login-form" title="Fill out all fields">
+      <input type="submit" class="btn btn-warning" value="Login" id="login-btn" disabled>
+    </div>
+    
+    <p class="text-end option-text">New here?&nbsp; <a href="{{ url_for('auth.register') }}">Register</a></p>
+  </form>
+</div>
+
+<script src="{{ url_for('static', filename='/js/login.js') }}"></script>
+
+{% endblock %}

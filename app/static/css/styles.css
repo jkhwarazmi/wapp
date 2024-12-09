@@ -133,6 +133,10 @@ body {
   color: white;
 }
 
+.nav-tabs .nav-link.active {
+  color: black;
+}
+
 .nav-tabs .nav-link.active:hover {
 background-color: var(--secondary-yellow);
 border-bottom-color: var(--secondary-yellow);
@@ -334,7 +338,7 @@ border-bottom-color: var(--secondary-yellow);
   }
 
   #profile-icon {
-    margin-top: 10px;
+    margin-top: 10px; 
   }
 }
 

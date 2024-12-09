@@ -7,12 +7,12 @@
 
 <!-- Form -->
 <div id="user-form">
-  <form action="" method="POST" name="Login">
+  <form action="#" method="POST" name="Login">
     {{  form.csrf_token }}
 
     <!-- Username -->
     <div class="form-group login-form">
-      <label for="username" class="form-label">Username</label>
+      <label for="enter-username" class="form-label">Username</label>
       {{ form.username(class_="form-control required-field", placeholder="Enter your username", id_="enter-username", maxlength_="30", autocomplete_="username") }}
       {% for error in form.username.errors %} 
       <div class="alert alert-danger" role="alert">{{ error }}</div>
@@ -21,7 +21,7 @@
 
     <!-- Password -->
     <div class="form-group login-form">
-      <label for="password" class="form-label">Password</label>
+      <label for="enter-password" class="form-label">Password</label>
       {{ form.password(class_="form-control required-field", placeholder="Enter your password", id_="enter-password", minlength_="8", maxlength_="24", autocomplete_="current-password") }}
       {% for error in form.password.errors %}
       <div class="alert alert-danger" role="alert">{{ error }}</div>

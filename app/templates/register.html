@@ -10,11 +10,11 @@
 
 <!-- Form -->
 <div id="user-form">
-  <form action="" method="POST" name="Register" id="register-form">
+  <form action="#" method="POST" name="Register" id="register-form">
     {{ form.csrf_token }}
     <!-- Username -->
     <div class="form-group">
-      <label for="username" class="form-label">Username</label>
+      <label for="enter-username" class="form-label">Username</label>
       {{ form.username(class_="form-control required-field", placeholder="Enter a username", id_="enter-username", maxlength_="30") }}
       <p id="username-warning" class="text-danger" style="visibility: hidden">Invalid username</p>
       {% for error in form.username.errors %} 
@@ -23,7 +23,7 @@
     </div>
     <!-- Email -->
     <div class="form-group">
-      <label for="email" class="form-label">Email</label>
+      <label for="enter-email" class="form-label">Email</label>
       {{ form.email(class_="form-control required-field", placeholder="Enter your email", id_="enter-email",minlength_="5", maxlength_="256") }}
       <p id="email-warning" class="text-danger" style="visibility: hidden">Invalid email</p>
       {% for error in form.email.errors %}
@@ -32,7 +32,7 @@
     </div>
     <!-- Password -->
     <div class="form-group">
-      <label for="password" class="form-label">Password</label>
+      <label for="enter-password" class="form-label">Password</label>
       {{ form.password(class_="form-control required-field", placeholder="Enter a password", id_="enter-password", minlength_="8", maxlength_="24") }}
       <p id="password-warning" class="text-danger" style="visibility: hidden">Invalid password</p>
       {% for error in form.password.errors %}
@@ -41,7 +41,7 @@
     </div>
     <!-- Confirm Password -->
     <div class="form-group">
-      <label for="confirm_password" class="form-label">Confirm Password</label>
+      <label for="enter-confirm" class="form-label">Confirm Password</label>
       {{ form.confirm_password(class_="form-control required-field", placeholder="Confirm your password", id_="enter-confirm", minlength_="8", maxlength_="24") }}
       <p id="confirm-warning" class="text-danger" style="visibility: hidden">Passwords do not match</p>
       {% for error in form.confirm_password.errors %}
@@ -50,7 +50,7 @@
     </div>
     <!-- Submit -->
     <p title="Please fill out all fields correctly" class="form-group">
-      <input type="submit" id="register-btn" class="btn btn-warning" value="Register" disabled />
+      <input type="submit" id="register-btn" class="btn btn-warning" value="Register" disabled>
     </p>
     <p class="text-end option-text">Already have an account?&nbsp; <a href="{{ url_for('auth.login') }}">Login</a></p>
   </form>

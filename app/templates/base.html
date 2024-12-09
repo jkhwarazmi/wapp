@@ -64,14 +64,14 @@
           {% if title == "Watch Parties" or title == "Register" %}
           <!-- Login Link -->
           <div class="nav-item ms-lg-auto me-2 nav-action" title="Login">
-            <a class="btn btn-outline-secondary" href="{{ url_for('auth.login') }}">
+            <a class="btn btn-outline-primary" href="{{ url_for('auth.login') }}">
               Login
             </a>
           </div>
           {% elif title == "Login" %}
           <!-- Register Link -->
           <div class="nav-item ms-lg-auto me-2 nav-action">
-            <a class="btn btn-outline-secondary" href="{{ url_for('auth.register') }}" title="Register">
+            <a class="btn btn-outline-primary" href="{{ url_for('auth.register') }}" title="Register">
               Register
             </a>
           </div>

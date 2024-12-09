@@ -63,20 +63,16 @@
           </ul>
           {% if title == "Watch Parties" or title == "Register" %}
           <!-- Login Link -->
-          <div class="nav-item ms-lg-auto me-2 nav-action">
-            <a class="nav-link btn-hover" href="{{ url_for('auth.login') }}">
-              <button type="button" class="btn btn-outline-secondary" title="Login">
-                  Login
-              </button>
+          <div class="nav-item ms-lg-auto me-2 nav-action" title="Login">
+            <a class="btn btn-outline-secondary" href="{{ url_for('auth.login') }}">
+              Login
             </a>
           </div>
           {% elif title == "Login" %}
           <!-- Register Link -->
           <div class="nav-item ms-lg-auto me-2 nav-action">
-            <a class="nav-link btn-hover" href="{{ url_for('auth.register') }}">
-              <button type="button" class="btn btn-outline-secondary" title="Register">
-                  Register
-              </button>
+            <a class="btn btn-outline-secondary" href="{{ url_for('auth.register') }}" title="Register">
+              Register
             </a>
           </div>
           {% elif title %}

@@ -27,17 +27,11 @@ def index():
     form = WatchPartyForm()
 
     # Display the next Watch Party on the homepage
-    next = (
-        models.WatchParty.query
-        .join(models.WatchPartyUser)
-        .filter(
-            models.WatchPartyUser.user_id == current_user.id,
-            models.WatchParty.start_time >= datetime.now(timezone.utc),
-            models.WatchParty.deleted_at.is_(None)
-        )
-        .order_by(models.WatchParty.start_time.asc())
-        .first()
-    )
+    next = models.WatchParty.query.join(models.WatchPartyUser).filter(
+        models.WatchPartyUser.user_id == current_user.id,
+        models.WatchParty.start_time >= datetime.now(timezone.utc),
+        models.WatchParty.deleted_at == None
+    ).order_by(models.WatchParty.start_time.asc()).first()
 
     # Get next movie details
     if next:
@@ -51,16 +45,14 @@ def index():
         next_owner = None
 
     # Show all future public parties, ordered by start time and not deleted
-    public = (
-        models.WatchParty.query
-        .filter(
-            models.WatchParty.is_private.is_(False),
-            models.WatchParty.start_time >= datetime.now(timezone.utc),
-            models.WatchParty.deleted_at.is_(None)
-        )
-        .order_by(models.WatchParty.start_time.asc())
-        .all()
-    )
+    public = (models.WatchParty.query
+              .filter(
+                  models.WatchParty.is_private == False,
+                  models.WatchParty.start_time >= datetime.now(timezone.utc),
+                  models.WatchParty.deleted_at == None
+              )
+              .order_by(models.WatchParty.start_time.asc())
+              .all())
 
     # Display the user's username and profile colour in the navbaron all pages
     username = current_user.username
@@ -77,23 +69,20 @@ def index():
 @login_required
 def parties():
     """Render the user's joined parties page."""
-    # Get all upcoming and previous watch parties the user is in
-    upcoming = (
-        models.WatchPartyUser.query
-        .join(models.WatchParty)
-        .filter(
-            models.WatchPartyUser.user_id == current_user.id,
-            models.WatchParty.start_time >= datetime.now(timezone.utc),
-            models.WatchParty.deleted_at.is_(None)
-        )
-        .order_by(models.WatchParty.start_time.asc())
-        .all()
-    )
+
+    # Show all upcoming and previous watch parties the user is in
+    upcoming = models.WatchPartyUser.query.join(models.WatchParty).filter(
+        models.WatchPartyUser.user_id == current_user.id,
+        models.WatchParty.start_time >= datetime.now(timezone.utc),
+        models.WatchParty.deleted_at == None
+    ).order_by(
+        models.WatchParty.start_time.asc()
+    ).all()
 
     previous = models.WatchPartyUser.query.join(models.WatchParty).filter(
         models.WatchPartyUser.user_id == current_user.id,
         models.WatchParty.start_time < datetime.now(timezone.utc),
-        models.WatchParty.deleted_at.is_(None)
+        models.WatchParty.deleted_at == None
     ).order_by(
         models.WatchParty.start_time.desc()
     ).all()
@@ -116,11 +105,12 @@ def parties():
 @login_required
 def my_parties():
     """Render the user's created parties page."""
-    # Get all upcoming and previous watch parties the user created
+
+    # Show all upcoming and previous watch parties the user created
     upcoming = models.WatchPartyUser.query.join(models.WatchParty).filter(
         models.WatchParty.created_by == current_user.id,
         models.WatchParty.start_time >= datetime.now(timezone.utc),
-        models.WatchParty.deleted_at.is_(None)
+        models.WatchParty.deleted_at == None
     ).order_by(
         models.WatchParty.start_time.asc()
     ).all()
@@ -128,7 +118,7 @@ def my_parties():
     previous = models.WatchPartyUser.query.join(models.WatchParty).filter(
         models.WatchParty.created_by == current_user.id,
         models.WatchParty.start_time < datetime.now(timezone.utc),
-        models.WatchParty.deleted_at.is_(None)
+        models.WatchParty.deleted_at == None
     ).order_by(
         models.WatchParty.start_time.desc()
     ).all()
@@ -210,7 +200,6 @@ def party(url):
         models.WatchParty.created_by == current_user.id,
         models.WatchParty.id == wp.id
     ).first() is not None
-
     is_member = False
 
     if not is_owner:
@@ -224,7 +213,7 @@ def party(url):
     members = models.User.query.join(
         models.WatchPartyUser).filter(
             models.WatchPartyUser.watch_party_id == wp.id,
-            models.User.deleted_at.is_(None),
+            models.User.deleted_at is None,
             models.User.id != owner.id
     ).all()
 
@@ -259,38 +248,29 @@ def party(url):
             models.User.username,
             models.User.profile_colour,
             # Count likes
-            func.count(
-                case((models.CommentReaction.is_like.is_(True), 1))
-            ).label("likes"),
+            func.count(case(
+                (models.CommentReaction.is_like == True, 1)))
+                .label("likes"),
             # Count dislikes
-            func.count(
-                case((models.CommentReaction.is_like.is_(False), 1))
-            ).label("dislikes"),
+            func.count(case(
+                (models.CommentReaction.is_like == False, 1)))
+                .label("dislikes"),
             # Check if current user has reacted
-            func.max(
-                case(
-                    (models.CommentReaction.user_id == current_user.id,
-                    models.CommentReaction.is_like)
-                )
-            ).label("user_reaction"),
+            func.max(case((
+                models.CommentReaction.user_id == current_user.id,
+                models.CommentReaction.is_like))).label("user_reaction"),
             # Check if user can edit (is comment owner)
             (models.Comment.user_id == current_user.id).label("can_edit")
         )
-        .join(
-            models.User,
-            models.Comment.user_id == models.User.id
-        )
-        .outerjoin(
-            models.CommentReaction,
-            models.Comment.id == models.CommentReaction.comment_id
-        )
+        .join(models.User, models.Comment.user_id == models.User.id)
+        .outerjoin(models.CommentReaction, models.Comment.id == 
+                   models.CommentReaction.comment_id)
         .filter(models.Comment.watch_party_id == wp.id)
         .group_by(
             models.Comment.id,
             models.User.username,
             models.User.profile_colour
-        )
-        .all()
+        ).all()
     )
 
     # Process the results into a format easy to use in templates
@@ -401,7 +381,7 @@ def edit_party(url):
 
     form = WatchPartyForm()
     if form.validate_on_submit():
-        result = validate_party(form.title.data, form.movie_id.data,
+        result = validate_party(form.title.data, form.movie_id.data, 
                                 form.description.data, form.location.data,
                                 form.start_date.data, form.start_time.data,
                                 form.is_private.data)
@@ -414,12 +394,12 @@ def edit_party(url):
             return redirect(url_for("party", url=wp.url))
 
         # Check if we are updating anything
-        if (form.title.data == wp.title and
-                form.movie_id.data == wp.movie_id and
-                form.description.data == wp.description and
-                form.location.data == wp.location and
-                result == wp.start_time and
-                form.is_private.data == wp.is_private):
+        if (form.title.data == wp.title and 
+            form.movie_id.data == wp.movie_id and 
+            form.description.data == wp.description and 
+            form.location.data == wp.location and 
+            result == wp.start_time and 
+            form.is_private.data == wp.is_private):
             app.logger.debug(
                 f"""No changes made to Watch Party {wp.id} by """
                 """{current_user.username}""")
@@ -502,15 +482,15 @@ def rate(url):
 
         app.logger.info(
             f"Watch Party {wp.id} rated by {current_user.username}")
-
+        
         avg_rating = db.session.query(func.avg(
             models.WatchPartyUser.rating)).filter(
                 models.WatchPartyUser.watch_party_id == wp.id
             ).scalar()
-
+        
         avg_rating = float(Decimal(avg_rating).quantize(
             Decimal("0.1"), rounding=ROUND_HALF_UP))
-
+        
         return jsonify(
             {"status": "OK", "rating": new_rating, "avgRating": avg_rating}
             ), 200
@@ -641,28 +621,18 @@ def vote(url, id):
     app.logger.info(
         f"Reaction by {current_user.username} in Watch Party {wp.id}")
 
-    # Return the updated reaction counts
-    likes = (
-        db.session.query(
-            func.count(models.CommentReaction.is_like)
-        )
-        .filter(
+    # Return the updated reaction count
+    likes = db.session.query(func.count(
+        models.CommentReaction.is_like)).filter(
             models.CommentReaction.comment_id == id,
-            models.CommentReaction.is_like.is_(True)
-        )
-        .scalar()
-    )
+            models.CommentReaction.is_like == True
+    ).scalar()
 
-    dislikes = (
-        db.session.query(
-            func.count(models.CommentReaction.is_like)
-        )
-        .filter(
+    dislikes = db.session.query(func.count(
+        models.CommentReaction.is_like)).filter(
             models.CommentReaction.comment_id == id,
-            models.CommentReaction.is_like.is_(False)
-        )
-        .scalar()
-    )
+            models.CommentReaction.is_like == False
+    ).scalar()
 
     return jsonify({
         "status": "OK",
@@ -700,7 +670,7 @@ def edit_comment(url, id):
         return "comment does not exist", 404
 
     # Require the comment to not be deleted
-    if comment.deleted_at is not None:
+    if comment.deleted_at != None:
         app.logger.debug(
             f"""{current_user.username} tried to edit a deleted comment """
             """in Watch Party {wp.id}""")
@@ -859,8 +829,7 @@ def profile():
                 return "Username already taken", 400
 
             app.logger.info(
-                f""""{current_user.username} changed their username to """
-                """{new_username}""")
+                f"{current_user.username} changed their username to {new_username}")
             current_user.username = new_username
             db.session.commit()
 
@@ -886,17 +855,14 @@ def profile():
                 return "Email cannot be the same as the current email", 400
 
             email = models.User.query.filter(
-                models.User.email == new_email,
-                models.User.deleted_at.is_(None)).first()
+                models.User.email == new_email, models.User.deleted_at is None).first()
             if email:
                 app.logger.debug(
-                    f"""{current_user.username}'s Email was already taken """
-                    """by {email.username}""")
+                    f"{current_user.username}'s Email was already taken by {email.username}")
                 return "Email already taken", 400
 
             app.logger.info(
-                f"""{current_user.username} changed their email from """
-                """{current_user.email} to {new_email}""")
+                f"{current_user.username} changed their email from {current_user.email} to {new_email}")
             current_user.email = new_email
             db.session.commit()
 
@@ -904,10 +870,9 @@ def profile():
         elif "edit-password" in response:
             new_password = response["edit-password"]
 
-            if "edit-password-confirm" not in response:
+            if not "edit-password-confirm" in response:
                 app.logger.debug(
-                    f"""Password confirmation required by """
-                    """{current_user.username}""")
+                    f"Password confirmation required by {current_user.username}")
                 return "Password confirmation required", 400
 
             new_confirm = response["edit-password-confirm"]
@@ -944,8 +909,7 @@ def profile():
                 return "Invalid colour", 400
 
             app.logger.info(
-                f"""{current_user.username} changed their profile colour """
-                """from {current_user.profile_colour} to {new_colour}""")
+                f"{current_user.username} changed their profile colour from {current_user.profile_colour} to {new_colour}")
             current_user.profile_colour = new_colour
             db.session.commit()
 
@@ -971,20 +935,16 @@ def profile():
     search_form = SearchForm()
     form = WatchPartyForm()
 
-    return render_template(
-        "profile.html", title="Profile", user=user,
-        colours=models.PROFILE_COLOURS, username=username, colour=colour,
-        search_form=search_form, form=form)
+    return render_template("profile.html", title="Profile", user=user, colours=models.PROFILE_COLOURS, username=username, colour=colour, search_form=search_form, form=form)
 
 
 @app.route("/query", methods=["POST"])
 @login_required
 def query():
-    """Query the TMDB API and return the results."""
+    """Queries the TMDB API and returns the results."""
     search = request.get_json()["search"].strip()
 
-    url = "https://api.themoviedb.org/3/search/movie?"
-    url += f"query={search}&include_adult=false&language=en-US&page=1"
+    url = f"https://api.themoviedb.org/3/search/movie?query={search}&include_adult=false&language=en-US&page=1"
 
     response = requests.get(url, headers=headers)
     return response.text

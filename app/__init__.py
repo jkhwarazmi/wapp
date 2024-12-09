@@ -6,6 +6,7 @@ from flask_migrate import Migrate
 from flask_login import LoginManager
 from flask_wtf.csrf import CSRFProtect
 import logging
+from logging.handlers import RotatingFileHandler
 
 app = Flask(__name__)
 app.config.from_object("config")
@@ -24,5 +25,11 @@ from app.auth import auth
 
 app.register_blueprint(auth)
 
+handler = RotatingFileHandler("logfile.log", maxBytes=1000000, backupCount=1)
+handler.setLevel(logging.DEBUG)
+handler.setFormatter(logging.Formatter(
+    "%(asctime)s - %(name)s - %(levelname)s - %(message)s"))
 
-logging.basicConfig(filename="logfile.log", level=logging.DEBUG)
+root_logger = logging.getLogger()
+root_logger.setLevel(logging.DEBUG)
+root_logger.addHandler(handler)

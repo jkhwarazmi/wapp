@@ -11,13 +11,21 @@
         <h2>{{ wp.title }}</h2>
         <p class="text-muted mb-0">Created by {{ owner.username }}</p>
         <p class="text-muted mb-0">Last Updated: {{ wp.updated_at.strftime('%d/%m/%Y at %H:%M') }}</p>
+        <input type="hidden" id="wp-url" value="{{ wp.url }}">
+        <button id="copy-url-btn" class="btn btn-outline-primary d-flex align-items-center gap-2 mt-3 btn-sm">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16">
+              <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z"/>
+              <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z"/>
+          </svg>
+          <span>Copy URL</span>
+        </button>
       </div>
       
       <div class="mb-4">
         <div class="row">
           <div class="col-md-6">
             <p>Location: {{ wp.location or "No location specified" }}</p>
-            <p>Start Time: {{ wp.start_time.strftime('%d/%m/%Y at %H:%M') }}</p>
+            <p>Start Time: <span id="starting-time">{{ wp.start_time.strftime('%d/%m/%Y at %H:%M') }}</span></p>
             <p>Visibility: {{ "Private" if wp.is_private else "Public" }}</p>
             <br>
             <p>Description:</p>
@@ -59,7 +67,7 @@
                     data-size="sm" 
                     title="Average rating: {{ avg_rating }}" 
                     readonly>
-              <span class="text-muted fs-5">({{ "%.1f"|format(avg_rating) }})</span>
+              <span class="text-muted fs-5">({{ avg_rating|round(1)  }})</span>
             </div>
           {% else %}
             <p class="text-muted mb-0 fs-5" id="no-avg">No ratings yet</p>
@@ -272,20 +280,22 @@
         <!-- Watch Party Options -->
         <div class="d-flex flex-wrap gap-2 mt-4 {% if is_owner %}{% else %}justify-content-center{% endif %}">
           {% if is_owner %}
+          <div id="edit-container">
             <button id="edit-party" class="btn btn-warning flex-fill">Edit Watch Party</button>
+          </div>
             <form action="/party/delete/{{ wp.url }}" method="POST" id="delete-form" class="flex-fill">
               <input type="hidden" name="csrf_token" value="{{ csrf_token() }}"/>
-              <button type="submit" class="btn btn-danger w-100">Delete Watch Party</button>
+              <div id="delete-container">
+                <button type="submit" class="btn btn-danger w-100" id="delete-party">Delete Watch Party</button>
+              </div>
             </form>
             <input type="hidden" id="current-movie-id" value="{{ wp.movie_id }}">
             <input type="hidden" id="current-start-date" value="{{ wp.start_time.strftime('%Y-%m-%d') }}">
             <input type="hidden" id="current-start-time" value="{{ wp.start_time.strftime('%H:%M') }}">
             <input type="hidden" id="current-is-private" value="{{ 'true' if wp.is_private else '' }}">
-            <input type="hidden" id="wp-url" value="{{ wp.url }}">
             <div id="current-title" class="d-none">{{ wp.title }}</div>
             <div id="current-location" class="d-none">{{ wp.location or "" }}</div>
             <div id="current-description" class="d-none">{{ wp.description or "" }}</div>
-            <input type="hidden" id="wp-url" value="{{ wp.url }}">
           {% elif is_member %}
             <form action="/party/leave/{{ wp.url }}" method="POST">
               <input type="hidden" name="csrf_token" value="{{ csrf_token() }}"/>

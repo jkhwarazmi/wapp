@@ -55,7 +55,7 @@ $("#rating-form").submit(function(e) {
               data-size="sm" 
               title="Average rating: ${data.avgRating}" 
               readonly>
-            <span class="text-muted fs-5">(${parseFloat(data.avgRating).toFixed(1)})</span>
+            <span class="text-muted fs-5">(${Math.round(parseFloat(data.avgRating) * 10) / 10})</span>
           </div>`
         $("#no-avg").replaceWith(avgHtml)
         // Initialise the new rating display
@@ -69,7 +69,7 @@ $("#rating-form").submit(function(e) {
       } else {
         // Update existing average rating
         $(".rating-display").first().rating("update", data.avgRating)
-        $(".text-muted.fs-5").text(`(${parseFloat(data.avgRating).toFixed(1)})`)
+        $(".text-muted.fs-5").text(`(${Math.round(parseFloat(data.avgRating) * 10) / 10})`)
       }
 
       // Update button text

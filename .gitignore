@@ -22,3 +22,4 @@ __pycache__/
 run.sh
 .env
 logfile.log
+migrations/*

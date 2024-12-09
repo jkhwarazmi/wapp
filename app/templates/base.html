@@ -240,7 +240,7 @@
       <div class="expanded-header">
         <button type="button" class="btn-close float-end" aria-label="Close" onclick="closePopup()" title="Close popup"></button>
         <form action="query" method="POST" name="Search for a movie" id="search-form" class="mt-3">
-          {{ search_form.csrf_token }}
+          {{ search_form.csrf_token(id = "search-csrf") }}
           <label for="movie-name" class="form-label">Movie Title</label>
           <div class="input-group">
             {{ search_form.search(class_="form-control required-field", id_="search-bar", placeholder="Search for a movie...", maxlength_="100") }}
@@ -259,7 +259,7 @@
           </div>
         </div>
         <form id="party-form" method="POST" class="form-mode-create" style="display: none;">
-          {{ form.csrf_token }}
+          {{ form.csrf_token(id = "party-csrf") }}
           
           <div class="form-group">
               <label for="title-input">Party Title</label>

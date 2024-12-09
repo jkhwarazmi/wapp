@@ -2,11 +2,13 @@ const usernameRegex = /^[a-zA-Z][a-zA-Z0-9._-]{0,29}$/
 const emailRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*\.[a-zA-Z]{2,}$/
 const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[^a-zA-Z\d\s])[A-Za-z\d\W_]{8,24}$/
 
+// Initially disable register button, but keep username and email if page reloaded
 let validUsername = $("#enter-username").val().length > 0
 let validEmail = $("#enter-email").val().length > 5
 let validPassword = false
 let validConfirm = false
 
+// Check for inputs to enable/disable register button
 $("#enter-username").on("input", function () {
   const username = $(this).val()
   
@@ -98,11 +100,9 @@ $("#enter-confirm").on("input", function () {
 
 function checkValidity() {
   if (validUsername && validEmail && validPassword && validConfirm) {
-    console.log("Valid")
     $("#register-btn").prop("disabled", false)
     $("#register-btn").parent().attr("title", "Register")
   } else {
-    console.log("Invalid")
     $("#register-btn").prop("disabled", true)
     $("#register-btn").parent().attr("title", "Please fill out all fields correctly")
   }

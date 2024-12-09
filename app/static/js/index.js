@@ -1,10 +1,11 @@
+// Show the time remaining until the next party starts if there is one
 if ($("#next-start").length) {
-
   function updateTimeRemaining() {
     const startTime = $("#next-start").data("start")
     const now = new Date()
     const target = new Date(startTime)
     
+    // Show the start time if it has already passed
     if (now >= target) {
       const formattedTime = target.toLocaleTimeString("en-US", { 
         hour: "2-digit", 
@@ -15,7 +16,7 @@ if ($("#next-start").length) {
       clearInterval(timerInterval)
       return
     }
-
+    
     $("#next-start").text("Starts in " + getTimeRemaining(startTime))
   }
 

@@ -3,6 +3,7 @@ const emailRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]
 const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[^a-zA-Z\d\s])[A-Za-z\d\W_]{8,24}$/
 const colours = ["#3375cb", "#51b1df", "#59c3ad", "#5fcf80", "#7a5ddf", "#959595", "#c67b2b", "#c89332", "#c22946", "#d7348a"]
 
+// Validate profile changes
 $("form input").on("input", function() {
   const form = $(this).closest("form")
   const originalValue = form.data("original")
@@ -13,41 +14,32 @@ $("form input").on("input", function() {
   // Default disabled state if empty or unchanged
   let isValid = newValue !== "" && newValue !== originalValue
   
-  // Specific validation based on input type
+  // Validate different inputs
   switch(inputId) {
     case "username":
       isValid = isValid && usernameRegex.test(newValue)
       break
-      
     case "email":
-      isValid = isValid && 
-                emailRegex.test(newValue) && 
-                newValue.length >= 5 && 
-                newValue.length <= 256
+      isValid = isValid && emailRegex.test(newValue) && newValue.length >= 5 && newValue.length <= 256
       break
-      
     case "password":
       const confirmPassword = $("#confirm-password").val()
-      isValid = isValid && 
-                passwordRegex.test(newValue) && 
-                (confirmPassword === "" || newValue === confirmPassword)
+      isValid = isValid && passwordRegex.test(newValue) && (confirmPassword === "" || newValue === confirmPassword)
       // Update confirm password button state
       if (confirmPassword) {
         $("#confirm-password").trigger("input")
       }
       break
-      
-    case "confirm-password":
+      case "confirm-password":
       const password = $("#password").val()
-      isValid = isValid && 
-                password === newValue && 
-                passwordRegex.test(password)
+      isValid = isValid && password === newValue && passwordRegex.test(password)
       break
   }
   
   button.prop("disabled", !isValid)
 })
 
+// Check for valid inputs
 $("form select").on("change", function() {
   const form = $(this).closest("form")
   const originalValue = form.data("original")
@@ -57,10 +49,12 @@ $("form select").on("change", function() {
   button.prop("disabled", newValue === originalValue)
 })
 
+// AJAX profile updates
 $("form").on("submit", function(e) {
   e.preventDefault()
   let data = {}
 
+  // Delete profile confirmation
   if ($(this).attr("id") === "delete-profile") {
     if (confirm("Are you sure you want to delete your profile?")) {
       data = { "delete-profile": true }
@@ -69,6 +63,7 @@ $("form").on("submit", function(e) {
     }
   }
 
+  // Final input validation
   if ($(this).attr("id") === "edit-password") {
     const password = $(this).find("#password").val()
     const confirmPassword = $(this).find("#confirm-password").val()
@@ -96,8 +91,8 @@ $("form").on("submit", function(e) {
   } else if ($(this).attr("id") == "edit-username") {
     const username = $(this).find("input").val().trim()
 
-    if (username.length < 8 || username.length > 30) {
-      return alert("Username must be between 8 and 30 characters")
+    if (username.length < 1 || username.length > 30) {
+      return alert("Username must be between 1 and 30 characters")
     }
 
     if (!usernameRegex.test(username)) {
@@ -133,7 +128,7 @@ $("form").on("submit", function(e) {
             $("#profile-initial").text(res.value[0])
           }
         } else if ($(this).attr("id") === "edit-colour") {
-          $(`input[name="profile_colour"][value="${res.value}"]`).prop('checked', true)
+          $(`input[name="profile_colour"][value="${res.value}"]`).prop("checked", true)
           $("#profile-circle").css("background-color", res.value)
         } else if ($(this).attr("id") === "edit-password") {
           $(this).find("input").val("")

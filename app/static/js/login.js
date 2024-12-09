@@ -1,3 +1,4 @@
+// Disable login if username or password are invalid
 $("#login-button").prop("disabled", $("#enter-username").val().length == 0 || $("#enter-password").val().length < 8)
 
 if ($("#login-btn").attr("disabled")) {
@@ -6,6 +7,7 @@ if ($("#login-btn").attr("disabled")) {
   $("#login-btn").parent().attr("title", "Login")
 }
 
+// Check for inputs to enable/disable login button
 $("#enter-username").on("input", function () {
   const username = $(this).val()
 

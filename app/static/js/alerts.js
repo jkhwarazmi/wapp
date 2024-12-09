@@ -1,26 +1,24 @@
 // Fade alerts after 5 seconds
 function autoFadeAlerts() {
-  const alerts = document.querySelectorAll(".alert.fade.show")
-  
-  alerts.forEach(alert => {
+  $(".alert.fade.show").each(function() {
+    const $alert = $(this)
+    
     const fadeOut = () => {
-      alert.classList.add("alert-fade-out")
-      setTimeout(() => alert.remove(), 500)
+      $alert.addClass("alert-fade-out")
+      setTimeout(() => $alert.remove(), 500)
     }
-  
+    
     // Set timeout to fade out after 5 seconds
     const fadeTimeout = setTimeout(fadeOut, 5000)
-    alert.dataset.fadeTimeout = fadeTimeout
-  
+    $alert.data("fadeTimeout", fadeTimeout)
+    
     // Handle manual close
-    const closeButton = alert.querySelector(".btn-close")
-    closeButton.addEventListener("click", () => {
-      clearTimeout(fadeTimeout)
+    $alert.find(".btn-close").on("click", function() {
+      clearTimeout($alert.data("fadeTimeout"))
       fadeOut()
     })
   })
 }
-  
+
 // Initialise when DOM is loaded
-document.addEventListener("DOMContentLoaded", autoFadeAlerts)
-  
+$(document).ready(autoFadeAlerts)

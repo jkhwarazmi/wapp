@@ -1,3 +1,4 @@
+// Store whether we want to show upcoming or previous watch parties
 let partyview = localStorage.getItem("partyview")
 
 if (!partyview) {
@@ -22,7 +23,7 @@ function updatepartyview() {
 }
 
 // Initial update
-updatepartyview();
+updatepartyview()
 
 $("#party-upcoming-btn").on("click", () => {
   partyview = "upcoming"

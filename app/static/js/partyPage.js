@@ -1,13 +1,12 @@
 $(document).ready(() => {
+  // If we just posted a comment, scroll down to it
   const scrollPosition = localStorage.getItem("scrollPosition")
   if (scrollPosition) {
     $(window).scrollTop(scrollPosition)
     localStorage.removeItem("scrollPosition")
   }
 
-  const startDate = "{{ wp.start_time }}".split(" ")
-  $("#start-date").val(startDate[0])
-
+  // Check before deleting a watch party
   $("#delete-form").submit(function(e) {
     e.preventDefault()
 
@@ -17,7 +16,6 @@ $(document).ready(() => {
   })
 
   // Disable the delete and edit buttons if the watch party has already started
-  // Maybe check periodically for this?
   const startTimeStr = $("#starting-time").text()
 
   const [datePart, timePart] = startTimeStr.split(" at ")
@@ -57,7 +55,7 @@ $(document).ready(() => {
         
       // Reset button after 2 seconds
       setTimeout(() => {
-        $(this).html(originalHtml);
+        $(this).html(originalHtml)
       }, 2000)  
     } catch (err) {
       alert("Failed to copy URL: " + err)

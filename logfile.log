@@ -424,3 +424,878 @@
 2024-12-09 03:39:23,000 - werkzeug - INFO -  * Restarting with stat
 2024-12-09 03:39:23,339 - werkzeug - WARNING -  * Debugger is active!
 2024-12-09 03:39:23,365 - werkzeug - INFO -  * Debugger PIN: 127-006-388
+2024-12-09 03:40:49,254 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): api.themoviedb.org:443
+2024-12-09 03:40:49,304 - urllib3.connectionpool - DEBUG - https://api.themoviedb.org:443 "GET /3/movie/%0A%20%20%20%20%20%20%20%20%20%20%20%201118031?language=en-US HTTP/1.1" 200 None
+2024-12-09 03:40:49,309 - app - INFO - User s visited the homepage
+2024-12-09 03:40:49,328 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 03:40:49] "GET / HTTP/1.1" 200 -
+2024-12-09 03:40:49,392 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 03:40:49] "[36mGET /static/js/theme.js HTTP/1.1[0m" 304 -
+2024-12-09 03:40:49,393 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 03:40:49] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2024-12-09 03:40:49,393 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 03:40:49] "[36mGET /static/js/index.js HTTP/1.1[0m" 304 -
+2024-12-09 03:40:49,394 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 03:40:49] "[36mGET /static/js/alerts.js HTTP/1.1[0m" 304 -
+2024-12-09 03:40:49,405 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 03:40:49] "[36mGET /static/js/party.js HTTP/1.1[0m" 304 -
+2024-12-09 03:40:49,405 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 03:40:49] "[36mGET /static/images/icon.png HTTP/1.1[0m" 304 -
+2024-12-09 03:40:49,406 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 03:40:49] "[36mGET /static/js/csrf.js HTTP/1.1[0m" 304 -
+2024-12-09 03:40:49,425 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 03:40:49] "[36mGET /static/images/favicon.ico HTTP/1.1[0m" 304 -
+2024-12-09 03:40:49,590 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): api.themoviedb.org:443
+2024-12-09 03:40:49,644 - urllib3.connectionpool - DEBUG - https://api.themoviedb.org:443 "GET /3/movie/%0A%20%20%20%20%20%20%20%20%20%20%20%201118031?language=en-US HTTP/1.1" 200 None
+2024-12-09 03:40:49,647 - app - INFO - User s visited the homepage
+2024-12-09 03:40:49,649 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 03:40:49] "GET / HTTP/1.1" 200 -
+2024-12-09 03:40:49,691 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 03:40:49] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2024-12-09 03:40:49,696 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 03:40:49] "[36mGET /static/js/theme.js HTTP/1.1[0m" 304 -
+2024-12-09 03:40:49,697 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 03:40:49] "[36mGET /static/js/index.js HTTP/1.1[0m" 304 -
+2024-12-09 03:40:49,697 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 03:40:49] "[36mGET /static/js/alerts.js HTTP/1.1[0m" 304 -
+2024-12-09 03:40:49,705 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 03:40:49] "[36mGET /static/images/icon.png HTTP/1.1[0m" 304 -
+2024-12-09 03:40:49,706 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 03:40:49] "[36mGET /static/js/party.js HTTP/1.1[0m" 304 -
+2024-12-09 03:40:49,706 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 03:40:49] "[36mGET /static/js/csrf.js HTTP/1.1[0m" 304 -
+2024-12-09 03:40:49,723 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 03:40:49] "[36mGET /static/images/favicon.ico HTTP/1.1[0m" 304 -
+2024-12-09 03:40:50,092 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): api.themoviedb.org:443
+2024-12-09 03:40:50,142 - urllib3.connectionpool - DEBUG - https://api.themoviedb.org:443 "GET /3/movie/1118031?language=en-US HTTP/1.1" 200 None
+2024-12-09 03:40:50,151 - app - INFO - s visited Watch Party 21
+2024-12-09 03:40:50,175 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 03:40:50] "GET /party/6085a8d3803140d18b2c2d3e579edcc6 HTTP/1.1" 200 -
+2024-12-09 03:40:50,228 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 03:40:50] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2024-12-09 03:40:50,230 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 03:40:50] "[36mGET /static/js/theme.js HTTP/1.1[0m" 304 -
+2024-12-09 03:40:50,231 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 03:40:50] "[36mGET /static/js/rate.js HTTP/1.1[0m" 304 -
+2024-12-09 03:40:50,231 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 03:40:50] "[36mGET /static/js/comment.js HTTP/1.1[0m" 304 -
+2024-12-09 03:40:50,245 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 03:40:50] "[36mGET /static/images/icon.png HTTP/1.1[0m" 304 -
+2024-12-09 03:40:50,246 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 03:40:50] "[36mGET /static/js/partyPage.js HTTP/1.1[0m" 304 -
+2024-12-09 03:40:50,249 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 03:40:50] "[36mGET /static/js/party.js HTTP/1.1[0m" 304 -
+2024-12-09 03:40:50,249 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 03:40:50] "[36mGET /static/js/alerts.js HTTP/1.1[0m" 304 -
+2024-12-09 03:40:50,249 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 03:40:50] "[36mGET /static/js/csrf.js HTTP/1.1[0m" 304 -
+2024-12-09 03:40:52,145 - app - INFO - Watch Party 21 rated by s
+2024-12-09 03:40:52,147 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 03:40:52] "POST /party/rate/6085a8d3803140d18b2c2d3e579edcc6 HTTP/1.1" 200 -
+2024-12-09 03:40:54,228 - app - INFO - Reaction by s in Watch Party 21
+2024-12-09 03:40:54,231 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 03:40:54] "POST /party/vote/6085a8d3803140d18b2c2d3e579edcc6/45 HTTP/1.1" 200 -
+2024-12-09 03:40:54,874 - app - INFO - Reaction by s in Watch Party 21
+2024-12-09 03:40:54,875 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 03:40:54] "POST /party/vote/6085a8d3803140d18b2c2d3e579edcc6/45 HTTP/1.1" 200 -
+2024-12-09 03:40:56,849 - app - INFO - Comment edited by s in Watch Party 21
+2024-12-09 03:40:56,851 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 03:40:56] "POST /party/comment/edit/6085a8d3803140d18b2c2d3e579edcc6/45 HTTP/1.1" 200 -
+2024-12-09 03:40:58,702 - app - INFO - Comment by s in Watch Party 21
+2024-12-09 03:40:58,703 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 03:40:58] "[32mPOST /party/comment/6085a8d3803140d18b2c2d3e579edcc6 HTTP/1.1[0m" 302 -
+2024-12-09 03:40:58,713 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): api.themoviedb.org:443
+2024-12-09 03:40:58,764 - urllib3.connectionpool - DEBUG - https://api.themoviedb.org:443 "GET /3/movie/1118031?language=en-US HTTP/1.1" 200 None
+2024-12-09 03:40:58,770 - app - INFO - s visited Watch Party 21
+2024-12-09 03:40:58,772 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 03:40:58] "GET /party/6085a8d3803140d18b2c2d3e579edcc6 HTTP/1.1" 200 -
+2024-12-09 03:40:58,817 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 03:40:58] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2024-12-09 03:40:58,818 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 03:40:58] "[36mGET /static/js/theme.js HTTP/1.1[0m" 304 -
+2024-12-09 03:40:58,819 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 03:40:58] "[36mGET /static/js/rate.js HTTP/1.1[0m" 304 -
+2024-12-09 03:40:58,820 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 03:40:58] "[36mGET /static/js/comment.js HTTP/1.1[0m" 304 -
+2024-12-09 03:40:58,828 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 03:40:58] "[36mGET /static/images/icon.png HTTP/1.1[0m" 304 -
+2024-12-09 03:40:58,833 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 03:40:58] "[36mGET /static/js/alerts.js HTTP/1.1[0m" 304 -
+2024-12-09 03:40:58,834 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 03:40:58] "[36mGET /static/js/csrf.js HTTP/1.1[0m" 304 -
+2024-12-09 03:40:58,836 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 03:40:58] "[36mGET /static/js/partyPage.js HTTP/1.1[0m" 304 -
+2024-12-09 03:40:58,836 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 03:40:58] "[36mGET /static/js/party.js HTTP/1.1[0m" 304 -
+2024-12-09 03:41:03,176 - app - INFO - User s visited their created parties page
+2024-12-09 03:41:03,189 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 03:41:03] "GET /my-parties HTTP/1.1" 200 -
+2024-12-09 03:41:03,227 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 03:41:03] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2024-12-09 03:41:03,231 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 03:41:03] "[36mGET /static/js/theme.js HTTP/1.1[0m" 304 -
+2024-12-09 03:41:03,232 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 03:41:03] "[36mGET /static/js/alerts.js HTTP/1.1[0m" 304 -
+2024-12-09 03:41:03,232 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 03:41:03] "[36mGET /static/js/parties.js HTTP/1.1[0m" 304 -
+2024-12-09 03:41:03,238 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 03:41:03] "[36mGET /static/js/party.js HTTP/1.1[0m" 304 -
+2024-12-09 03:41:03,240 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 03:41:03] "[36mGET /static/images/icon.png HTTP/1.1[0m" 304 -
+2024-12-09 03:41:03,241 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 03:41:03] "[36mGET /static/js/csrf.js HTTP/1.1[0m" 304 -
+2024-12-09 03:41:04,874 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): api.themoviedb.org:443
+2024-12-09 03:41:04,926 - urllib3.connectionpool - DEBUG - https://api.themoviedb.org:443 "GET /3/movie/1118031?language=en-US HTTP/1.1" 200 None
+2024-12-09 03:41:04,930 - app - INFO - s visited Watch Party 30
+2024-12-09 03:41:04,932 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 03:41:04] "GET /party/65bfddd76eab43d5a4e23f359a390309 HTTP/1.1" 200 -
+2024-12-09 03:41:04,980 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 03:41:04] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2024-12-09 03:41:04,983 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 03:41:04] "[36mGET /static/js/theme.js HTTP/1.1[0m" 304 -
+2024-12-09 03:41:04,984 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 03:41:04] "[36mGET /static/js/comment.js HTTP/1.1[0m" 304 -
+2024-12-09 03:41:04,985 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 03:41:04] "[36mGET /static/js/rate.js HTTP/1.1[0m" 304 -
+2024-12-09 03:41:04,994 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 03:41:04] "[36mGET /static/images/icon.png HTTP/1.1[0m" 304 -
+2024-12-09 03:41:04,997 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 03:41:04] "[36mGET /static/js/alerts.js HTTP/1.1[0m" 304 -
+2024-12-09 03:41:04,997 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 03:41:04] "[36mGET /static/js/partyPage.js HTTP/1.1[0m" 304 -
+2024-12-09 03:41:04,998 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 03:41:04] "[36mGET /static/js/party.js HTTP/1.1[0m" 304 -
+2024-12-09 03:41:04,999 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 03:41:04] "[36mGET /static/js/csrf.js HTTP/1.1[0m" 304 -
+2024-12-09 03:41:08,422 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): api.themoviedb.org:443
+2024-12-09 03:41:08,556 - urllib3.connectionpool - DEBUG - https://api.themoviedb.org:443 "GET /3/search/movie?query=hj&include_adult=false&language=en-US&page=1 HTTP/1.1" 200 None
+2024-12-09 03:41:08,558 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 03:41:08] "POST /query HTTP/1.1" 200 -
+2024-12-09 03:41:10,097 - app - INFO - Watch Party 30 updated by s
+2024-12-09 03:41:10,099 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 03:41:10] "[32mPOST /party/edit/65bfddd76eab43d5a4e23f359a390309 HTTP/1.1[0m" 302 -
+2024-12-09 03:41:10,110 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): api.themoviedb.org:443
+2024-12-09 03:41:10,243 - urllib3.connectionpool - DEBUG - https://api.themoviedb.org:443 "GET /3/movie/1317159?language=en-US HTTP/1.1" 200 None
+2024-12-09 03:41:10,248 - app - INFO - s visited Watch Party 30
+2024-12-09 03:41:10,251 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 03:41:10] "GET /party/65bfddd76eab43d5a4e23f359a390309 HTTP/1.1" 200 -
+2024-12-09 03:41:10,320 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 03:41:10] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2024-12-09 03:41:10,321 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 03:41:10] "[36mGET /static/js/theme.js HTTP/1.1[0m" 304 -
+2024-12-09 03:41:10,323 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 03:41:10] "[36mGET /static/js/rate.js HTTP/1.1[0m" 304 -
+2024-12-09 03:41:10,323 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 03:41:10] "[36mGET /static/js/comment.js HTTP/1.1[0m" 304 -
+2024-12-09 03:41:10,331 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 03:41:10] "[36mGET /static/images/icon.png HTTP/1.1[0m" 304 -
+2024-12-09 03:41:10,337 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 03:41:10] "[36mGET /static/js/partyPage.js HTTP/1.1[0m" 304 -
+2024-12-09 03:41:10,339 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 03:41:10] "[36mGET /static/js/party.js HTTP/1.1[0m" 304 -
+2024-12-09 03:41:10,339 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 03:41:10] "[36mGET /static/js/csrf.js HTTP/1.1[0m" 304 -
+2024-12-09 03:41:10,340 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 03:41:10] "[36mGET /static/js/alerts.js HTTP/1.1[0m" 304 -
+2024-12-09 03:41:15,107 - app - INFO - Watch Party 30 deleted by s
+2024-12-09 03:41:15,108 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 03:41:15] "[32mPOST /party/delete/65bfddd76eab43d5a4e23f359a390309 HTTP/1.1[0m" 302 -
+2024-12-09 03:41:15,118 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): api.themoviedb.org:443
+2024-12-09 03:41:15,170 - urllib3.connectionpool - DEBUG - https://api.themoviedb.org:443 "GET /3/movie/%0A%20%20%20%20%20%20%20%20%20%20%20%201118031?language=en-US HTTP/1.1" 200 None
+2024-12-09 03:41:15,173 - app - INFO - User s visited the homepage
+2024-12-09 03:41:15,176 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 03:41:15] "GET / HTTP/1.1" 200 -
+2024-12-09 03:41:15,226 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 03:41:15] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2024-12-09 03:41:15,229 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 03:41:15] "[36mGET /static/js/theme.js HTTP/1.1[0m" 304 -
+2024-12-09 03:41:15,230 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 03:41:15] "[36mGET /static/js/index.js HTTP/1.1[0m" 304 -
+2024-12-09 03:41:15,230 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 03:41:15] "[36mGET /static/js/alerts.js HTTP/1.1[0m" 304 -
+2024-12-09 03:41:15,239 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 03:41:15] "[36mGET /static/images/icon.png HTTP/1.1[0m" 304 -
+2024-12-09 03:41:15,240 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 03:41:15] "[36mGET /static/js/party.js HTTP/1.1[0m" 304 -
+2024-12-09 03:41:15,240 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 03:41:15] "[36mGET /static/js/csrf.js HTTP/1.1[0m" 304 -
+2024-12-09 03:41:18,801 - app - INFO - User s visited their created parties page
+2024-12-09 03:41:18,803 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 03:41:18] "GET /my-parties HTTP/1.1" 200 -
+2024-12-09 03:41:18,841 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 03:41:18] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2024-12-09 03:41:18,843 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 03:41:18] "[36mGET /static/js/theme.js HTTP/1.1[0m" 304 -
+2024-12-09 03:41:18,845 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 03:41:18] "[36mGET /static/js/alerts.js HTTP/1.1[0m" 304 -
+2024-12-09 03:41:18,845 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 03:41:18] "[36mGET /static/js/parties.js HTTP/1.1[0m" 304 -
+2024-12-09 03:41:18,851 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 03:41:18] "[36mGET /static/images/icon.png HTTP/1.1[0m" 304 -
+2024-12-09 03:41:18,853 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 03:41:18] "[36mGET /static/js/party.js HTTP/1.1[0m" 304 -
+2024-12-09 03:41:18,853 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 03:41:18] "[36mGET /static/js/csrf.js HTTP/1.1[0m" 304 -
+2024-12-09 03:41:22,454 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): api.themoviedb.org:443
+2024-12-09 03:41:22,510 - urllib3.connectionpool - DEBUG - https://api.themoviedb.org:443 "GET /3/movie/%0A%20%20%20%20%20%20%20%20%20%20%20%201118031?language=en-US HTTP/1.1" 200 None
+2024-12-09 03:41:22,514 - app - INFO - User s visited the homepage
+2024-12-09 03:41:22,517 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 03:41:22] "GET / HTTP/1.1" 200 -
+2024-12-09 03:41:22,565 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 03:41:22] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2024-12-09 03:41:22,569 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 03:41:22] "[36mGET /static/js/theme.js HTTP/1.1[0m" 304 -
+2024-12-09 03:41:22,569 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 03:41:22] "[36mGET /static/js/index.js HTTP/1.1[0m" 304 -
+2024-12-09 03:41:22,570 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 03:41:22] "[36mGET /static/js/alerts.js HTTP/1.1[0m" 304 -
+2024-12-09 03:41:22,578 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 03:41:22] "[36mGET /static/images/icon.png HTTP/1.1[0m" 304 -
+2024-12-09 03:41:22,579 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 03:41:22] "[36mGET /static/js/party.js HTTP/1.1[0m" 304 -
+2024-12-09 03:41:22,580 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 03:41:22] "[36mGET /static/js/csrf.js HTTP/1.1[0m" 304 -
+2024-12-09 17:00:14,743 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): api.themoviedb.org:443
+2024-12-09 17:00:14,939 - urllib3.connectionpool - DEBUG - https://api.themoviedb.org:443 "GET /3/movie/%0A%20%20%20%20%20%20%20%20%20%20%20%201118031?language=en-US HTTP/1.1" 200 None
+2024-12-09 17:00:14,944 - app - INFO - User s visited the homepage
+2024-12-09 17:00:14,952 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:00:14] "GET / HTTP/1.1" 200 -
+2024-12-09 17:00:15,012 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:00:15] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2024-12-09 17:00:15,046 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:00:15] "[36mGET /static/js/theme.js HTTP/1.1[0m" 304 -
+2024-12-09 17:00:15,046 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:00:15] "[36mGET /static/js/index.js HTTP/1.1[0m" 304 -
+2024-12-09 17:00:15,047 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:00:15] "[36mGET /static/js/alerts.js HTTP/1.1[0m" 304 -
+2024-12-09 17:00:15,052 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:00:15] "[36mGET /static/js/party.js HTTP/1.1[0m" 304 -
+2024-12-09 17:00:15,058 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:00:15] "[36mGET /static/images/icon.png HTTP/1.1[0m" 304 -
+2024-12-09 17:00:15,059 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:00:15] "[36mGET /static/js/csrf.js HTTP/1.1[0m" 304 -
+2024-12-09 17:00:15,094 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:00:15] "[36mGET /static/images/favicon.ico HTTP/1.1[0m" 304 -
+2024-12-09 17:00:29,839 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): api.themoviedb.org:443
+2024-12-09 17:00:29,975 - urllib3.connectionpool - DEBUG - https://api.themoviedb.org:443 "GET /3/movie/1118031?language=en-US HTTP/1.1" 200 None
+2024-12-09 17:00:29,980 - app - INFO - s visited Watch Party 21
+2024-12-09 17:00:29,983 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:00:29] "GET /party/6085a8d3803140d18b2c2d3e579edcc6 HTTP/1.1" 200 -
+2024-12-09 17:00:30,047 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:00:30] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2024-12-09 17:00:30,055 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:00:30] "[36mGET /static/js/theme.js HTTP/1.1[0m" 304 -
+2024-12-09 17:00:30,056 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:00:30] "[36mGET /static/js/rate.js HTTP/1.1[0m" 304 -
+2024-12-09 17:00:30,056 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:00:30] "[36mGET /static/js/comment.js HTTP/1.1[0m" 304 -
+2024-12-09 17:00:30,072 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:00:30] "[36mGET /static/images/icon.png HTTP/1.1[0m" 304 -
+2024-12-09 17:00:30,078 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:00:30] "[36mGET /static/js/alerts.js HTTP/1.1[0m" 304 -
+2024-12-09 17:00:30,080 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:00:30] "[36mGET /static/js/partyPage.js HTTP/1.1[0m" 304 -
+2024-12-09 17:00:30,080 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:00:30] "[36mGET /static/js/party.js HTTP/1.1[0m" 304 -
+2024-12-09 17:00:30,081 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:00:30] "[36mGET /static/js/csrf.js HTTP/1.1[0m" 304 -
+2024-12-09 17:00:32,930 - app - INFO - Watch Party 21 rated by s
+2024-12-09 17:00:32,932 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:00:32] "POST /party/rate/6085a8d3803140d18b2c2d3e579edcc6 HTTP/1.1" 200 -
+2024-12-09 17:00:35,096 - app - INFO - Watch Party 21 rated by s
+2024-12-09 17:00:35,097 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:00:35] "POST /party/rate/6085a8d3803140d18b2c2d3e579edcc6 HTTP/1.1" 200 -
+2024-12-09 17:00:36,241 - app - INFO - Watch Party 21 rated by s
+2024-12-09 17:00:36,243 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:00:36] "POST /party/rate/6085a8d3803140d18b2c2d3e579edcc6 HTTP/1.1" 200 -
+2024-12-09 17:00:37,100 - app - INFO - Watch Party 21 rated by s
+2024-12-09 17:00:37,102 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:00:37] "POST /party/rate/6085a8d3803140d18b2c2d3e579edcc6 HTTP/1.1" 200 -
+2024-12-09 17:00:42,337 - app - INFO - Watch Party 21 rated by s
+2024-12-09 17:00:42,339 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:00:42] "POST /party/rate/6085a8d3803140d18b2c2d3e579edcc6 HTTP/1.1" 200 -
+2024-12-09 17:00:45,306 - app - INFO - Reaction by s in Watch Party 21
+2024-12-09 17:00:45,308 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:00:45] "POST /party/vote/6085a8d3803140d18b2c2d3e579edcc6/45 HTTP/1.1" 200 -
+2024-12-09 17:00:50,784 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): api.themoviedb.org:443
+2024-12-09 17:00:50,839 - urllib3.connectionpool - DEBUG - https://api.themoviedb.org:443 "GET /3/movie/1118031?language=en-US HTTP/1.1" 200 None
+2024-12-09 17:00:50,845 - app - INFO - s visited Watch Party 21
+2024-12-09 17:00:50,848 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:00:50] "GET /party/6085a8d3803140d18b2c2d3e579edcc6 HTTP/1.1" 200 -
+2024-12-09 17:00:50,910 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:00:50] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2024-12-09 17:00:50,910 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:00:50] "[36mGET /static/js/theme.js HTTP/1.1[0m" 304 -
+2024-12-09 17:00:50,912 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:00:50] "[36mGET /static/js/rate.js HTTP/1.1[0m" 304 -
+2024-12-09 17:00:50,912 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:00:50] "[36mGET /static/js/comment.js HTTP/1.1[0m" 304 -
+2024-12-09 17:00:50,922 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:00:50] "[36mGET /static/images/icon.png HTTP/1.1[0m" 304 -
+2024-12-09 17:00:50,923 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:00:50] "[36mGET /static/js/partyPage.js HTTP/1.1[0m" 304 -
+2024-12-09 17:00:50,926 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:00:50] "[36mGET /static/js/alerts.js HTTP/1.1[0m" 304 -
+2024-12-09 17:00:50,927 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:00:50] "[36mGET /static/js/party.js HTTP/1.1[0m" 304 -
+2024-12-09 17:00:50,927 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:00:50] "[36mGET /static/js/csrf.js HTTP/1.1[0m" 304 -
+2024-12-09 17:00:50,945 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:00:50] "[36mGET /static/images/favicon.ico HTTP/1.1[0m" 304 -
+2024-12-09 17:00:53,572 - app - INFO - Watch Party 21 rated by s
+2024-12-09 17:00:53,573 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:00:53] "POST /party/rate/6085a8d3803140d18b2c2d3e579edcc6 HTTP/1.1" 200 -
+2024-12-09 17:01:00,946 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): api.themoviedb.org:443
+2024-12-09 17:01:01,003 - urllib3.connectionpool - DEBUG - https://api.themoviedb.org:443 "GET /3/movie/1118031?language=en-US HTTP/1.1" 200 None
+2024-12-09 17:01:01,008 - app - INFO - s visited Watch Party 21
+2024-12-09 17:01:01,011 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:01:01] "GET /party/6085a8d3803140d18b2c2d3e579edcc6 HTTP/1.1" 200 -
+2024-12-09 17:01:01,063 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:01:01] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2024-12-09 17:01:01,066 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:01:01] "[36mGET /static/js/theme.js HTTP/1.1[0m" 304 -
+2024-12-09 17:01:01,066 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:01:01] "[36mGET /static/js/rate.js HTTP/1.1[0m" 304 -
+2024-12-09 17:01:01,067 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:01:01] "[36mGET /static/js/comment.js HTTP/1.1[0m" 304 -
+2024-12-09 17:01:01,076 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:01:01] "[36mGET /static/images/icon.png HTTP/1.1[0m" 304 -
+2024-12-09 17:01:01,077 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:01:01] "[36mGET /static/js/partyPage.js HTTP/1.1[0m" 304 -
+2024-12-09 17:01:01,080 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:01:01] "[36mGET /static/js/alerts.js HTTP/1.1[0m" 304 -
+2024-12-09 17:01:01,081 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:01:01] "[36mGET /static/js/party.js HTTP/1.1[0m" 304 -
+2024-12-09 17:01:01,082 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:01:01] "[36mGET /static/js/csrf.js HTTP/1.1[0m" 304 -
+2024-12-09 17:01:01,098 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:01:01] "[36mGET /static/images/favicon.ico HTTP/1.1[0m" 304 -
+2024-12-09 17:01:07,347 - app - INFO - Watch Party 21 rated by s
+2024-12-09 17:01:07,349 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:01:07] "POST /party/rate/6085a8d3803140d18b2c2d3e579edcc6 HTTP/1.1" 200 -
+2024-12-09 17:02:01,285 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): api.themoviedb.org:443
+2024-12-09 17:02:01,339 - urllib3.connectionpool - DEBUG - https://api.themoviedb.org:443 "GET /3/movie/1118031?language=en-US HTTP/1.1" 200 None
+2024-12-09 17:02:01,344 - app - INFO - s visited Watch Party 21
+2024-12-09 17:02:01,347 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:02:01] "GET /party/6085a8d3803140d18b2c2d3e579edcc6 HTTP/1.1" 200 -
+2024-12-09 17:02:01,420 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:02:01] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2024-12-09 17:02:01,421 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:02:01] "[36mGET /static/js/theme.js HTTP/1.1[0m" 304 -
+2024-12-09 17:02:01,422 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:02:01] "[36mGET /static/js/rate.js HTTP/1.1[0m" 304 -
+2024-12-09 17:02:01,423 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:02:01] "[36mGET /static/js/comment.js HTTP/1.1[0m" 304 -
+2024-12-09 17:02:01,433 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:02:01] "[36mGET /static/images/icon.png HTTP/1.1[0m" 304 -
+2024-12-09 17:02:01,440 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:02:01] "[36mGET /static/js/partyPage.js HTTP/1.1[0m" 304 -
+2024-12-09 17:02:01,441 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:02:01] "[36mGET /static/js/alerts.js HTTP/1.1[0m" 304 -
+2024-12-09 17:02:01,442 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:02:01] "[36mGET /static/js/party.js HTTP/1.1[0m" 304 -
+2024-12-09 17:02:01,443 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:02:01] "[36mGET /static/js/csrf.js HTTP/1.1[0m" 304 -
+2024-12-09 17:02:01,458 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:02:01] "[36mGET /static/images/favicon.ico HTTP/1.1[0m" 304 -
+2024-12-09 17:02:01,737 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): api.themoviedb.org:443
+2024-12-09 17:02:01,789 - urllib3.connectionpool - DEBUG - https://api.themoviedb.org:443 "GET /3/movie/1118031?language=en-US HTTP/1.1" 200 None
+2024-12-09 17:02:01,794 - app - INFO - s visited Watch Party 21
+2024-12-09 17:02:01,796 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:02:01] "GET /party/6085a8d3803140d18b2c2d3e579edcc6 HTTP/1.1" 200 -
+2024-12-09 17:02:01,858 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:02:01] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2024-12-09 17:02:01,862 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:02:01] "[36mGET /static/js/theme.js HTTP/1.1[0m" 304 -
+2024-12-09 17:02:01,863 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:02:01] "[36mGET /static/js/rate.js HTTP/1.1[0m" 304 -
+2024-12-09 17:02:01,863 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:02:01] "[36mGET /static/js/comment.js HTTP/1.1[0m" 304 -
+2024-12-09 17:02:01,875 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:02:01] "[36mGET /static/images/icon.png HTTP/1.1[0m" 304 -
+2024-12-09 17:02:01,881 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:02:01] "[36mGET /static/js/partyPage.js HTTP/1.1[0m" 304 -
+2024-12-09 17:02:01,882 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:02:01] "[36mGET /static/js/alerts.js HTTP/1.1[0m" 304 -
+2024-12-09 17:02:01,883 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:02:01] "[36mGET /static/js/party.js HTTP/1.1[0m" 304 -
+2024-12-09 17:02:01,883 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:02:01] "[36mGET /static/js/csrf.js HTTP/1.1[0m" 304 -
+2024-12-09 17:02:01,897 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:02:01] "[36mGET /static/images/favicon.ico HTTP/1.1[0m" 304 -
+2024-12-09 17:02:02,045 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): api.themoviedb.org:443
+2024-12-09 17:02:02,099 - urllib3.connectionpool - DEBUG - https://api.themoviedb.org:443 "GET /3/movie/1118031?language=en-US HTTP/1.1" 200 None
+2024-12-09 17:02:02,103 - app - INFO - s visited Watch Party 21
+2024-12-09 17:02:02,106 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:02:02] "GET /party/6085a8d3803140d18b2c2d3e579edcc6 HTTP/1.1" 200 -
+2024-12-09 17:02:02,134 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:02:02] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2024-12-09 17:02:02,156 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:02:02] "[36mGET /static/js/theme.js HTTP/1.1[0m" 304 -
+2024-12-09 17:02:02,157 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:02:02] "[36mGET /static/js/rate.js HTTP/1.1[0m" 304 -
+2024-12-09 17:02:02,158 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:02:02] "[36mGET /static/js/comment.js HTTP/1.1[0m" 304 -
+2024-12-09 17:02:02,166 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:02:02] "[36mGET /static/images/icon.png HTTP/1.1[0m" 304 -
+2024-12-09 17:02:02,168 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:02:02] "[36mGET /static/js/partyPage.js HTTP/1.1[0m" 304 -
+2024-12-09 17:02:02,170 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:02:02] "[36mGET /static/js/party.js HTTP/1.1[0m" 304 -
+2024-12-09 17:02:02,171 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:02:02] "[36mGET /static/js/alerts.js HTTP/1.1[0m" 304 -
+2024-12-09 17:02:02,171 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:02:02] "[36mGET /static/js/csrf.js HTTP/1.1[0m" 304 -
+2024-12-09 17:02:02,187 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:02:02] "[36mGET /static/images/favicon.ico HTTP/1.1[0m" 304 -
+2024-12-09 17:02:55,109 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): api.themoviedb.org:443
+2024-12-09 17:02:55,160 - urllib3.connectionpool - DEBUG - https://api.themoviedb.org:443 "GET /3/movie/1118031?language=en-US HTTP/1.1" 200 None
+2024-12-09 17:02:55,164 - app - INFO - s visited Watch Party 21
+2024-12-09 17:02:55,166 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:02:55] "GET /party/6085a8d3803140d18b2c2d3e579edcc6 HTTP/1.1" 200 -
+2024-12-09 17:02:55,238 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:02:55] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2024-12-09 17:02:55,238 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:02:55] "[36mGET /static/js/theme.js HTTP/1.1[0m" 304 -
+2024-12-09 17:02:55,239 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:02:55] "GET /static/js/rate.js HTTP/1.1" 200 -
+2024-12-09 17:02:55,240 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:02:55] "[36mGET /static/js/comment.js HTTP/1.1[0m" 304 -
+2024-12-09 17:02:55,256 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:02:55] "[36mGET /static/images/icon.png HTTP/1.1[0m" 304 -
+2024-12-09 17:02:55,258 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:02:55] "[36mGET /static/js/alerts.js HTTP/1.1[0m" 304 -
+2024-12-09 17:02:55,260 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:02:55] "[36mGET /static/js/party.js HTTP/1.1[0m" 304 -
+2024-12-09 17:02:55,261 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:02:55] "[36mGET /static/js/partyPage.js HTTP/1.1[0m" 304 -
+2024-12-09 17:02:55,261 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:02:55] "[36mGET /static/js/csrf.js HTTP/1.1[0m" 304 -
+2024-12-09 17:02:55,277 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:02:55] "[36mGET /static/images/favicon.ico HTTP/1.1[0m" 304 -
+2024-12-09 17:02:55,624 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): api.themoviedb.org:443
+2024-12-09 17:02:55,674 - urllib3.connectionpool - DEBUG - https://api.themoviedb.org:443 "GET /3/movie/1118031?language=en-US HTTP/1.1" 200 None
+2024-12-09 17:02:55,679 - app - INFO - s visited Watch Party 21
+2024-12-09 17:02:55,682 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:02:55] "GET /party/6085a8d3803140d18b2c2d3e579edcc6 HTTP/1.1" 200 -
+2024-12-09 17:02:55,745 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:02:55] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2024-12-09 17:02:55,749 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:02:55] "[36mGET /static/js/rate.js HTTP/1.1[0m" 304 -
+2024-12-09 17:02:55,750 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:02:55] "[36mGET /static/js/theme.js HTTP/1.1[0m" 304 -
+2024-12-09 17:02:55,751 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:02:55] "[36mGET /static/js/comment.js HTTP/1.1[0m" 304 -
+2024-12-09 17:02:55,762 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:02:55] "[36mGET /static/images/icon.png HTTP/1.1[0m" 304 -
+2024-12-09 17:02:55,768 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:02:55] "[36mGET /static/js/alerts.js HTTP/1.1[0m" 304 -
+2024-12-09 17:02:55,769 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:02:55] "[36mGET /static/js/party.js HTTP/1.1[0m" 304 -
+2024-12-09 17:02:55,770 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:02:55] "[36mGET /static/js/partyPage.js HTTP/1.1[0m" 304 -
+2024-12-09 17:02:55,770 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:02:55] "[36mGET /static/js/csrf.js HTTP/1.1[0m" 304 -
+2024-12-09 17:02:55,787 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:02:55] "[36mGET /static/images/favicon.ico HTTP/1.1[0m" 304 -
+2024-12-09 17:02:57,296 - app - INFO - Watch Party 21 rated by s
+2024-12-09 17:02:57,297 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:02:57] "POST /party/rate/6085a8d3803140d18b2c2d3e579edcc6 HTTP/1.1" 200 -
+2024-12-09 17:03:08,070 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): api.themoviedb.org:443
+2024-12-09 17:03:08,118 - urllib3.connectionpool - DEBUG - https://api.themoviedb.org:443 "GET /3/movie/1118031?language=en-US HTTP/1.1" 200 None
+2024-12-09 17:03:08,120 - app - INFO - s visited Watch Party 21
+2024-12-09 17:03:08,122 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:03:08] "GET /party/6085a8d3803140d18b2c2d3e579edcc6 HTTP/1.1" 200 -
+2024-12-09 17:03:08,170 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:03:08] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2024-12-09 17:03:08,170 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:03:08] "[36mGET /static/js/theme.js HTTP/1.1[0m" 304 -
+2024-12-09 17:03:08,170 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:03:08] "GET /static/js/rate.js HTTP/1.1" 200 -
+2024-12-09 17:03:08,171 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:03:08] "[36mGET /static/js/comment.js HTTP/1.1[0m" 304 -
+2024-12-09 17:03:08,181 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:03:08] "[36mGET /static/images/icon.png HTTP/1.1[0m" 304 -
+2024-12-09 17:03:08,187 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:03:08] "[36mGET /static/js/partyPage.js HTTP/1.1[0m" 304 -
+2024-12-09 17:03:08,188 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:03:08] "[36mGET /static/js/alerts.js HTTP/1.1[0m" 304 -
+2024-12-09 17:03:08,188 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:03:08] "[36mGET /static/js/party.js HTTP/1.1[0m" 304 -
+2024-12-09 17:03:08,190 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:03:08] "[36mGET /static/js/csrf.js HTTP/1.1[0m" 304 -
+2024-12-09 17:03:08,203 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:03:08] "[36mGET /static/images/favicon.ico HTTP/1.1[0m" 304 -
+2024-12-09 17:03:08,473 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): api.themoviedb.org:443
+2024-12-09 17:03:08,522 - urllib3.connectionpool - DEBUG - https://api.themoviedb.org:443 "GET /3/movie/1118031?language=en-US HTTP/1.1" 200 None
+2024-12-09 17:03:08,528 - app - INFO - s visited Watch Party 21
+2024-12-09 17:03:08,530 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:03:08] "GET /party/6085a8d3803140d18b2c2d3e579edcc6 HTTP/1.1" 200 -
+2024-12-09 17:03:08,578 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:03:08] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2024-12-09 17:03:08,580 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:03:08] "[36mGET /static/js/theme.js HTTP/1.1[0m" 304 -
+2024-12-09 17:03:08,581 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:03:08] "[36mGET /static/js/rate.js HTTP/1.1[0m" 304 -
+2024-12-09 17:03:08,582 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:03:08] "[36mGET /static/js/comment.js HTTP/1.1[0m" 304 -
+2024-12-09 17:03:08,591 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:03:08] "[36mGET /static/images/icon.png HTTP/1.1[0m" 304 -
+2024-12-09 17:03:08,592 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:03:08] "[36mGET /static/js/partyPage.js HTTP/1.1[0m" 304 -
+2024-12-09 17:03:08,593 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:03:08] "[36mGET /static/js/alerts.js HTTP/1.1[0m" 304 -
+2024-12-09 17:03:08,595 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:03:08] "[36mGET /static/js/party.js HTTP/1.1[0m" 304 -
+2024-12-09 17:03:08,596 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:03:08] "[36mGET /static/js/csrf.js HTTP/1.1[0m" 304 -
+2024-12-09 17:03:08,616 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:03:08] "[36mGET /static/images/favicon.ico HTTP/1.1[0m" 304 -
+2024-12-09 17:03:10,314 - app - INFO - Watch Party 21 rated by s
+2024-12-09 17:03:10,315 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:03:10] "POST /party/rate/6085a8d3803140d18b2c2d3e579edcc6 HTTP/1.1" 200 -
+2024-12-09 17:03:11,412 - app - INFO - Watch Party 21 rated by s
+2024-12-09 17:03:11,413 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:03:11] "POST /party/rate/6085a8d3803140d18b2c2d3e579edcc6 HTTP/1.1" 200 -
+2024-12-09 17:03:12,504 - app - INFO - Watch Party 21 rated by s
+2024-12-09 17:03:12,505 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:03:12] "POST /party/rate/6085a8d3803140d18b2c2d3e579edcc6 HTTP/1.1" 200 -
+2024-12-09 17:03:13,800 - app - INFO - Watch Party 21 rated by s
+2024-12-09 17:03:13,801 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:03:13] "POST /party/rate/6085a8d3803140d18b2c2d3e579edcc6 HTTP/1.1" 200 -
+2024-12-09 17:03:14,917 - app - INFO - Watch Party 21 rated by s
+2024-12-09 17:03:14,919 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:03:14] "POST /party/rate/6085a8d3803140d18b2c2d3e579edcc6 HTTP/1.1" 200 -
+2024-12-09 17:03:16,104 - app - INFO - Watch Party 21 rated by s
+2024-12-09 17:03:16,105 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:03:16] "POST /party/rate/6085a8d3803140d18b2c2d3e579edcc6 HTTP/1.1" 200 -
+2024-12-09 17:03:16,385 - app - INFO - Watch Party 21 rated by s
+2024-12-09 17:03:16,387 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:03:16] "POST /party/rate/6085a8d3803140d18b2c2d3e579edcc6 HTTP/1.1" 200 -
+2024-12-09 17:03:17,686 - app - INFO - Watch Party 21 rated by s
+2024-12-09 17:03:17,687 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:03:17] "POST /party/rate/6085a8d3803140d18b2c2d3e579edcc6 HTTP/1.1" 200 -
+2024-12-09 17:03:18,872 - app - INFO - Watch Party 21 rated by s
+2024-12-09 17:03:18,874 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:03:18] "POST /party/rate/6085a8d3803140d18b2c2d3e579edcc6 HTTP/1.1" 200 -
+2024-12-09 17:05:14,881 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): api.themoviedb.org:443
+2024-12-09 17:05:14,932 - urllib3.connectionpool - DEBUG - https://api.themoviedb.org:443 "GET /3/movie/%0A%20%20%20%20%20%20%20%20%20%20%20%201118031?language=en-US HTTP/1.1" 200 None
+2024-12-09 17:05:14,937 - app - INFO - User s visited the homepage
+2024-12-09 17:05:14,941 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:05:14] "GET / HTTP/1.1" 200 -
+2024-12-09 17:05:15,011 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:05:15] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2024-12-09 17:05:15,017 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:05:15] "[36mGET /static/js/index.js HTTP/1.1[0m" 304 -
+2024-12-09 17:05:15,017 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:05:15] "[36mGET /static/js/theme.js HTTP/1.1[0m" 304 -
+2024-12-09 17:05:15,020 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:05:15] "GET /static/js/alerts.js HTTP/1.1" 200 -
+2024-12-09 17:05:15,024 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:05:15] "[36mGET /static/js/party.js HTTP/1.1[0m" 304 -
+2024-12-09 17:05:15,029 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:05:15] "[36mGET /static/images/icon.png HTTP/1.1[0m" 304 -
+2024-12-09 17:05:15,029 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:05:15] "[36mGET /static/js/csrf.js HTTP/1.1[0m" 304 -
+2024-12-09 17:05:17,510 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:05:17] "[33mGET /asas HTTP/1.1[0m" 404 -
+2024-12-09 17:05:17,554 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:05:17] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2024-12-09 17:05:17,556 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:05:17] "GET /static/images/404.gif HTTP/1.1" 200 -
+2024-12-09 17:05:17,559 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:05:17] "[36mGET /static/js/theme.js HTTP/1.1[0m" 304 -
+2024-12-09 17:05:17,559 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:05:17] "[36mGET /static/js/alerts.js HTTP/1.1[0m" 304 -
+2024-12-09 17:05:17,565 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:05:17] "[36mGET /static/js/party.js HTTP/1.1[0m" 304 -
+2024-12-09 17:05:17,569 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:05:17] "[36mGET /static/images/icon.png HTTP/1.1[0m" 304 -
+2024-12-09 17:05:17,570 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:05:17] "[36mGET /static/js/csrf.js HTTP/1.1[0m" 304 -
+2024-12-09 17:05:20,809 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): api.themoviedb.org:443
+2024-12-09 17:05:20,864 - urllib3.connectionpool - DEBUG - https://api.themoviedb.org:443 "GET /3/movie/1118031?language=en-US HTTP/1.1" 200 None
+2024-12-09 17:05:20,869 - app - INFO - s visited Watch Party 21
+2024-12-09 17:05:20,873 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:05:20] "GET /party/6085a8d3803140d18b2c2d3e579edcc6 HTTP/1.1" 200 -
+2024-12-09 17:05:20,919 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:05:20] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2024-12-09 17:05:20,921 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:05:20] "[36mGET /static/js/theme.js HTTP/1.1[0m" 304 -
+2024-12-09 17:05:20,922 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:05:20] "[36mGET /static/js/rate.js HTTP/1.1[0m" 304 -
+2024-12-09 17:05:20,922 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:05:20] "[36mGET /static/js/comment.js HTTP/1.1[0m" 304 -
+2024-12-09 17:05:20,935 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:05:20] "[36mGET /static/images/icon.png HTTP/1.1[0m" 304 -
+2024-12-09 17:05:20,942 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:05:20] "[36mGET /static/js/alerts.js HTTP/1.1[0m" 304 -
+2024-12-09 17:05:20,943 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:05:20] "[36mGET /static/js/party.js HTTP/1.1[0m" 304 -
+2024-12-09 17:05:20,943 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:05:20] "[36mGET /static/js/csrf.js HTTP/1.1[0m" 304 -
+2024-12-09 17:05:20,944 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:05:20] "[36mGET /static/js/partyPage.js HTTP/1.1[0m" 304 -
+2024-12-09 17:05:24,001 - app - DEBUG - s tried to access a non-existent Watch Party, {url}
+2024-12-09 17:05:24,004 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:05:24] "[33mGET /party/6085a8d3803140d18ssb2c2d3e579edcc6 HTTP/1.1[0m" 404 -
+2024-12-09 17:05:24,043 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:05:24] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2024-12-09 17:05:24,044 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:05:24] "[36mGET /static/images/404.gif HTTP/1.1[0m" 304 -
+2024-12-09 17:05:24,045 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:05:24] "[36mGET /static/js/theme.js HTTP/1.1[0m" 304 -
+2024-12-09 17:05:24,046 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:05:24] "[36mGET /static/js/alerts.js HTTP/1.1[0m" 304 -
+2024-12-09 17:05:24,052 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:05:24] "[36mGET /static/js/party.js HTTP/1.1[0m" 304 -
+2024-12-09 17:05:24,055 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:05:24] "[36mGET /static/images/icon.png HTTP/1.1[0m" 304 -
+2024-12-09 17:05:24,056 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:05:24] "[36mGET /static/js/csrf.js HTTP/1.1[0m" 304 -
+2024-12-09 17:05:31,508 - app - DEBUG - s tried to access a non-existent Watch Party, {url}
+2024-12-09 17:05:31,510 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:05:31] "[33mGET /party/6085a8d3803140d18ssb2c2d3e579edcc6 HTTP/1.1[0m" 404 -
+2024-12-09 17:05:31,553 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:05:31] "[36mGET /static/images/404.gif HTTP/1.1[0m" 304 -
+2024-12-09 17:05:31,554 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:05:31] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2024-12-09 17:05:31,554 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:05:31] "[36mGET /static/js/theme.js HTTP/1.1[0m" 304 -
+2024-12-09 17:05:31,555 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:05:31] "[36mGET /static/js/alerts.js HTTP/1.1[0m" 304 -
+2024-12-09 17:05:31,561 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:05:31] "[36mGET /static/js/party.js HTTP/1.1[0m" 304 -
+2024-12-09 17:05:31,564 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:05:31] "[36mGET /static/images/icon.png HTTP/1.1[0m" 304 -
+2024-12-09 17:05:31,564 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:05:31] "[36mGET /static/js/csrf.js HTTP/1.1[0m" 304 -
+2024-12-09 17:05:31,579 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:05:31] "[36mGET /static/images/favicon.ico HTTP/1.1[0m" 304 -
+2024-12-09 17:05:37,104 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:05:37] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2024-12-09 17:08:10,569 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): api.themoviedb.org:443
+2024-12-09 17:08:10,619 - urllib3.connectionpool - DEBUG - https://api.themoviedb.org:443 "GET /3/movie/%0A%20%20%20%20%20%20%20%20%20%20%20%201118031?language=en-US HTTP/1.1" 200 None
+2024-12-09 17:08:10,623 - app - INFO - User s visited the homepage
+2024-12-09 17:08:10,626 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:08:10] "GET / HTTP/1.1" 200 -
+2024-12-09 17:08:10,661 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:08:10] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2024-12-09 17:08:10,689 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:08:10] "[36mGET /static/js/theme.js HTTP/1.1[0m" 304 -
+2024-12-09 17:08:10,691 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:08:10] "[36mGET /static/js/index.js HTTP/1.1[0m" 304 -
+2024-12-09 17:08:10,691 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:08:10] "[36mGET /static/js/alerts.js HTTP/1.1[0m" 304 -
+2024-12-09 17:08:10,702 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:08:10] "[36mGET /static/images/icon.png HTTP/1.1[0m" 304 -
+2024-12-09 17:08:10,703 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:08:10] "[36mGET /static/js/party.js HTTP/1.1[0m" 304 -
+2024-12-09 17:08:10,707 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:08:10] "[36mGET /static/js/csrf.js HTTP/1.1[0m" 304 -
+2024-12-09 17:08:11,104 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): api.themoviedb.org:443
+2024-12-09 17:08:11,162 - urllib3.connectionpool - DEBUG - https://api.themoviedb.org:443 "GET /3/movie/1118031?language=en-US HTTP/1.1" 200 None
+2024-12-09 17:08:11,167 - app - INFO - s visited Watch Party 21
+2024-12-09 17:08:11,169 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:08:11] "GET /party/6085a8d3803140d18b2c2d3e579edcc6 HTTP/1.1" 200 -
+2024-12-09 17:08:11,226 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:08:11] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2024-12-09 17:08:11,232 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:08:11] "[36mGET /static/js/theme.js HTTP/1.1[0m" 304 -
+2024-12-09 17:08:11,233 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:08:11] "[36mGET /static/js/rate.js HTTP/1.1[0m" 304 -
+2024-12-09 17:08:11,233 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:08:11] "GET /static/js/comment.js HTTP/1.1" 200 -
+2024-12-09 17:08:11,242 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:08:11] "[36mGET /static/images/icon.png HTTP/1.1[0m" 304 -
+2024-12-09 17:08:11,249 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:08:11] "[36mGET /static/js/alerts.js HTTP/1.1[0m" 304 -
+2024-12-09 17:08:11,250 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:08:11] "[36mGET /static/js/csrf.js HTTP/1.1[0m" 304 -
+2024-12-09 17:08:11,251 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:08:11] "[36mGET /static/js/party.js HTTP/1.1[0m" 304 -
+2024-12-09 17:08:11,252 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:08:11] "[36mGET /static/js/partyPage.js HTTP/1.1[0m" 304 -
+2024-12-09 17:08:13,112 - app - INFO - Reaction by s in Watch Party 21
+2024-12-09 17:08:13,114 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:08:13] "POST /party/vote/6085a8d3803140d18b2c2d3e579edcc6/45 HTTP/1.1" 200 -
+2024-12-09 17:08:15,386 - app - INFO - Reaction by s in Watch Party 21
+2024-12-09 17:08:15,387 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:08:15] "POST /party/vote/6085a8d3803140d18b2c2d3e579edcc6/46 HTTP/1.1" 200 -
+2024-12-09 17:08:16,765 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): api.themoviedb.org:443
+2024-12-09 17:08:16,820 - urllib3.connectionpool - DEBUG - https://api.themoviedb.org:443 "GET /3/movie/1118031?language=en-US HTTP/1.1" 200 None
+2024-12-09 17:08:16,824 - app - INFO - s visited Watch Party 21
+2024-12-09 17:08:16,827 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:08:16] "GET /party/6085a8d3803140d18b2c2d3e579edcc6 HTTP/1.1" 200 -
+2024-12-09 17:08:16,883 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:08:16] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2024-12-09 17:08:16,885 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:08:16] "[36mGET /static/js/theme.js HTTP/1.1[0m" 304 -
+2024-12-09 17:08:16,885 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:08:16] "[36mGET /static/js/rate.js HTTP/1.1[0m" 304 -
+2024-12-09 17:08:16,885 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:08:16] "[36mGET /static/js/comment.js HTTP/1.1[0m" 304 -
+2024-12-09 17:08:16,898 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:08:16] "[36mGET /static/images/icon.png HTTP/1.1[0m" 304 -
+2024-12-09 17:08:16,899 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:08:16] "[36mGET /static/js/alerts.js HTTP/1.1[0m" 304 -
+2024-12-09 17:08:16,899 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:08:16] "[36mGET /static/js/partyPage.js HTTP/1.1[0m" 304 -
+2024-12-09 17:08:16,899 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:08:16] "[36mGET /static/js/party.js HTTP/1.1[0m" 304 -
+2024-12-09 17:08:16,900 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:08:16] "[36mGET /static/js/csrf.js HTTP/1.1[0m" 304 -
+2024-12-09 17:08:16,919 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:08:16] "[36mGET /static/images/favicon.ico HTTP/1.1[0m" 304 -
+2024-12-09 17:08:22,326 - app - INFO - Comment deleted by s in Watch Party 21
+2024-12-09 17:08:22,327 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:08:22] "[32mPOST /party/comment/delete/6085a8d3803140d18b2c2d3e579edcc6/46 HTTP/1.1[0m" 302 -
+2024-12-09 17:08:22,340 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): api.themoviedb.org:443
+2024-12-09 17:08:22,389 - urllib3.connectionpool - DEBUG - https://api.themoviedb.org:443 "GET /3/movie/1118031?language=en-US HTTP/1.1" 200 None
+2024-12-09 17:08:22,394 - app - INFO - s visited Watch Party 21
+2024-12-09 17:08:22,396 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:08:22] "GET /party/6085a8d3803140d18b2c2d3e579edcc6 HTTP/1.1" 200 -
+2024-12-09 17:08:22,460 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:08:22] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2024-12-09 17:08:22,464 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:08:22] "[36mGET /static/js/rate.js HTTP/1.1[0m" 304 -
+2024-12-09 17:08:22,464 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:08:22] "[36mGET /static/js/theme.js HTTP/1.1[0m" 304 -
+2024-12-09 17:08:22,465 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:08:22] "[36mGET /static/js/comment.js HTTP/1.1[0m" 304 -
+2024-12-09 17:08:22,483 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:08:22] "[36mGET /static/js/partyPage.js HTTP/1.1[0m" 304 -
+2024-12-09 17:08:22,485 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:08:22] "[36mGET /static/js/alerts.js HTTP/1.1[0m" 304 -
+2024-12-09 17:08:22,487 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:08:22] "[36mGET /static/js/party.js HTTP/1.1[0m" 304 -
+2024-12-09 17:08:22,487 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:08:22] "[36mGET /static/images/icon.png HTTP/1.1[0m" 304 -
+2024-12-09 17:08:22,488 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:08:22] "[36mGET /static/js/csrf.js HTTP/1.1[0m" 304 -
+2024-12-09 17:08:31,498 - app - INFO - Comment edited by s in Watch Party 21
+2024-12-09 17:08:31,499 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:08:31] "POST /party/comment/edit/6085a8d3803140d18b2c2d3e579edcc6/45 HTTP/1.1" 200 -
+2024-12-09 17:08:32,608 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): api.themoviedb.org:443
+2024-12-09 17:08:32,660 - urllib3.connectionpool - DEBUG - https://api.themoviedb.org:443 "GET /3/movie/1118031?language=en-US HTTP/1.1" 200 None
+2024-12-09 17:08:32,665 - app - INFO - s visited Watch Party 21
+2024-12-09 17:08:32,667 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:08:32] "GET /party/6085a8d3803140d18b2c2d3e579edcc6 HTTP/1.1" 200 -
+2024-12-09 17:08:32,727 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:08:32] "[36mGET /static/js/theme.js HTTP/1.1[0m" 304 -
+2024-12-09 17:08:32,729 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:08:32] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2024-12-09 17:08:32,729 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:08:32] "[36mGET /static/js/rate.js HTTP/1.1[0m" 304 -
+2024-12-09 17:08:32,730 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:08:32] "[36mGET /static/js/comment.js HTTP/1.1[0m" 304 -
+2024-12-09 17:08:32,739 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:08:32] "[36mGET /static/images/icon.png HTTP/1.1[0m" 304 -
+2024-12-09 17:08:32,740 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:08:32] "[36mGET /static/js/partyPage.js HTTP/1.1[0m" 304 -
+2024-12-09 17:08:32,741 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:08:32] "[36mGET /static/js/alerts.js HTTP/1.1[0m" 304 -
+2024-12-09 17:08:32,742 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:08:32] "[36mGET /static/js/party.js HTTP/1.1[0m" 304 -
+2024-12-09 17:08:32,743 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:08:32] "[36mGET /static/js/csrf.js HTTP/1.1[0m" 304 -
+2024-12-09 17:08:32,759 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:08:32] "[36mGET /static/images/favicon.ico HTTP/1.1[0m" 304 -
+2024-12-09 17:09:31,484 - app - INFO - Reaction by s in Watch Party 21
+2024-12-09 17:09:31,485 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:09:31] "POST /party/vote/6085a8d3803140d18b2c2d3e579edcc6/45 HTTP/1.1" 200 -
+2024-12-09 17:09:32,211 - app - INFO - Reaction by s in Watch Party 21
+2024-12-09 17:09:32,212 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:09:32] "POST /party/vote/6085a8d3803140d18b2c2d3e579edcc6/45 HTTP/1.1" 200 -
+2024-12-09 17:09:32,584 - app - INFO - Reaction by s in Watch Party 21
+2024-12-09 17:09:32,586 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:09:32] "POST /party/vote/6085a8d3803140d18b2c2d3e579edcc6/45 HTTP/1.1" 200 -
+2024-12-09 17:09:33,726 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): api.themoviedb.org:443
+2024-12-09 17:09:33,776 - urllib3.connectionpool - DEBUG - https://api.themoviedb.org:443 "GET /3/movie/1118031?language=en-US HTTP/1.1" 200 None
+2024-12-09 17:09:33,780 - app - INFO - s visited Watch Party 21
+2024-12-09 17:09:33,783 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:09:33] "GET /party/6085a8d3803140d18b2c2d3e579edcc6 HTTP/1.1" 200 -
+2024-12-09 17:09:33,827 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:09:33] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2024-12-09 17:09:33,832 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:09:33] "[36mGET /static/js/theme.js HTTP/1.1[0m" 304 -
+2024-12-09 17:09:33,833 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:09:33] "[36mGET /static/js/rate.js HTTP/1.1[0m" 304 -
+2024-12-09 17:09:33,834 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:09:33] "GET /static/js/comment.js HTTP/1.1" 200 -
+2024-12-09 17:09:33,844 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:09:33] "[36mGET /static/images/icon.png HTTP/1.1[0m" 304 -
+2024-12-09 17:09:33,848 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:09:33] "[36mGET /static/js/partyPage.js HTTP/1.1[0m" 304 -
+2024-12-09 17:09:33,848 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:09:33] "[36mGET /static/js/alerts.js HTTP/1.1[0m" 304 -
+2024-12-09 17:09:33,850 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:09:33] "[36mGET /static/js/party.js HTTP/1.1[0m" 304 -
+2024-12-09 17:09:33,850 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:09:33] "[36mGET /static/js/csrf.js HTTP/1.1[0m" 304 -
+2024-12-09 17:09:33,872 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:09:33] "[36mGET /static/images/favicon.ico HTTP/1.1[0m" 304 -
+2024-12-09 17:09:34,755 - app - INFO - Reaction by s in Watch Party 21
+2024-12-09 17:09:34,757 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:09:34] "POST /party/vote/6085a8d3803140d18b2c2d3e579edcc6/45 HTTP/1.1" 200 -
+2024-12-09 17:09:35,866 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): api.themoviedb.org:443
+2024-12-09 17:09:35,919 - urllib3.connectionpool - DEBUG - https://api.themoviedb.org:443 "GET /3/movie/1118031?language=en-US HTTP/1.1" 200 None
+2024-12-09 17:09:35,924 - app - INFO - s visited Watch Party 21
+2024-12-09 17:09:35,926 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:09:35] "GET /party/6085a8d3803140d18b2c2d3e579edcc6 HTTP/1.1" 200 -
+2024-12-09 17:09:35,986 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:09:35] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2024-12-09 17:09:35,993 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:09:35] "[36mGET /static/js/theme.js HTTP/1.1[0m" 304 -
+2024-12-09 17:09:35,994 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:09:35] "[36mGET /static/js/rate.js HTTP/1.1[0m" 304 -
+2024-12-09 17:09:35,994 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:09:35] "[36mGET /static/js/comment.js HTTP/1.1[0m" 304 -
+2024-12-09 17:09:36,005 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:09:36] "[36mGET /static/images/icon.png HTTP/1.1[0m" 304 -
+2024-12-09 17:09:36,007 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:09:36] "[36mGET /static/js/alerts.js HTTP/1.1[0m" 304 -
+2024-12-09 17:09:36,008 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:09:36] "[36mGET /static/js/party.js HTTP/1.1[0m" 304 -
+2024-12-09 17:09:36,008 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:09:36] "[36mGET /static/js/partyPage.js HTTP/1.1[0m" 304 -
+2024-12-09 17:09:36,009 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:09:36] "[36mGET /static/js/csrf.js HTTP/1.1[0m" 304 -
+2024-12-09 17:09:36,024 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:09:36] "[36mGET /static/images/favicon.ico HTTP/1.1[0m" 304 -
+2024-12-09 17:09:36,733 - app - INFO - Reaction by s in Watch Party 21
+2024-12-09 17:09:36,735 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:09:36] "POST /party/vote/6085a8d3803140d18b2c2d3e579edcc6/45 HTTP/1.1" 200 -
+2024-12-09 17:09:39,734 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:09:39] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2024-12-09 17:11:36,872 - app - INFO - Watch Party 21 rated by s
+2024-12-09 17:11:36,874 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:11:36] "POST /party/rate/6085a8d3803140d18b2c2d3e579edcc6 HTTP/1.1" 200 -
+2024-12-09 17:11:39,096 - app - INFO - Watch Party 21 rated by s
+2024-12-09 17:11:39,097 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:11:39] "POST /party/rate/6085a8d3803140d18b2c2d3e579edcc6 HTTP/1.1" 200 -
+2024-12-09 17:13:36,722 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): api.themoviedb.org:443
+2024-12-09 17:13:36,772 - urllib3.connectionpool - DEBUG - https://api.themoviedb.org:443 "GET /3/movie/%0A%20%20%20%20%20%20%20%20%20%20%20%201118031?language=en-US HTTP/1.1" 200 None
+2024-12-09 17:13:36,775 - app - INFO - User s visited the homepage
+2024-12-09 17:13:36,779 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:13:36] "GET / HTTP/1.1" 200 -
+2024-12-09 17:13:36,811 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:13:36] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2024-12-09 17:13:36,839 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:13:36] "[36mGET /static/js/theme.js HTTP/1.1[0m" 304 -
+2024-12-09 17:13:36,839 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:13:36] "GET /static/js/index.js HTTP/1.1" 200 -
+2024-12-09 17:13:36,842 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:13:36] "[36mGET /static/js/alerts.js HTTP/1.1[0m" 304 -
+2024-12-09 17:13:36,853 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:13:36] "[36mGET /static/images/icon.png HTTP/1.1[0m" 304 -
+2024-12-09 17:13:36,854 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:13:36] "[36mGET /static/js/party.js HTTP/1.1[0m" 304 -
+2024-12-09 17:13:36,854 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:13:36] "[36mGET /static/js/csrf.js HTTP/1.1[0m" 304 -
+2024-12-09 17:13:40,121 - app - INFO - User s visited their created parties page
+2024-12-09 17:13:40,122 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:13:40] "GET /my-parties HTTP/1.1" 200 -
+2024-12-09 17:13:40,164 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:13:40] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2024-12-09 17:13:40,171 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:13:40] "[36mGET /static/js/alerts.js HTTP/1.1[0m" 304 -
+2024-12-09 17:13:40,171 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:13:40] "[36mGET /static/js/theme.js HTTP/1.1[0m" 304 -
+2024-12-09 17:13:40,172 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:13:40] "[36mGET /static/js/parties.js HTTP/1.1[0m" 304 -
+2024-12-09 17:13:40,177 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:13:40] "[36mGET /static/js/party.js HTTP/1.1[0m" 304 -
+2024-12-09 17:13:40,179 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:13:40] "[36mGET /static/images/icon.png HTTP/1.1[0m" 304 -
+2024-12-09 17:13:40,180 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:13:40] "[36mGET /static/js/csrf.js HTTP/1.1[0m" 304 -
+2024-12-09 17:13:46,578 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): api.themoviedb.org:443
+2024-12-09 17:13:46,630 - urllib3.connectionpool - DEBUG - https://api.themoviedb.org:443 "GET /3/movie/%0A%20%20%20%20%20%20%20%20%20%20%20%201118031?language=en-US HTTP/1.1" 200 None
+2024-12-09 17:13:46,634 - app - INFO - User s visited the homepage
+2024-12-09 17:13:46,637 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:13:46] "GET / HTTP/1.1" 200 -
+2024-12-09 17:13:46,685 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:13:46] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2024-12-09 17:13:46,689 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:13:46] "[36mGET /static/js/theme.js HTTP/1.1[0m" 304 -
+2024-12-09 17:13:46,689 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:13:46] "[36mGET /static/js/index.js HTTP/1.1[0m" 304 -
+2024-12-09 17:13:46,690 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:13:46] "[36mGET /static/js/alerts.js HTTP/1.1[0m" 304 -
+2024-12-09 17:13:46,699 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:13:46] "[36mGET /static/images/icon.png HTTP/1.1[0m" 304 -
+2024-12-09 17:13:46,700 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:13:46] "[36mGET /static/js/party.js HTTP/1.1[0m" 304 -
+2024-12-09 17:13:46,700 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:13:46] "[36mGET /static/js/csrf.js HTTP/1.1[0m" 304 -
+2024-12-09 17:15:26,644 - app - INFO - User s logged out
+2024-12-09 17:15:26,645 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:15:26] "[32mGET /logout HTTP/1.1[0m" 302 -
+2024-12-09 17:15:26,651 - app - INFO - User not authenticated
+2024-12-09 17:15:26,670 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): api.themoviedb.org:443
+2024-12-09 17:15:26,858 - urllib3.connectionpool - DEBUG - https://api.themoviedb.org:443 "GET /3/discover/movie?include_adult=False&include_video=False&language=en-US&sort_by=popularity.desc&primary_release_date.gte=2022-01-01&primary_release_date.lte=2024-12-31&vote_count.gte=100&with_poster=True&page=1 HTTP/1.1" 200 None
+2024-12-09 17:15:26,864 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:15:26] "GET / HTTP/1.1" 200 -
+2024-12-09 17:15:26,917 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:15:26] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2024-12-09 17:15:26,921 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:15:26] "[36mGET /static/js/theme.js HTTP/1.1[0m" 304 -
+2024-12-09 17:15:26,928 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:15:26] "[36mGET /static/js/alerts.js HTTP/1.1[0m" 304 -
+2024-12-09 17:15:26,930 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:15:26] "[36mGET /static/js/party.js HTTP/1.1[0m" 304 -
+2024-12-09 17:15:26,931 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:15:26] "[36mGET /static/images/icon.png HTTP/1.1[0m" 304 -
+2024-12-09 17:15:26,932 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:15:26] "[36mGET /static/js/csrf.js HTTP/1.1[0m" 304 -
+2024-12-09 17:15:28,234 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:15:28] "GET /login HTTP/1.1" 200 -
+2024-12-09 17:15:28,280 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:15:28] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2024-12-09 17:15:28,283 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:15:28] "[36mGET /static/js/theme.js HTTP/1.1[0m" 304 -
+2024-12-09 17:15:28,284 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:15:28] "[36mGET /static/js/login.js HTTP/1.1[0m" 304 -
+2024-12-09 17:15:28,284 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:15:28] "[36mGET /static/js/alerts.js HTTP/1.1[0m" 304 -
+2024-12-09 17:15:28,292 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:15:28] "[36mGET /static/images/icon.png HTTP/1.1[0m" 304 -
+2024-12-09 17:15:28,293 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:15:28] "[36mGET /static/js/party.js HTTP/1.1[0m" 304 -
+2024-12-09 17:15:28,294 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:15:28] "[36mGET /static/js/csrf.js HTTP/1.1[0m" 304 -
+2024-12-09 17:15:34,989 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:15:34] "GET /register HTTP/1.1" 200 -
+2024-12-09 17:15:35,028 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:15:35] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2024-12-09 17:15:35,032 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:15:35] "[36mGET /static/js/theme.js HTTP/1.1[0m" 304 -
+2024-12-09 17:15:35,032 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:15:35] "[36mGET /static/js/alerts.js HTTP/1.1[0m" 304 -
+2024-12-09 17:15:35,033 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:15:35] "[36mGET /static/js/register.js HTTP/1.1[0m" 304 -
+2024-12-09 17:15:35,038 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:15:35] "[36mGET /static/js/party.js HTTP/1.1[0m" 304 -
+2024-12-09 17:15:35,040 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:15:35] "[36mGET /static/images/icon.png HTTP/1.1[0m" 304 -
+2024-12-09 17:15:35,040 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:15:35] "[36mGET /static/js/csrf.js HTTP/1.1[0m" 304 -
+2024-12-09 17:15:37,127 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:15:37] "GET /login HTTP/1.1" 200 -
+2024-12-09 17:15:37,168 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:15:37] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2024-12-09 17:15:37,172 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:15:37] "[36mGET /static/js/login.js HTTP/1.1[0m" 304 -
+2024-12-09 17:15:37,172 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:15:37] "[36mGET /static/js/theme.js HTTP/1.1[0m" 304 -
+2024-12-09 17:15:37,172 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:15:37] "[36mGET /static/js/alerts.js HTTP/1.1[0m" 304 -
+2024-12-09 17:15:37,178 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:15:37] "[36mGET /static/js/party.js HTTP/1.1[0m" 304 -
+2024-12-09 17:15:37,180 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:15:37] "[36mGET /static/images/icon.png HTTP/1.1[0m" 304 -
+2024-12-09 17:15:37,181 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:15:37] "[36mGET /static/js/csrf.js HTTP/1.1[0m" 304 -
+2024-12-09 17:15:39,715 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:15:39] "GET /register HTTP/1.1" 200 -
+2024-12-09 17:15:39,754 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:15:39] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2024-12-09 17:15:39,759 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:15:39] "[36mGET /static/js/theme.js HTTP/1.1[0m" 304 -
+2024-12-09 17:15:39,759 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:15:39] "[36mGET /static/js/register.js HTTP/1.1[0m" 304 -
+2024-12-09 17:15:39,760 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:15:39] "[36mGET /static/js/alerts.js HTTP/1.1[0m" 304 -
+2024-12-09 17:15:39,765 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:15:39] "[36mGET /static/js/party.js HTTP/1.1[0m" 304 -
+2024-12-09 17:15:39,768 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:15:39] "[36mGET /static/js/csrf.js HTTP/1.1[0m" 304 -
+2024-12-09 17:15:39,768 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:15:39] "[36mGET /static/images/icon.png HTTP/1.1[0m" 304 -
+2024-12-09 17:15:40,733 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:15:40] "GET /login HTTP/1.1" 200 -
+2024-12-09 17:15:40,778 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:15:40] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2024-12-09 17:15:40,779 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:15:40] "[36mGET /static/js/theme.js HTTP/1.1[0m" 304 -
+2024-12-09 17:15:40,780 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:15:40] "[36mGET /static/js/alerts.js HTTP/1.1[0m" 304 -
+2024-12-09 17:15:40,780 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:15:40] "[36mGET /static/js/login.js HTTP/1.1[0m" 304 -
+2024-12-09 17:15:40,790 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:15:40] "[36mGET /static/js/party.js HTTP/1.1[0m" 304 -
+2024-12-09 17:15:40,790 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:15:40] "[36mGET /static/images/icon.png HTTP/1.1[0m" 304 -
+2024-12-09 17:15:40,790 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:15:40] "[36mGET /static/js/csrf.js HTTP/1.1[0m" 304 -
+2024-12-09 17:15:42,655 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:15:42] "GET /register HTTP/1.1" 200 -
+2024-12-09 17:15:42,696 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:15:42] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2024-12-09 17:15:42,699 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:15:42] "[36mGET /static/js/theme.js HTTP/1.1[0m" 304 -
+2024-12-09 17:15:42,699 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:15:42] "[36mGET /static/js/alerts.js HTTP/1.1[0m" 304 -
+2024-12-09 17:15:42,700 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:15:42] "[36mGET /static/js/register.js HTTP/1.1[0m" 304 -
+2024-12-09 17:15:42,710 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:15:42] "[36mGET /static/images/icon.png HTTP/1.1[0m" 304 -
+2024-12-09 17:15:42,710 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:15:42] "[36mGET /static/js/party.js HTTP/1.1[0m" 304 -
+2024-12-09 17:15:42,710 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:15:42] "[36mGET /static/js/csrf.js HTTP/1.1[0m" 304 -
+2024-12-09 17:15:43,773 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:15:43] "GET /login HTTP/1.1" 200 -
+2024-12-09 17:15:43,815 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:15:43] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2024-12-09 17:15:43,820 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:15:43] "[36mGET /static/js/theme.js HTTP/1.1[0m" 304 -
+2024-12-09 17:15:43,821 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:15:43] "[36mGET /static/js/login.js HTTP/1.1[0m" 304 -
+2024-12-09 17:15:43,821 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:15:43] "[36mGET /static/js/alerts.js HTTP/1.1[0m" 304 -
+2024-12-09 17:15:43,827 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:15:43] "[36mGET /static/js/party.js HTTP/1.1[0m" 304 -
+2024-12-09 17:15:43,829 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:15:43] "[36mGET /static/images/icon.png HTTP/1.1[0m" 304 -
+2024-12-09 17:15:43,830 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:15:43] "[36mGET /static/js/csrf.js HTTP/1.1[0m" 304 -
+2024-12-09 17:15:46,060 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:15:46] "GET /register HTTP/1.1" 200 -
+2024-12-09 17:15:46,101 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:15:46] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2024-12-09 17:15:46,105 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:15:46] "[36mGET /static/js/theme.js HTTP/1.1[0m" 304 -
+2024-12-09 17:15:46,106 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:15:46] "[36mGET /static/js/register.js HTTP/1.1[0m" 304 -
+2024-12-09 17:15:46,107 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:15:46] "[36mGET /static/js/alerts.js HTTP/1.1[0m" 304 -
+2024-12-09 17:15:46,115 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:15:46] "[36mGET /static/images/icon.png HTTP/1.1[0m" 304 -
+2024-12-09 17:15:46,116 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:15:46] "[36mGET /static/js/party.js HTTP/1.1[0m" 304 -
+2024-12-09 17:15:46,116 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:15:46] "[36mGET /static/js/csrf.js HTTP/1.1[0m" 304 -
+2024-12-09 17:15:47,807 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:15:47] "GET /login HTTP/1.1" 200 -
+2024-12-09 17:15:47,848 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:15:47] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2024-12-09 17:15:47,852 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:15:47] "[36mGET /static/js/theme.js HTTP/1.1[0m" 304 -
+2024-12-09 17:15:47,852 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:15:47] "[36mGET /static/js/alerts.js HTTP/1.1[0m" 304 -
+2024-12-09 17:15:47,853 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:15:47] "[36mGET /static/js/login.js HTTP/1.1[0m" 304 -
+2024-12-09 17:15:47,862 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:15:47] "[36mGET /static/images/icon.png HTTP/1.1[0m" 304 -
+2024-12-09 17:15:47,862 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:15:47] "[36mGET /static/js/party.js HTTP/1.1[0m" 304 -
+2024-12-09 17:15:47,863 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:15:47] "[36mGET /static/js/csrf.js HTTP/1.1[0m" 304 -
+2024-12-09 17:15:48,536 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:15:48] "GET /register HTTP/1.1" 200 -
+2024-12-09 17:15:48,578 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:15:48] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2024-12-09 17:15:48,584 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:15:48] "[36mGET /static/js/theme.js HTTP/1.1[0m" 304 -
+2024-12-09 17:15:48,585 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:15:48] "[36mGET /static/js/alerts.js HTTP/1.1[0m" 304 -
+2024-12-09 17:15:48,586 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:15:48] "[36mGET /static/js/register.js HTTP/1.1[0m" 304 -
+2024-12-09 17:15:48,591 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:15:48] "[36mGET /static/js/party.js HTTP/1.1[0m" 304 -
+2024-12-09 17:15:48,593 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:15:48] "[36mGET /static/images/icon.png HTTP/1.1[0m" 304 -
+2024-12-09 17:15:48,594 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:15:48] "[36mGET /static/js/csrf.js HTTP/1.1[0m" 304 -
+2024-12-09 17:15:51,070 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:15:51] "GET /login HTTP/1.1" 200 -
+2024-12-09 17:15:51,111 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:15:51] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2024-12-09 17:15:51,116 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:15:51] "[36mGET /static/js/login.js HTTP/1.1[0m" 304 -
+2024-12-09 17:15:51,117 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:15:51] "[36mGET /static/js/theme.js HTTP/1.1[0m" 304 -
+2024-12-09 17:15:51,117 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:15:51] "[36mGET /static/js/alerts.js HTTP/1.1[0m" 304 -
+2024-12-09 17:15:51,123 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:15:51] "[36mGET /static/js/party.js HTTP/1.1[0m" 304 -
+2024-12-09 17:15:51,126 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:15:51] "[36mGET /static/images/icon.png HTTP/1.1[0m" 304 -
+2024-12-09 17:15:51,127 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:15:51] "[36mGET /static/js/csrf.js HTTP/1.1[0m" 304 -
+2024-12-09 17:15:51,753 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:15:51] "GET /register HTTP/1.1" 200 -
+2024-12-09 17:15:51,795 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:15:51] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2024-12-09 17:15:51,800 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:15:51] "[36mGET /static/js/theme.js HTTP/1.1[0m" 304 -
+2024-12-09 17:15:51,801 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:15:51] "[36mGET /static/js/alerts.js HTTP/1.1[0m" 304 -
+2024-12-09 17:15:51,801 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:15:51] "[36mGET /static/js/register.js HTTP/1.1[0m" 304 -
+2024-12-09 17:15:51,807 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:15:51] "[36mGET /static/js/party.js HTTP/1.1[0m" 304 -
+2024-12-09 17:15:51,809 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:15:51] "[36mGET /static/images/icon.png HTTP/1.1[0m" 304 -
+2024-12-09 17:15:51,809 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:15:51] "[36mGET /static/js/csrf.js HTTP/1.1[0m" 304 -
+2024-12-09 17:15:52,294 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:15:52] "GET /login HTTP/1.1" 200 -
+2024-12-09 17:15:52,338 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:15:52] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2024-12-09 17:15:52,341 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:15:52] "[36mGET /static/js/login.js HTTP/1.1[0m" 304 -
+2024-12-09 17:15:52,342 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:15:52] "[36mGET /static/js/theme.js HTTP/1.1[0m" 304 -
+2024-12-09 17:15:52,342 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:15:52] "[36mGET /static/js/alerts.js HTTP/1.1[0m" 304 -
+2024-12-09 17:15:52,348 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:15:52] "[36mGET /static/js/party.js HTTP/1.1[0m" 304 -
+2024-12-09 17:15:52,351 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:15:52] "[36mGET /static/images/icon.png HTTP/1.1[0m" 304 -
+2024-12-09 17:15:52,351 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:15:52] "[36mGET /static/js/csrf.js HTTP/1.1[0m" 304 -
+2024-12-09 17:15:52,811 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:15:52] "GET /register HTTP/1.1" 200 -
+2024-12-09 17:15:52,849 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:15:52] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2024-12-09 17:15:52,856 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:15:52] "[36mGET /static/js/theme.js HTTP/1.1[0m" 304 -
+2024-12-09 17:15:52,858 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:15:52] "[36mGET /static/js/register.js HTTP/1.1[0m" 304 -
+2024-12-09 17:15:52,858 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:15:52] "[36mGET /static/js/alerts.js HTTP/1.1[0m" 304 -
+2024-12-09 17:15:52,867 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:15:52] "[36mGET /static/images/icon.png HTTP/1.1[0m" 304 -
+2024-12-09 17:15:52,868 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:15:52] "[36mGET /static/js/party.js HTTP/1.1[0m" 304 -
+2024-12-09 17:15:52,868 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:15:52] "[36mGET /static/js/csrf.js HTTP/1.1[0m" 304 -
+2024-12-09 17:15:53,839 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:15:53] "GET /login HTTP/1.1" 200 -
+2024-12-09 17:15:53,881 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:15:53] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2024-12-09 17:15:53,885 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:15:53] "[36mGET /static/js/theme.js HTTP/1.1[0m" 304 -
+2024-12-09 17:15:53,886 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:15:53] "[36mGET /static/js/login.js HTTP/1.1[0m" 304 -
+2024-12-09 17:15:53,886 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:15:53] "[36mGET /static/js/alerts.js HTTP/1.1[0m" 304 -
+2024-12-09 17:15:53,895 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:15:53] "[36mGET /static/images/icon.png HTTP/1.1[0m" 304 -
+2024-12-09 17:15:53,896 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:15:53] "[36mGET /static/js/party.js HTTP/1.1[0m" 304 -
+2024-12-09 17:15:53,896 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:15:53] "[36mGET /static/js/csrf.js HTTP/1.1[0m" 304 -
+2024-12-09 17:19:47,257 - app - INFO - User s logged in
+2024-12-09 17:19:47,258 - app - WARNING - User s attempted to redirect to /
+2024-12-09 17:19:47,259 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:19:47] "[32mPOST /login HTTP/1.1[0m" 302 -
+2024-12-09 17:19:47,290 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): api.themoviedb.org:443
+2024-12-09 17:19:47,340 - urllib3.connectionpool - DEBUG - https://api.themoviedb.org:443 "GET /3/movie/%0A%20%20%20%20%20%20%20%20%20%20%20%201118031?language=en-US HTTP/1.1" 200 None
+2024-12-09 17:19:47,342 - app - INFO - User s visited the homepage
+2024-12-09 17:19:47,343 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:19:47] "GET / HTTP/1.1" 200 -
+2024-12-09 17:19:47,382 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:19:47] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2024-12-09 17:19:47,387 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:19:47] "[36mGET /static/js/theme.js HTTP/1.1[0m" 304 -
+2024-12-09 17:19:47,388 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:19:47] "GET /static/js/index.js HTTP/1.1" 200 -
+2024-12-09 17:19:47,389 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:19:47] "[36mGET /static/js/alerts.js HTTP/1.1[0m" 304 -
+2024-12-09 17:19:47,396 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:19:47] "[36mGET /static/images/icon.png HTTP/1.1[0m" 304 -
+2024-12-09 17:19:47,402 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:19:47] "[36mGET /static/js/party.js HTTP/1.1[0m" 304 -
+2024-12-09 17:19:47,402 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:19:47] "[36mGET /static/js/csrf.js HTTP/1.1[0m" 304 -
+2024-12-09 17:19:47,902 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): api.themoviedb.org:443
+2024-12-09 17:19:47,951 - urllib3.connectionpool - DEBUG - https://api.themoviedb.org:443 "GET /3/movie/1118031?language=en-US HTTP/1.1" 200 None
+2024-12-09 17:19:47,956 - app - INFO - s visited Watch Party 21
+2024-12-09 17:19:47,958 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:19:47] "GET /party/6085a8d3803140d18b2c2d3e579edcc6 HTTP/1.1" 200 -
+2024-12-09 17:19:48,005 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:19:48] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2024-12-09 17:19:48,008 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:19:48] "[36mGET /static/js/theme.js HTTP/1.1[0m" 304 -
+2024-12-09 17:19:48,009 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:19:48] "[36mGET /static/js/rate.js HTTP/1.1[0m" 304 -
+2024-12-09 17:19:48,010 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:19:48] "GET /static/js/comment.js HTTP/1.1" 200 -
+2024-12-09 17:19:48,018 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:19:48] "[36mGET /static/images/icon.png HTTP/1.1[0m" 304 -
+2024-12-09 17:19:48,026 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:19:48] "[36mGET /static/js/party.js HTTP/1.1[0m" 304 -
+2024-12-09 17:19:48,027 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:19:48] "[36mGET /static/js/alerts.js HTTP/1.1[0m" 304 -
+2024-12-09 17:19:48,027 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:19:48] "[36mGET /static/js/csrf.js HTTP/1.1[0m" 304 -
+2024-12-09 17:19:48,029 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:19:48] "GET /static/js/partyPage.js HTTP/1.1" 200 -
+2024-12-09 17:19:51,496 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:19:51] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2024-12-09 17:19:57,977 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): api.themoviedb.org:443
+2024-12-09 17:19:58,031 - urllib3.connectionpool - DEBUG - https://api.themoviedb.org:443 "GET /3/movie/1118031?language=en-US HTTP/1.1" 200 None
+2024-12-09 17:19:58,033 - app - INFO - s visited Watch Party 21
+2024-12-09 17:19:58,035 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:19:58] "GET /party/6085a8d3803140d18b2c2d3e579edcc6 HTTP/1.1" 200 -
+2024-12-09 17:19:58,096 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:19:58] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2024-12-09 17:19:58,125 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:19:58] "[36mGET /static/js/theme.js HTTP/1.1[0m" 304 -
+2024-12-09 17:19:58,126 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:19:58] "[36mGET /static/js/rate.js HTTP/1.1[0m" 304 -
+2024-12-09 17:19:58,145 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:19:58] "[36mGET /static/js/comment.js HTTP/1.1[0m" 304 -
+2024-12-09 17:19:58,156 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:19:58] "GET /static/js/partyPage.js HTTP/1.1" 200 -
+2024-12-09 17:19:58,170 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:19:58] "[36mGET /static/images/icon.png HTTP/1.1[0m" 304 -
+2024-12-09 17:19:58,171 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:19:58] "[36mGET /static/js/alerts.js HTTP/1.1[0m" 304 -
+2024-12-09 17:19:58,176 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:19:58] "[36mGET /static/js/csrf.js HTTP/1.1[0m" 304 -
+2024-12-09 17:19:58,177 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:19:58] "[36mGET /static/js/party.js HTTP/1.1[0m" 304 -
+2024-12-09 17:19:58,220 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:19:58] "[36mGET /static/images/favicon.ico HTTP/1.1[0m" 304 -
+2024-12-09 17:21:59,881 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): api.themoviedb.org:443
+2024-12-09 17:21:59,930 - urllib3.connectionpool - DEBUG - https://api.themoviedb.org:443 "GET /3/movie/1118031?language=en-US HTTP/1.1" 200 None
+2024-12-09 17:21:59,935 - app - INFO - s visited Watch Party 21
+2024-12-09 17:21:59,938 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:21:59] "GET /party/6085a8d3803140d18b2c2d3e579edcc6 HTTP/1.1" 200 -
+2024-12-09 17:21:59,985 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:21:59] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2024-12-09 17:22:00,015 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:22:00] "[36mGET /static/js/theme.js HTTP/1.1[0m" 304 -
+2024-12-09 17:22:00,015 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:22:00] "[36mGET /static/js/rate.js HTTP/1.1[0m" 304 -
+2024-12-09 17:22:00,023 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:22:00] "[36mGET /static/js/comment.js HTTP/1.1[0m" 304 -
+2024-12-09 17:22:00,039 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:22:00] "[36mGET /static/images/icon.png HTTP/1.1[0m" 304 -
+2024-12-09 17:22:00,042 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:22:00] "GET /static/js/partyPage.js HTTP/1.1" 200 -
+2024-12-09 17:22:00,051 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:22:00] "[36mGET /static/js/alerts.js HTTP/1.1[0m" 304 -
+2024-12-09 17:22:00,052 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:22:00] "[36mGET /static/js/party.js HTTP/1.1[0m" 304 -
+2024-12-09 17:22:00,056 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:22:00] "[36mGET /static/js/csrf.js HTTP/1.1[0m" 304 -
+2024-12-09 17:22:00,119 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:22:00] "[36mGET /static/images/favicon.ico HTTP/1.1[0m" 304 -
+2024-12-09 17:22:00,670 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): api.themoviedb.org:443
+2024-12-09 17:22:00,719 - urllib3.connectionpool - DEBUG - https://api.themoviedb.org:443 "GET /3/movie/1118031?language=en-US HTTP/1.1" 200 None
+2024-12-09 17:22:00,724 - app - INFO - s visited Watch Party 21
+2024-12-09 17:22:00,727 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:22:00] "GET /party/6085a8d3803140d18b2c2d3e579edcc6 HTTP/1.1" 200 -
+2024-12-09 17:22:00,789 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:22:00] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2024-12-09 17:22:00,811 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:22:00] "[36mGET /static/js/rate.js HTTP/1.1[0m" 304 -
+2024-12-09 17:22:00,811 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:22:00] "[36mGET /static/js/theme.js HTTP/1.1[0m" 304 -
+2024-12-09 17:22:00,819 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:22:00] "[36mGET /static/js/comment.js HTTP/1.1[0m" 304 -
+2024-12-09 17:22:00,836 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:22:00] "[36mGET /static/images/icon.png HTTP/1.1[0m" 304 -
+2024-12-09 17:22:00,836 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:22:00] "[36mGET /static/js/partyPage.js HTTP/1.1[0m" 304 -
+2024-12-09 17:22:00,840 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:22:00] "[36mGET /static/js/alerts.js HTTP/1.1[0m" 304 -
+2024-12-09 17:22:00,841 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:22:00] "[36mGET /static/js/party.js HTTP/1.1[0m" 304 -
+2024-12-09 17:22:00,841 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:22:00] "[36mGET /static/js/csrf.js HTTP/1.1[0m" 304 -
+2024-12-09 17:22:00,876 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:22:00] "[36mGET /static/images/favicon.ico HTTP/1.1[0m" 304 -
+2024-12-09 17:28:32,023 - app - INFO - User s logged out
+2024-12-09 17:28:32,025 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:28:32] "[32mGET /logout HTTP/1.1[0m" 302 -
+2024-12-09 17:28:32,033 - app - INFO - User not authenticated
+2024-12-09 17:28:32,053 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): api.themoviedb.org:443
+2024-12-09 17:28:32,106 - urllib3.connectionpool - DEBUG - https://api.themoviedb.org:443 "GET /3/discover/movie?include_adult=False&include_video=False&language=en-US&sort_by=popularity.desc&primary_release_date.gte=2022-01-01&primary_release_date.lte=2024-12-31&vote_count.gte=100&with_poster=True&page=1 HTTP/1.1" 200 None
+2024-12-09 17:28:32,110 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:28:32] "GET / HTTP/1.1" 200 -
+2024-12-09 17:28:32,162 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:28:32] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2024-12-09 17:28:32,198 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:28:32] "[36mGET /static/js/theme.js HTTP/1.1[0m" 304 -
+2024-12-09 17:28:32,231 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:28:32] "[36mGET /static/js/csrf.js HTTP/1.1[0m" 304 -
+2024-12-09 17:28:32,231 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:28:32] "[36mGET /static/images/icon.png HTTP/1.1[0m" 304 -
+2024-12-09 17:28:32,231 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:28:32] "[36mGET /static/js/alerts.js HTTP/1.1[0m" 304 -
+2024-12-09 17:28:32,231 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:28:32] "[36mGET /static/js/party.js HTTP/1.1[0m" 304 -
+2024-12-09 17:28:33,502 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:28:33] "GET /login HTTP/1.1" 200 -
+2024-12-09 17:28:33,559 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:28:33] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2024-12-09 17:28:33,591 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:28:33] "[36mGET /static/js/theme.js HTTP/1.1[0m" 304 -
+2024-12-09 17:28:33,593 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:28:33] "[36mGET /static/js/alerts.js HTTP/1.1[0m" 304 -
+2024-12-09 17:28:33,597 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:28:33] "GET /static/js/login.js HTTP/1.1" 200 -
+2024-12-09 17:28:33,611 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:28:33] "[36mGET /static/js/party.js HTTP/1.1[0m" 304 -
+2024-12-09 17:28:33,612 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:28:33] "[36mGET /static/js/csrf.js HTTP/1.1[0m" 304 -
+2024-12-09 17:28:33,612 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:28:33] "[36mGET /static/images/icon.png HTTP/1.1[0m" 304 -
+2024-12-09 17:28:35,155 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:28:35] "GET /register HTTP/1.1" 200 -
+2024-12-09 17:28:35,211 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:28:35] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2024-12-09 17:28:35,237 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:28:35] "[36mGET /static/js/theme.js HTTP/1.1[0m" 304 -
+2024-12-09 17:28:35,239 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:28:35] "[36mGET /static/js/alerts.js HTTP/1.1[0m" 304 -
+2024-12-09 17:28:35,240 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:28:35] "[36mGET /static/js/register.js HTTP/1.1[0m" 304 -
+2024-12-09 17:28:35,255 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:28:35] "[36mGET /static/js/party.js HTTP/1.1[0m" 304 -
+2024-12-09 17:28:35,259 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:28:35] "[36mGET /static/images/icon.png HTTP/1.1[0m" 304 -
+2024-12-09 17:28:35,260 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:28:35] "[36mGET /static/js/csrf.js HTTP/1.1[0m" 304 -
+2024-12-09 17:29:03,492 - app - INFO - Failed to register user w. Username already taken
+2024-12-09 17:29:03,494 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:29:03] "POST /register HTTP/1.1" 200 -
+2024-12-09 17:29:03,537 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:29:03] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2024-12-09 17:29:03,563 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:29:03] "[36mGET /static/js/theme.js HTTP/1.1[0m" 304 -
+2024-12-09 17:29:03,564 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:29:03] "[36mGET /static/js/alerts.js HTTP/1.1[0m" 304 -
+2024-12-09 17:29:03,564 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:29:03] "[36mGET /static/js/register.js HTTP/1.1[0m" 304 -
+2024-12-09 17:29:03,579 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:29:03] "[36mGET /static/js/party.js HTTP/1.1[0m" 304 -
+2024-12-09 17:29:03,583 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:29:03] "[36mGET /static/images/icon.png HTTP/1.1[0m" 304 -
+2024-12-09 17:29:03,583 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:29:03] "[36mGET /static/js/csrf.js HTTP/1.1[0m" 304 -
+2024-12-09 17:29:14,026 - app - INFO - User ws registered and logged in
+2024-12-09 17:29:14,026 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:29:14] "[32mPOST /register HTTP/1.1[0m" 302 -
+2024-12-09 17:29:14,032 - app - INFO - User ws visited the homepage
+2024-12-09 17:29:14,033 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:29:14] "GET / HTTP/1.1" 200 -
+2024-12-09 17:29:14,088 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:29:14] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2024-12-09 17:29:14,109 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:29:14] "[36mGET /static/js/theme.js HTTP/1.1[0m" 304 -
+2024-12-09 17:29:14,109 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:29:14] "[36mGET /static/js/alerts.js HTTP/1.1[0m" 304 -
+2024-12-09 17:29:14,110 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:29:14] "[36mGET /static/js/index.js HTTP/1.1[0m" 304 -
+2024-12-09 17:29:14,126 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:29:14] "[36mGET /static/js/csrf.js HTTP/1.1[0m" 304 -
+2024-12-09 17:29:14,126 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:29:14] "[36mGET /static/js/party.js HTTP/1.1[0m" 304 -
+2024-12-09 17:29:14,127 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:29:14] "[36mGET /static/images/icon.png HTTP/1.1[0m" 304 -
+2024-12-09 17:29:16,862 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:29:16] "GET /profile HTTP/1.1" 200 -
+2024-12-09 17:29:16,920 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:29:16] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2024-12-09 17:29:16,945 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:29:16] "[36mGET /static/js/theme.js HTTP/1.1[0m" 304 -
+2024-12-09 17:29:16,948 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:29:16] "[36mGET /static/js/alerts.js HTTP/1.1[0m" 304 -
+2024-12-09 17:29:16,948 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:29:16] "GET /static/js/profile.js HTTP/1.1" 200 -
+2024-12-09 17:29:16,965 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:29:16] "[36mGET /static/js/party.js HTTP/1.1[0m" 304 -
+2024-12-09 17:29:16,968 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:29:16] "[36mGET /static/images/icon.png HTTP/1.1[0m" 304 -
+2024-12-09 17:29:16,970 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:29:16] "[36mGET /static/js/csrf.js HTTP/1.1[0m" 304 -
+2024-12-09 17:29:18,662 - app - INFO - "ws changed their username to {new_username}
+2024-12-09 17:29:18,666 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:29:18] "POST /profile HTTP/1.1" 200 -
+2024-12-09 17:29:47,258 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:29:47] "GET /profile HTTP/1.1" 200 -
+2024-12-09 17:29:47,319 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:29:47] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2024-12-09 17:29:47,347 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:29:47] "[36mGET /static/js/theme.js HTTP/1.1[0m" 304 -
+2024-12-09 17:29:47,349 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:29:47] "[36mGET /static/js/alerts.js HTTP/1.1[0m" 304 -
+2024-12-09 17:29:47,350 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:29:47] "GET /static/js/profile.js HTTP/1.1" 200 -
+2024-12-09 17:29:47,370 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:29:47] "[36mGET /static/js/party.js HTTP/1.1[0m" 304 -
+2024-12-09 17:29:47,371 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:29:47] "[36mGET /static/js/csrf.js HTTP/1.1[0m" 304 -
+2024-12-09 17:29:47,407 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:29:47] "[36mGET /static/images/icon.png HTTP/1.1[0m" 304 -
+2024-12-09 17:29:47,451 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:29:47] "[36mGET /static/images/favicon.ico HTTP/1.1[0m" 304 -
+2024-12-09 17:29:56,344 - app - DEBUG - Username already taken by wss
+2024-12-09 17:29:56,344 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:29:56] "[31m[1mPOST /profile HTTP/1.1[0m" 400 -
+2024-12-09 17:30:28,715 - app - DEBUG - Username already taken by wss
+2024-12-09 17:30:28,717 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:30:28] "[31m[1mPOST /profile HTTP/1.1[0m" 400 -
+2024-12-09 17:38:36,467 - app - INFO - User wss visited the homepage
+2024-12-09 17:38:36,471 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:38:36] "GET / HTTP/1.1" 200 -
+2024-12-09 17:38:36,556 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:38:36] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2024-12-09 17:38:36,568 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:38:36] "[36mGET /static/js/theme.js HTTP/1.1[0m" 304 -
+2024-12-09 17:38:36,569 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:38:36] "[36mGET /static/js/alerts.js HTTP/1.1[0m" 304 -
+2024-12-09 17:38:36,569 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:38:36] "[36mGET /static/js/index.js HTTP/1.1[0m" 304 -
+2024-12-09 17:38:36,596 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:38:36] "[36mGET /static/images/icon.png HTTP/1.1[0m" 304 -
+2024-12-09 17:38:36,601 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:38:36] "[36mGET /static/js/party.js HTTP/1.1[0m" 304 -
+2024-12-09 17:38:36,601 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:38:36] "[36mGET /static/js/csrf.js HTTP/1.1[0m" 304 -
+2024-12-09 17:38:39,029 - app - INFO - User wss visited their joined parties page
+2024-12-09 17:38:39,031 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:38:39] "GET /parties HTTP/1.1" 200 -
+2024-12-09 17:38:39,090 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:38:39] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2024-12-09 17:38:39,116 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:38:39] "[36mGET /static/js/theme.js HTTP/1.1[0m" 304 -
+2024-12-09 17:38:39,119 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:38:39] "[36mGET /static/js/alerts.js HTTP/1.1[0m" 304 -
+2024-12-09 17:38:39,120 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:38:39] "GET /static/js/parties.js HTTP/1.1" 200 -
+2024-12-09 17:38:39,136 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:38:39] "[36mGET /static/js/party.js HTTP/1.1[0m" 304 -
+2024-12-09 17:38:39,138 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:38:39] "[36mGET /static/images/icon.png HTTP/1.1[0m" 304 -
+2024-12-09 17:38:39,140 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:38:39] "[36mGET /static/js/csrf.js HTTP/1.1[0m" 304 -
+2024-12-09 17:38:50,140 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): api.themoviedb.org:443
+2024-12-09 17:38:50,284 - urllib3.connectionpool - DEBUG - https://api.themoviedb.org:443 "GET /3/search/movie?query=s&include_adult=false&language=en-US&page=1 HTTP/1.1" 200 None
+2024-12-09 17:38:50,287 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:38:50] "POST /query HTTP/1.1" 200 -
+2024-12-09 17:39:03,968 - app - INFO - wss created Watch Party 37
+2024-12-09 17:39:03,969 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:39:03] "[32mPOST /create HTTP/1.1[0m" 302 -
+2024-12-09 17:39:03,979 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): api.themoviedb.org:443
+2024-12-09 17:39:04,129 - urllib3.connectionpool - DEBUG - https://api.themoviedb.org:443 "GET /3/movie/1196470?language=en-US HTTP/1.1" 200 None
+2024-12-09 17:39:04,135 - app - INFO - wss visited Watch Party 37
+2024-12-09 17:39:04,140 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:39:04] "GET /party/688a2ade16dd44118130f9fc11524498 HTTP/1.1" 200 -
+2024-12-09 17:39:04,208 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:39:04] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2024-12-09 17:39:04,245 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:39:04] "[36mGET /static/js/theme.js HTTP/1.1[0m" 304 -
+2024-12-09 17:39:04,251 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:39:04] "[36mGET /static/js/rate.js HTTP/1.1[0m" 304 -
+2024-12-09 17:39:04,276 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:39:04] "[36mGET /static/js/comment.js HTTP/1.1[0m" 304 -
+2024-12-09 17:39:04,288 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:39:04] "[36mGET /static/js/party.js HTTP/1.1[0m" 304 -
+2024-12-09 17:39:04,303 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:39:04] "[36mGET /static/js/alerts.js HTTP/1.1[0m" 304 -
+2024-12-09 17:39:04,305 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:39:04] "GET /static/js/partyPage.js HTTP/1.1" 200 -
+2024-12-09 17:39:04,306 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:39:04] "[36mGET /static/js/csrf.js HTTP/1.1[0m" 304 -
+2024-12-09 17:39:04,309 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:39:04] "[36mGET /static/images/icon.png HTTP/1.1[0m" 304 -
+2024-12-09 17:39:06,670 - app - INFO - User wss visited their created parties page
+2024-12-09 17:39:06,673 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:39:06] "GET /my-parties HTTP/1.1" 200 -
+2024-12-09 17:39:06,728 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:39:06] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2024-12-09 17:39:06,752 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:39:06] "[36mGET /static/js/theme.js HTTP/1.1[0m" 304 -
+2024-12-09 17:39:06,754 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:39:06] "[36mGET /static/js/alerts.js HTTP/1.1[0m" 304 -
+2024-12-09 17:39:06,755 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:39:06] "[36mGET /static/js/parties.js HTTP/1.1[0m" 304 -
+2024-12-09 17:39:06,771 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:39:06] "[36mGET /static/js/party.js HTTP/1.1[0m" 304 -
+2024-12-09 17:39:06,776 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:39:06] "[36mGET /static/js/csrf.js HTTP/1.1[0m" 304 -
+2024-12-09 17:39:06,777 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:39:06] "[36mGET /static/images/icon.png HTTP/1.1[0m" 304 -
+2024-12-09 17:39:08,849 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:39:08] "GET /profile HTTP/1.1" 200 -
+2024-12-09 17:39:08,909 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:39:08] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2024-12-09 17:39:08,938 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:39:08] "[36mGET /static/js/theme.js HTTP/1.1[0m" 304 -
+2024-12-09 17:39:08,942 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:39:08] "[36mGET /static/js/alerts.js HTTP/1.1[0m" 304 -
+2024-12-09 17:39:08,945 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:39:08] "GET /static/js/profile.js HTTP/1.1" 200 -
+2024-12-09 17:39:08,962 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:39:08] "[36mGET /static/images/icon.png HTTP/1.1[0m" 304 -
+2024-12-09 17:39:08,963 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:39:08] "[36mGET /static/js/party.js HTTP/1.1[0m" 304 -
+2024-12-09 17:39:08,965 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:39:08] "[36mGET /static/js/csrf.js HTTP/1.1[0m" 304 -
+2024-12-09 17:40:58,758 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:40:58] "GET /profile HTTP/1.1" 200 -
+2024-12-09 17:40:58,833 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:40:58] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2024-12-09 17:40:58,861 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:40:58] "[36mGET /static/js/theme.js HTTP/1.1[0m" 304 -
+2024-12-09 17:40:58,861 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:40:58] "[36mGET /static/js/profile.js HTTP/1.1[0m" 304 -
+2024-12-09 17:40:58,862 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:40:58] "[36mGET /static/js/alerts.js HTTP/1.1[0m" 304 -
+2024-12-09 17:40:58,883 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:40:58] "[36mGET /static/images/icon.png HTTP/1.1[0m" 304 -
+2024-12-09 17:40:58,888 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:40:58] "[36mGET /static/js/party.js HTTP/1.1[0m" 304 -
+2024-12-09 17:40:58,889 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:40:58] "[36mGET /static/js/csrf.js HTTP/1.1[0m" 304 -
+2024-12-09 17:40:58,943 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:40:58] "[36mGET /static/images/favicon.ico HTTP/1.1[0m" 304 -
+2024-12-09 17:40:59,233 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:40:59] "GET /profile HTTP/1.1" 200 -
+2024-12-09 17:40:59,275 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:40:59] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2024-12-09 17:40:59,300 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:40:59] "[36mGET /static/js/theme.js HTTP/1.1[0m" 304 -
+2024-12-09 17:40:59,301 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:40:59] "[36mGET /static/js/profile.js HTTP/1.1[0m" 304 -
+2024-12-09 17:40:59,302 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:40:59] "[36mGET /static/js/alerts.js HTTP/1.1[0m" 304 -
+2024-12-09 17:40:59,321 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:40:59] "[36mGET /static/images/icon.png HTTP/1.1[0m" 304 -
+2024-12-09 17:40:59,322 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:40:59] "[36mGET /static/js/party.js HTTP/1.1[0m" 304 -
+2024-12-09 17:40:59,323 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:40:59] "[36mGET /static/js/csrf.js HTTP/1.1[0m" 304 -
+2024-12-09 17:40:59,358 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:40:59] "[36mGET /static/images/favicon.ico HTTP/1.1[0m" 304 -
+2024-12-09 17:40:59,402 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:40:59] "GET /profile HTTP/1.1" 200 -
+2024-12-09 17:40:59,447 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:40:59] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2024-12-09 17:40:59,467 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:40:59] "[36mGET /static/js/theme.js HTTP/1.1[0m" 304 -
+2024-12-09 17:40:59,468 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:40:59] "[36mGET /static/js/profile.js HTTP/1.1[0m" 304 -
+2024-12-09 17:40:59,468 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:40:59] "[36mGET /static/js/alerts.js HTTP/1.1[0m" 304 -
+2024-12-09 17:40:59,486 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:40:59] "[36mGET /static/images/icon.png HTTP/1.1[0m" 304 -
+2024-12-09 17:40:59,487 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:40:59] "[36mGET /static/js/party.js HTTP/1.1[0m" 304 -
+2024-12-09 17:40:59,487 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:40:59] "[36mGET /static/js/csrf.js HTTP/1.1[0m" 304 -
+2024-12-09 17:40:59,523 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:40:59] "[36mGET /static/images/favicon.ico HTTP/1.1[0m" 304 -
+2024-12-09 17:41:07,063 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): api.themoviedb.org:443
+2024-12-09 17:41:07,121 - urllib3.connectionpool - DEBUG - https://api.themoviedb.org:443 "GET /3/search/movie?query=s&include_adult=false&language=en-US&page=1 HTTP/1.1" 200 None
+2024-12-09 17:41:07,124 - werkzeug - INFO - 127.0.0.1 - - [09/Dec/2024 17:41:07] "POST /query HTTP/1.1" 200 -

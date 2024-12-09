@@ -13,7 +13,7 @@
     <!-- Username -->
     <div class="form-group login-form">
       <label for="username" class="form-label">Username</label>
-      {{ form.username(class_="form-control required-field", placeholder="Enter your username", id_="enter-username", maxlength_="30") }}
+      {{ form.username(class_="form-control required-field", placeholder="Enter your username", id_="enter-username", maxlength_="30", autocomplete_="username") }}
       {% for error in form.username.errors %} 
       <div class="alert alert-danger" role="alert">{{ error }}</div>
       {% endfor %}
@@ -22,7 +22,7 @@
     <!-- Password -->
     <div class="form-group login-form">
       <label for="password" class="form-label">Password</label>
-      {{ form.password(class_="form-control required-field", placeholder="Enter your password", id_="enter-password", minlength_="8", maxlength_="24") }}
+      {{ form.password(class_="form-control required-field", placeholder="Enter your password", id_="enter-password", minlength_="8", maxlength_="24", autocomplete_="current-password") }}
       {% for error in form.password.errors %}
       <div class="alert alert-danger" role="alert">{{ error }}</div>
       {% endfor %}
@@ -46,6 +46,7 @@
   </form>
 </div>
 
+<!-- Script -->
 <script src="{{ url_for('static', filename='/js/login.js') }}"></script>
 
 {% endblock %}

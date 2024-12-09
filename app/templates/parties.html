@@ -8,13 +8,14 @@
 <div class="row justify-content-center mt-3">
   <ul class="nav nav-tabs d-flex flex-nowrap justify-content-end" role="tablist">
     <li class="nav-item" role="presentation">
+      <!-- Upcoming Parties Button -->
       <button id="party-upcoming-btn" 
-              class="nav-link active flex-shrink-1 px-sm-2 px-md-3 fs-sm-6 fs-md-5 toggle-tab"  
-              data-bs-toggle="tab"
-              data-bs-target="#upcoming" 
-              type="button" 
-              role="tab" 
-              title="View upcoming parties">
+        class="nav-link active flex-shrink-1 px-sm-2 px-md-3 fs-sm-6 fs-md-5 toggle-tab"  
+        data-bs-toggle="tab"
+        data-bs-target="#upcoming" 
+        type="button" 
+        role="tab" 
+        title="View upcoming parties">
         Upcoming
         {% if upcoming %}
         <span class="position-absolute top-0 start-0 translate-middle badge rounded-pill bg-danger">
@@ -24,14 +25,15 @@
         {% endif %}
       </button>
     </li>
+    <!-- Previous Parties Button -->
     <li class="nav-item" role="presentation">
       <button id="party-previous-btn" 
-              class="nav-link flex-shrink-1 px-sm-2 px-md-3 fs-sm-6 fs-md-5 toggle-tab" 
-              data-bs-toggle="tab"
-              data-bs-target="#previous" 
-              type="button" 
-              role="tab" 
-              title="View previous parties">
+        class="nav-link flex-shrink-1 px-sm-2 px-md-3 fs-sm-6 fs-md-5 toggle-tab" 
+        data-bs-toggle="tab"
+        data-bs-target="#previous" 
+        type="button" 
+        role="tab" 
+        title="View previous parties">
         Previous
       </button>
     </li>
@@ -99,5 +101,7 @@
   </div>
 </div>
 
+<!-- Script -->
 <script src="{{ url_for('static', filename='/js/parties.js') }}"></script>
+
 {% endblock %}

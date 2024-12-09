@@ -6,42 +6,41 @@
 <h6 class="text-muted text-center">Username must be 1 - 30 characters and start with a letter. Letters, numbers, dots, hyphens, and underscores are allowed.</h6>
 <p></p>
 <h6 class="text-muted text-center">Password must be 8 - 24 characters with at least one uppercase letter, lowercase letter, number, and special character. No spaces allowed.</h6>
-
 <!-- Username Form -->
 <form action="/profile" method="POST" name="Edit Username" id="edit-username" data-original="{{ user.username }}" class="mt-5">
   <div class="form-group">
     <label for="username" class="form-label">Username</label>
     <div class="d-flex gap-2" title="Change username">
-      <input type="text" name="username" id="username" class="form-control required-field" value="{{ user.username }}" maxlength="30">
+      <input type="text" name="username" id="username" class="form-control required-field" value="{{ user.username }}" maxlength="30" autocomplete="username">
       <button type="submit" disabled class="btn btn-secondary">Change</button>
     </div>
   </div>
 </form>
-
 <!-- Email Form -->
 <form action="/profile" method="POST" name="Edit email" id="edit-email" data-original="{{ user.email }}" class="mt-3">
   <div class="form-group">
     <label for="email" class="form-label">Email</label>
     <div class="d-flex gap-2" title="Change email">
-      <input type="email" name="email" id="email" class="form-control required-field" value="{{ user.email }}" minlength="5" maxlength="256">
+      <input type="email" name="email" id="email" class="form-control required-field" value="{{ user.email }}" minlength="5" maxlength="256" autocomplete="username">
       <button type="submit" disabled class="btn btn-secondary">Change</button>
     </div>
   </div>
 </form>
-
 <!-- Password Form -->
 <form action="/profile" method="POST" name="Edit password" id="edit-password" data-original="" class="mt-3">
   <div class="form-group">
+    <!-- user invisible -->
+    <label for="original-username" class="form-label" style="display: none">Username (invisible)</label>
+    <input type="text" id="original-username" name="username" value="{{ user.username }}" autocomplete="username" class="form-control d-none">
     <label for="password" class="form-label">Password</label>
-    <input type="password" name="password" id="password" class="form-control required-field" placeholder="Enter a new password" minlength="8" maxlength="24">
+    <input type="password" name="password" id="password" class="form-control required-field" placeholder="Enter a new password" minlength="8" maxlength="24" autocomplete="new-password">
     <label for="confirm-password" class="form-label mt-3">Confirm Password</label>
-    <input type="password" name="confirm-password" id="confirm-password" class="form-control required-field" placeholder="Confirm your new password" minlength="8" maxlength="24">
+    <input type="password" name="confirm-password" id="confirm-password" class="form-control required-field" placeholder="Confirm your new password" minlength="8" maxlength="24" autocomplete="new-password">
     <div class="d-flex justify-content-end" title="Change password">
       <button type="submit" disabled class="btn btn-secondary mt-3">Change</button>
     </div>
   </div>
 </form>
-
 <!-- Profile Colour Form -->
 <form action="/profile" method="POST" name="Edit colour" id="edit-colour" data-original="{{ user.profile_colour }}">
   <div class="form-group">
@@ -70,7 +69,7 @@
     </div>
   </div>
 </form>
-
+<!-- Logout/Delete Buttons -->
 <div class="form-group my-5 d-flex justify-content-between">
   <a href="/logout" class="btn btn-warning">Logout</a>
   <form action="/profile" method="POST" name="Delete Profile" id="delete-profile">
@@ -78,6 +77,7 @@
   </form>
 </div>
 
+<!-- Script -->
 <script src="{{ url_for('static', filename='/js/profile.js') }}"></script>
 
 {% endblock %}

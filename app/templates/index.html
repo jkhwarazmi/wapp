@@ -38,6 +38,7 @@
 <h5 class="text-muted">No upcoming parties.</h5>
 <h5 class="text-muted">Join a public party or create a new one.</h5>
 {% endif %}
+<!-- Public Parties -->
 <h2 class="mt-5 mb-4">Public Watch Parties</h2>
 {% if public %}
 <div class="row justify-content-center mt-3 mb-5">
@@ -68,6 +69,7 @@
 <h5 class="text-muted">No public parties right now, check back later</h5>
 {% endif %}
 
+<!-- Script -->
 <script src="{{ url_for('static', filename='/js/index.js') }}"></script>
 
 {% endblock %}

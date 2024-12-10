@@ -15,7 +15,7 @@
     <!-- Username -->
     <div class="form-group">
       <label for="enter-username" class="form-label">Username</label>
-      {{ form.username(class_="form-control required-field", placeholder="Enter a username", id_="enter-username", maxlength_="30") }}
+      {{ form.username(class_="form-control required-field", placeholder="Enter a username", id_="enter-username", maxlength_="30", autocomplete="usersname") }}
       <p id="username-warning" class="text-danger" style="visibility: hidden">Invalid username</p>
       {% for error in form.username.errors %} 
       <div class="alert alert-danger" role="alert">{{ error }}</div>
@@ -24,7 +24,7 @@
     <!-- Email -->
     <div class="form-group">
       <label for="enter-email" class="form-label">Email</label>
-      {{ form.email(class_="form-control required-field", placeholder="Enter your email", id_="enter-email",minlength_="5", maxlength_="256") }}
+      {{ form.email(class_="form-control required-field", placeholder="Enter your email", id_="enter-email",minlength_="5", maxlength_="256", autcomplete="email") }}
       <p id="email-warning" class="text-danger" style="visibility: hidden">Invalid email</p>
       {% for error in form.email.errors %}
       <div class="alert alert-danger" role="alert">{{ error }}</div>
@@ -33,7 +33,7 @@
     <!-- Password -->
     <div class="form-group">
       <label for="enter-password" class="form-label">Password</label>
-      {{ form.password(class_="form-control required-field", placeholder="Enter a password", id_="enter-password", minlength_="8", maxlength_="24") }}
+      {{ form.password(class_="form-control required-field", placeholder="Enter a password", id_="enter-password", minlength_="8", maxlength_="24", autocomplete="new-password") }}
       <p id="password-warning" class="text-danger" style="visibility: hidden">Invalid password</p>
       {% for error in form.password.errors %}
       <div class="alert alert-danger" role="alert">{{ error }}</div>
@@ -42,7 +42,7 @@
     <!-- Confirm Password -->
     <div class="form-group">
       <label for="enter-confirm" class="form-label">Confirm Password</label>
-      {{ form.confirm_password(class_="form-control required-field", placeholder="Confirm your password", id_="enter-confirm", minlength_="8", maxlength_="24") }}
+      {{ form.confirm_password(class_="form-control required-field", placeholder="Confirm your password", id_="enter-confirm", minlength_="8", maxlength_="24", autocomplete="new-password") }}
       <p id="confirm-warning" class="text-danger" style="visibility: hidden">Passwords do not match</p>
       {% for error in form.confirm_password.errors %}
       <div class="alert alert-danger" role="alert">{{ error }}</div>

@@ -5,7 +5,7 @@ from flask import jsonify, Response
 from app import app, db, models
 from flask_login import login_required, current_user, logout_user
 import requests
-from sqlalchemy import func, case
+from sqlalchemy import func, case, and_
 from datetime import datetime, timezone, date, time
 from random import sample
 from decimal import Decimal, ROUND_HALF_UP
@@ -117,19 +117,31 @@ def parties():
 def my_parties():
     """Render the user's created parties page."""
     # Get all upcoming and previous watch parties the user created
-    upcoming = models.WatchPartyUser.query.join(models.WatchParty).filter(
-        models.WatchParty.created_by == current_user.id,
+    upcoming = models.WatchPartyUser.query\
+    .join(models.WatchParty, and_(
+        models.WatchParty.id == models.WatchPartyUser.watch_party_id,
+        models.WatchParty.created_by == models.WatchPartyUser.user_id
+    ))\
+    .filter(
+        models.WatchPartyUser.user_id == current_user.id,
         models.WatchParty.start_time >= datetime.now(timezone.utc),
         models.WatchParty.deleted_at.is_(None)
-    ).order_by(
+    )\
+    .order_by(
         models.WatchParty.start_time.asc()
     ).all()
 
-    previous = models.WatchPartyUser.query.join(models.WatchParty).filter(
-        models.WatchParty.created_by == current_user.id,
+    previous = models.WatchPartyUser.query\
+    .join(models.WatchParty, and_(
+        models.WatchPartyUser.user_id == current_user.id,
+        models.WatchParty.id == models.WatchPartyUser.watch_party_id,
+        models.WatchParty.created_by == models.WatchPartyUser.user_id
+    ))\
+    .filter(
         models.WatchParty.start_time < datetime.now(timezone.utc),
         models.WatchParty.deleted_at.is_(None)
-    ).order_by(
+    )\
+    .order_by(
         models.WatchParty.start_time.desc()
     ).all()
 

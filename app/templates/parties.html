@@ -53,12 +53,13 @@
               <div class="col" title="Click for more details">
                 <div class="card p-3 shadow-sm">
                   <h5>{{ party.watch_party.title }}</h5>
-                  <h6 class="d-flex align-items-center gap-2">
-                    Creator: {{ party.watch_party.creator.username }}
-                    <div class="d-flex align-items-center justify-content-center rounded-circle text-white" style="width: 30px; height: 30px; background-color: {{ party.watch_party.creator.profile_colour }}">
+                  <div class="d-flex align-items-center gap-2">
+                    <h6 class="mb-0">Creator: {{ party.watch_party.creator.username }}</h6>
+                    <div class="d-flex align-items-center justify-content-center rounded-circle text-white mb-2" 
+                      style="width: 30px; height: 30px; background-color: {{ party.watch_party.creator.profile_colour }}">
                       <span class="fs-6 fw-semibold">{{ party.watch_party.creator.username[0] }}</span>
                     </div>
-                   </h6>
+                  </div>
                   <p>{{ "Location: " + party.watch_party.location if party.watch_party.location else "No location specified" }}</p>
                   <h5><span class="badge rounded-pill text-bg-warning text-wrap" style="max-width: 100%; overflow-wrap: break-word;">Starts: {{ party.watch_party.start_time.strftime('%d/%m/%Y at %H:%M') }}</span></h5>
                 </div>
@@ -81,12 +82,13 @@
               <div class="col" title="Click for more details">
                 <div class="card p-3 shadow-sm">
                   <h5>{{ party.watch_party.title }}</h5>
-                  <h6 class="d-flex align-items-center gap-2">
-                    Creator: {{ party.watch_party.creator.username }}
-                    <div class="d-flex align-items-center justify-content-center rounded-circle text-white" style="width: 30px; height: 30px; background-color: {{ party.watch_party.creator.profile_colour }}">
+                  <div class="d-flex align-items-center gap-2">
+                    <h6 class="mb-0">Creator: {{ party.watch_party.creator.username }}</h6>
+                    <div class="d-flex align-items-center justify-content-center rounded-circle text-white mb-2" 
+                      style="width: 30px; height: 30px; background-color: {{ party.watch_party.creator.profile_colour }}">
                       <span class="fs-6 fw-semibold">{{ party.watch_party.creator.username[0] }}</span>
                     </div>
-                   </h6>
+                  </div>
                   <p>{{ "Location: " + party.watch_party.location if party.watch_party.location else "No location specified" }}</p>
                   <h5><span class="badge rounded-pill text-bg-warning text-wrap" style="max-width: 100%; overflow-wrap: break-word;">Started: {{ party.watch_party.start_time.strftime('%d/%m/%Y at %H:%M') }}</span></h5>
                 </div>

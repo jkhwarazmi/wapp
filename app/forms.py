@@ -2,7 +2,7 @@
 
 from flask_wtf import FlaskForm
 from wtforms import StringField, BooleanField, PasswordField, EmailField
-from wtforms import IntegerField, DateField, TimeField, SelectField
+from wtforms import HiddenField, DateField, TimeField, SelectField
 from wtforms.validators import DataRequired, Length
 from wtforms.widgets import TextArea
 
@@ -42,7 +42,7 @@ class WatchPartyForm(FlaskForm):
 
     title = StringField("Title", validators=[
                         DataRequired(), Length(min=1, max=100)])
-    movie_id = IntegerField("Movie ID", validators=[DataRequired()])
+    movie_id = HiddenField("Movie ID", validators=[DataRequired()])
     description = StringField("Description", widget=TextArea(), validators=[
                               Length(max=500)])
     location = StringField("Location", validators=[

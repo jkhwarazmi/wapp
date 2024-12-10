@@ -49,15 +49,13 @@
             {% if title and title != "Watch Parties" and title != "Register" and title != "Login" %}
             <!-- Your Watch Parties -->
             <li class="nav-item me-2">
-              <button type="button" class="btn nav-pad btn-outline-secondary {{ 'nav-active' if title == 'Joined Parties' }}" title="See joined watch parties">
-                <a class="nav-link btn-hover {{ 'nav-btn' if title == 'Joined Parties' }}" href="{{ url_for('parties') }}">
+                <a class="btn btn{{ '-outline' if title != 'Joined Parties' }}-warning mx-3 my-2" href="{{ url_for('parties') }}">
                   Joined Watch Parties &nbsp;
                   <!-- Source: https://icons.getbootstrap.com/icons/list/ -->
                   <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
                     <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
                   </svg>
                 </a>
-              </button>
             </li>
           {% endif %}
           </ul>
@@ -89,17 +87,22 @@
           </div>
           <!-- Profile Link -->
           <div class="nav-item dropdown ms-2">
-            <button class="btn p-0" id="profile-icon" type="button" data-bs-toggle="dropdown" aria-expanded="false" data-bs-display="static" title="Profile options">
-              <div id="profile-circle" class="d-flex align-items-center justify-content-center rounded-circle text-white" 
-                style="width: 35px; height: 35px; background-color: {{ colour }}">
-                <span id="profile-initial" class="fs-6 fw-semibold">{{ username[0] }}</span>
-              </div>
+            <button 
+              class="btn p-0 d-flex align-items-center justify-content-center rounded-circle text-white"
+              id="profile-icon" 
+              type="button" 
+              data-bs-toggle="dropdown" 
+              aria-expanded="false" 
+              data-bs-display="static" 
+              title="Profile options"
+              style="width: 35px; height: 35px; background-color: {{ colour }}">
+              <span id="profile-initial" class="fs-6 fw-semibold">{{ username[0] }}</span>
             </button>
             <ul class="dropdown-menu dropdown-menu-start dropdown-menu-lg-end">
               <li>
                 <a class="dropdown-item d-flex align-items-center {{ 'active' if title == 'My Parties' }}" href="{{ url_for('my_parties') }}">
                   <!-- Source: https://icons.getbootstrap.com/icons/collection-fill/ -->
-                  <svg class="bi me-2" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-collection-fill" viewBox="0 0 16 16">
+                  <svg class="bi me-2 bi-collection-fill" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
                     <path d="M0 13a1.5 1.5 0 0 0 1.5 1.5h13A1.5 1.5 0 0 0 16 13V6a1.5 1.5 0 0 0-1.5-1.5h-13A1.5 1.5 0 0 0 0 6zM2 3a.5.5 0 0 0 .5.5h11a.5.5 0 0 0 0-1h-11A.5.5 0 0 0 2 3m2-2a.5.5 0 0 0 .5.5h7a.5.5 0 0 0 0-1h-7A.5.5 0 0 0 4 1"/>
                   </svg>
                   My Parties
@@ -269,7 +272,7 @@
               {% endfor %}
           </div>
           <!-- Movie ID -->
-          {{ form.movie_id(type="hidden", class="form-control required-field", id="movie-input") }}
+          {{ form.movie_id(class="form-control", id="movie-input") }}
           <!-- Location -->
           <div class="form-group">
               <label for="location-input">Location</label>

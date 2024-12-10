@@ -129,7 +129,8 @@ $("form").on("submit", function(e) {
           }
         } else if ($(this).attr("id") === "edit-colour") {
           $(`input[name="profile_colour"][value="${res.value}"]`).prop("checked", true)
-          $("#profile-circle").css("background-color", res.value)
+          $("#profile-icon").css("background-color", res.value)
+          $("#edit-colour").data("original", res.value)
         } else if ($(this).attr("id") === "edit-password") {
           $(this).find("input").val("")
         }

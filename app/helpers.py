@@ -48,8 +48,15 @@ def validate_party(
         app.logger.debug(
             f"Wrong Watch Party title type by {current_user.username}")
         return "Invalid title."
-
-    if not movie_id or not isinstance(movie_id, int):
+    
+    if not movie_id:
+        app.logger.debug(
+            f"Empty Watch Party movie ID by {current_user.username}")
+        return "Movie ID cannot be empty."
+    
+    try:
+        movie_id = int(movie_id)
+    except ValueError:
         app.logger.debug(
             f"Wrong Watch Party movie ID type by {current_user.username}")
         return "Invalid movie ID."
